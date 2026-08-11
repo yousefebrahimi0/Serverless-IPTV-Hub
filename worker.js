@@ -1046,35 +1046,32 @@ function renderCategories() {
     categoryListEl.innerHTML = '';
     const filterQuery = catFilterInput ? catFilterInput.value.toLowerCase().trim() : '';
 
-    // "All Channels" pseudo-category
-    if (!filterQuery || 'all channels'.includes(filterQuery)) {
+    if (!filterQuery || "all channels".includes(filterQuery)) {
         const allBtn = document.createElement('button');
-        allBtn.className = 'category-row w-full text-left p-2.5 flex items-center gap-3.5 focus:outline-none cursor-pointer rounded-xl transition-all';
+        allBtn.className = "category-row w-full text-left p-2.5 flex items-center gap-3.5 focus:outline-none cursor-pointer rounded-xl transition-all";
         allBtn.dataset.group = '__ALL__';
-        allBtn.innerHTML =
-            '<div class="cat-avatar w-8 h-8 rounded-full bg-gradient-to-tr from-blue-600 to-indigo-500 flex items-center justify-center text-white text-xs font-bold shrink-0 shadow-sm">' +
-                '<span class="material-icons" style="font-size: 16px;">public</span>' +
-            '</div>' +
-            '<div class="cat-text-container flex flex-col overflow-hidden">' +
-                '<span class="text-xs font-semibold text-white truncate">All Channels</span>' +
-                '<span class="text-[10px] text-gray-400 mt-0.5">' + globalChannelsData.length + ' Channels</span>' +
-            '</div>';
-
+        allBtn.innerHTML = \`
+        <div class="cat-avatar w-8 h-8 rounded-full bg-gradient-to-tr from-blue-600 to-indigo-500 flex items-center justify-center text-white text-xs font-bold shrink-0 shadow-sm">
+            <span class="material-icons" style="font-size: 16px;">public</span>
+        </div>
+        <div class="cat-text-container flex flex-col overflow-hidden">
+            <span class="text-xs font-semibold text-white truncate">All Channels</span>
+            <span class="text-[10px] text-gray-400 mt-0.5">\${globalChannelsData.length} Channels</span>
+        </div>
+        \`;
         allBtn.onclick = () => {
             if (activeCategoryBtn) activeCategoryBtn.classList.remove('is-active');
             allBtn.classList.add('is-active');
             activeCategoryBtn = allBtn;
             document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('is-active'));
             navHome.classList.add('is-active');
-            channelHeaderTitle.innerText = 'All Channels';
+            channelHeaderTitle.innerText = "All Channels";
             if (searchInput) searchInput.value = '';
             renderChannels(globalChannelsData);
         };
-
         categoryListEl.appendChild(allBtn);
     }
 
-    // Real groups
     Object.keys(categories).forEach(groupName => {
         const groupChannels = categories[groupName];
         if (!groupChannels.length) return;
@@ -1082,22 +1079,18 @@ function renderCategories() {
 
         const colorClass = COLORS[groupName.length % COLORS.length];
         const initial = groupName.charAt(0).toUpperCase();
-        const displayGroupName = groupName.replace(
-            ' > ',
-            '<span class="material-icons align-middle text-gray-400" style="font-size: 14px; margin: -2px 2px 0 2px;">chevron_right</span>'
-        );
+        const displayGroupName = groupName.replace(' > ', '<span class="material-icons align-middle text-gray-400" style="font-size: 14px; margin: -2px 2px 0 2px;">chevron_right</span>');
 
         const btn = document.createElement('button');
-        btn.className = 'category-row w-full text-left p-2.5 flex items-center gap-3.5 focus:outline-none cursor-pointer rounded-xl transition-all';
+        btn.className = "category-row w-full text-left p-2.5 flex items-center gap-3.5 focus:outline-none cursor-pointer rounded-xl transition-all";
         btn.dataset.group = groupName;
-        btn.innerHTML =
-            '<div class="cat-avatar w-8 h-8 rounded-full ' + colorClass + ' flex items-center justify-center text-white text-xs font-bold shrink-0 shadow-inner">' +
-                initial +
-            '</div>' +
-            '<div class="cat-text-container flex flex-col overflow-hidden">' +
-                '<span class="text-xs font-medium text-white truncate">' + displayGroupName + '</span>' +
-                '<span class="text-[10px] text-gray-400 mt-0.5">' + groupChannels.length + ' Channels</span>' +
-            '</div>';
+        btn.innerHTML = \`
+        <div class="cat-avatar w-8 h-8 rounded-full \${colorClass} flex items-center justify-center text-white text-xs font-bold shrink-0 shadow-inner">\${initial}</div>
+        <div class="cat-text-container flex flex-col overflow-hidden">
+            <span class="text-xs font-medium text-white truncate">\${displayGroupName}</span>
+            <span class="text-[10px] text-gray-400 mt-0.5">\${groupChannels.length} Channels</span>
+        </div>
+        \`;
 
         btn.onclick = () => {
             if (activeCategoryBtn) activeCategoryBtn.classList.remove('is-active');
@@ -1108,14 +1101,11 @@ function renderCategories() {
             channelHeaderTitle.innerText = groupName.replace(/^.*?>\s*/, '');
             if (searchInput) searchInput.value = '';
             renderChannels(groupChannels);
-
-            // collapse sidebar on tablet
             if (window.innerWidth >= 768 && window.innerWidth <= 1023) {
                 sidebar.classList.add('collapsed');
                 localStorage.setItem('iptv_sidebar_collapsed', 'true');
             }
         };
-
         categoryListEl.appendChild(btn);
     });
 }
@@ -1124,12 +1114,27 @@ if (catFilterInput) {
     catFilterInput.addEventListener('input', () => renderCategories());
 }
 
+function setSearchScope(scope) {
+    searchScope = scope;
+    const allBtn = document.getElementById('scope-all-btn');
+    const catBtn = document.getElementById('scope-cat-btn');
+
+    if (scope === 'all') {
+        allBtn.className = "flex-1 py-1 px-2.5 rounded-md text-[11px] font-semibold transition-all flex items-center justify-center gap-1 bg-[#2D5BE3] text-white shadow-sm";
+        catBtn.className = "flex-1 py-1 px-2.5 rounded-md text-[11px] font-semibold transition-all flex items-center justify-center gap-1 bg-transparent text-gray-400 hover:text-white";
+    } else {
+        catBtn.className = "flex-1 py-1 px-2.5 rounded-md text-[11px] font-semibold transition-all flex items-center justify-center gap-1 bg-[#2D5BE3] text-white shadow-sm";
+        allBtn.className = "flex-1 py-1 px-2.5 rounded-md text-[11px] font-semibold transition-all flex items-center justify-center gap-1 bg-transparent text-gray-400 hover:text-white";
+    }
+    applySearch();
+}
+
 function renderFavorites() {
     if (activeCategoryBtn) activeCategoryBtn.classList.remove('is-active');
     activeCategoryBtn = null;
     document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('is-active'));
     navFav.classList.add('is-active');
-    channelHeaderTitle.innerText = 'Favorites';
+    channelHeaderTitle.innerText = "Favorites";
     if (searchInput) searchInput.value = '';
     const favChannels = globalChannelsData.filter(ch => getFavorites().includes(ch.id));
     renderChannels(favChannels);
@@ -1141,50 +1146,11 @@ function renderFavorites() {
 
 function renderChannels(channelsArray, append = false) {
     if (!append) {
-        currentFilteredChannels = channelsArray || [];
+        currentFilteredChannels = channelsArray;
         renderedCount = 0;
         channelListEl.innerHTML = '';
-        document.getElementById('total-channels-count').innerText =
-            currentFilteredChannels.length + ' Channels';
+        document.getElementById('total-channels-count').innerText = \`\${currentFilteredChannels.length} Channels\`;
     }
-
-    if (!currentFilteredChannels.length) {
-        channelListEl.innerHTML = '<div class="text-sm text-gray-500 p-6 text-center">No channels found.</div>';
-        return;
-    }
-
-    const slice = currentFilteredChannels.slice(renderedCount, renderedCount + PAGE_SIZE);
-    if (!slice.length) return;
-
-    const fragment = document.createDocumentFragment();
-    slice.forEach(ch => {
-        let btn;
-        if (channelNodeCache[ch.id]) {
-            btn = channelNodeCache[ch.id];
-            if (activeChannelBtn && activeChannelBtn.dataset.id === ch.id) {
-                btn.classList.add('is-active');
-                activeChannelBtn = btn;
-            } else {
-                btn.classList.remove('is-active');
-            }
-            const starEl = btn.querySelector('.star-btn');
-            const isFav = getFavorites().includes(ch.id);
-            starEl.classList.toggle('text-[#E87A31]', isFav);
-            starEl.classList.toggle('text-gray-600', !isFav);
-            starEl.innerHTML =
-                '<span class="material-icons" style="font-size:18px;">' +
-                (isFav ? 'star' : 'star_border') +
-                '</span>';
-        } else {
-            btn = buildDesktopCard(ch);
-            addToCache(ch.id, btn);
-        }
-        fragment.appendChild(btn);
-    });
-
-    channelListEl.appendChild(fragment);
-    renderedCount += slice.length;
-}
 
     if (!currentFilteredChannels.length) {
         channelListEl.innerHTML = '<div class="text-sm text-gray-500 p-6 text-center">No channels found.</div>';
@@ -1205,7 +1171,7 @@ function renderChannels(channelsArray, append = false) {
             const isFav = getFavorites().includes(ch.id);
             starEl.classList.toggle('text-[#E87A31]', isFav);
             starEl.classList.toggle('text-gray-600', !isFav);
-            starEl.innerHTML = \`<span class="material-icons" style="font-size:18px;">\${{isFav ? 'star' : 'star_border'}</span>\`;
+            starEl.innerHTML = \`<span class="material-icons" style="font-size:18px;">\${isFav ? 'star' : 'star_border'}</span>\`;
         } else {
             btn = buildDesktopCard(ch);
             addToCache(ch.id, btn);
@@ -1235,8 +1201,8 @@ function buildDesktopCard(ch) {
     const safeName    = escHtml(ch.name);
     const initial     = escHtml(ch.name.charAt(0));
     const logoHtml = ch.logo
-        ? \`<img src="\${{safeLogoUrl}" loading="lazy" class="w-full h-full object-contain" alt="\${{safeName}" onerror="this.outerHTML='<span class=&quot;text-xs font-bold text-gray-400&quot;>\${{initial}</span>'">\`
-        : \`<span class="text-xs font-bold text-gray-400">\${{initial}</span>\`;
+        ? \`<img src="\${safeLogoUrl}" loading="lazy" class="w-full h-full object-contain" alt="\${safeName}" onerror="this.outerHTML='<span class=&quot;text-xs font-bold text-gray-400&quot;>\${initial}</span>'">\`
+        : \`<span class="text-xs font-bold text-gray-400">\${initial}</span>\`;
 
     const isFav = getFavorites().includes(ch.id);
     const starColor = isFav ? "text-[#E87A31]" : "text-gray-600 hover:text-[#E87A31]";
@@ -1249,17 +1215,17 @@ function buildDesktopCard(ch) {
     let catTag = '';
     if (ch.group) {
         const cleanGroup = ch.group.replace(/^.*?>\s*/, '');
-        catTag = \`<span class="text-[8px] font-medium bg-[#1C1D26] text-gray-400 border border-[#2A2B38] px-1.5 py-0.5 rounded truncate max-w-[110px]" title="\${{escHtml(ch.group)}">\${{escHtml(cleanGroup)}</span>\`;
+        catTag = \`<span class="text-[8px] font-medium bg-[#1C1D26] text-gray-400 border border-[#2A2B38] px-1.5 py-0.5 rounded truncate max-w-[110px]" title="\${escHtml(ch.group)}">\${escHtml(cleanGroup)}</span>\`;
     }
 
     btn.innerHTML = \`
-    <div class="w-12 h-12 bg-[#1C1D26] border border-[#2D2E3D] rounded-lg flex items-center justify-center shrink-0 overflow-hidden shadow-inner">\${{logoHtml}</div>
+    <div class="w-12 h-12 bg-[#1C1D26] border border-[#2D2E3D] rounded-lg flex items-center justify-center shrink-0 overflow-hidden shadow-inner">\${logoHtml}</div>
     <div class="flex-1 flex flex-col overflow-hidden py-0.5">
-        <span class="text-xs font-semibold text-white truncate">\${{safeName}</span>
-        <div class="flex items-center gap-1 mt-1.5 flex-wrap">\${{badgesHtml}\${{catTag}</div>
+        <span class="text-xs font-semibold text-white truncate">\${safeName}</span>
+        <div class="flex items-center gap-1 mt-1.5 flex-wrap">\${badgesHtml}\${catTag}</div>
     </div>
-    <div class="star-btn p-1.5 shrink-0 \${{starColor} transition-colors" data-id="\${{ch.id}">
-        <span class="material-icons" style="font-size: 18px;">\${{starIcon}</span>
+    <div class="star-btn p-1.5 shrink-0 \${starColor} transition-colors" data-id="\${ch.id}">
+        <span class="material-icons" style="font-size: 18px;">\${starIcon}</span>
     </div>
     \`;
 
@@ -1272,7 +1238,7 @@ function buildDesktopCard(ch) {
         nowPlayingContainer.classList.remove('opacity-0');
         clearTimeout(hideBannerTimeout);
         hideBannerTimeout = setTimeout(() => nowPlayingContainer.classList.add('opacity-0'), 4000);
-        playStream(\`?action=proxy&url=\${{encodeURIComponent(ch.url)}\`);
+        playStream(\`?action=proxy&url=\${encodeURIComponent(ch.url)}\`);
     };
 
     const starEl = btn.querySelector('.star-btn');
@@ -1281,7 +1247,7 @@ function buildDesktopCard(ch) {
         toggleFavorite(ch.id, starEl, () => {
             if (navFav.classList.contains('is-active')) {
                 btn.remove();
-                document.getElementById('total-channels-count').innerText = \`\${{getFavorites().length} Channels\`;
+                document.getElementById('total-channels-count').innerText = \`\${getFavorites().length} Channels\`;
             }
         });
     };
@@ -1294,7 +1260,20 @@ navHome.addEventListener('click', () => {
     else { const fb = categoryListEl.querySelector('button'); if (fb) fb.click(); }
 });
 
+function applySearch() {
+    const query = (searchInput && searchInput.value ? searchInput.value : '').toLowerCase().trim();
+    if (!query) {
+        if (navFav.classList.contains('is-active')) { renderFavorites(); }
+        else if (activeCategoryBtn) { activeCategoryBtn.click(); }
+        else { renderChannels(globalChannelsData); }
+        return;
+    }
 
+    let pool = globalChannelsData;
+    if (searchScope === 'category' && activeCategoryBtn && activeCategoryBtn.dataset.group && activeCategoryBtn.dataset.group !== '__ALL__') {
+        const g = activeCategoryBtn.dataset.group;
+        pool = categories[g] || [];
+    }
 
 searchInput.addEventListener('input', (e) => {
     const query = e.target.value.toLowerCase().trim();
