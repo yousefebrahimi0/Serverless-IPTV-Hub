@@ -1114,12 +1114,6 @@ if (catFilterInput) {
     catFilterInput.addEventListener('input', () => renderCategories());
 }
 
-    // Re-run search if there’s an active query
-    if (searchInput && searchInput.value.trim()) {
-        searchInput.dispatchEvent(new Event('input'));
-    }
-}
-
 function renderFavorites() {
     if (activeCategoryBtn) activeCategoryBtn.classList.remove('is-active');
     activeCategoryBtn = null;
@@ -1140,7 +1134,8 @@ function renderChannels(channelsArray, append = false) {
         currentFilteredChannels = channelsArray;
         renderedCount = 0;
         channelListEl.innerHTML = '';
-        document.getElementById('total-channels-count').innerText = \`\${{currentFilteredChannels.length} Channels\`;
+        document.getElementById('total-channels-count').innerText =
+    currentFilteredChannels.length + ' Channels';
     }
 
     if (!currentFilteredChannels.length) {
