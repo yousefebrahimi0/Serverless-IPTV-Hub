@@ -1260,20 +1260,23 @@ navHome.addEventListener('click', () => {
     else { const fb = categoryListEl.querySelector('button'); if (fb) fb.click(); }
 });
 
-function applySearch() {
-    const query = (searchInput && searchInput.value ? searchInput.value : '').toLowerCase().trim();
-    if (!query) {
-        if (navFav.classList.contains('is-active')) { renderFavorites(); }
-        else if (activeCategoryBtn) { activeCategoryBtn.click(); }
-        else { renderChannels(globalChannelsData); }
-        return;
+function setSearchScope(scope) {
+    searchScope = scope;
+    const allBtn = document.getElementById('scope-all-btn');
+    const catBtn = document.getElementById('scope-cat-btn');
+
+    if (scope === 'all') {
+        allBtn.className = 'flex-1 py-1 px-2.5 rounded-md text-[11px] font-semibold transition-all flex items-center justify-center gap-1 bg-[#2D5BE3] text-white shadow-sm';
+        catBtn.className = 'flex-1 py-1 px-2.5 rounded-md text-[11px] font-semibold transition-all flex items-center justify-center gap-1 bg-transparent text-gray-400 hover:text-white';
+    } else {
+        catBtn.className = 'flex-1 py-1 px-2.5 rounded-md text-[11px] font-semibold transition-all flex items-center justify-center gap-1 bg-[#2D5BE3] text-white shadow-sm';
+        allBtn.className = 'flex-1 py-1 px-2.5 rounded-md text-[11px] font-semibold transition-all flex items-center justify-center gap-1 bg-transparent text-gray-400 hover:text-white';
     }
 
-    let pool = globalChannelsData;
-    if (searchScope === 'category' && activeCategoryBtn && activeCategoryBtn.dataset.group && activeCategoryBtn.dataset.group !== '__ALL__') {
-        const g = activeCategoryBtn.dataset.group;
-        pool = categories[g] || [];
+    if (searchInput && searchInput.value.trim()) {
+        searchInput.dispatchEvent(new Event('input'));
     }
+}
 
 searchInput.addEventListener('input', (e) => {
     const query = e.target.value.toLowerCase().trim();
@@ -1289,25 +1292,14 @@ searchInput.addEventListener('input', (e) => {
         return;
     }
 
-    // Respect current search scope
     let pool = globalChannelsData;
-    if (searchScope === 'category' &&
-        activeCategoryBtn &&
-        activeCategoryBtn.dataset.group &&
-        activeCategoryBtn.dataset.group !== '__ALL__') {
-
-        const g = activeCategoryBtn.dataset.group;
-        pool = categories[g] || [];
+    if (searchScope === 'category' && activeCategoryBtn && activeCategoryBtn.dataset.group && activeCategoryBtn.dataset.group !== '__ALL__') {
+        pool = categories[activeCategoryBtn.dataset.group] || [];
     }
 
-    const filtered = pool.filter(ch =>
-        ch.name && ch.name.toLowerCase().includes(query)
-    );
-
+    const filtered = pool.filter(ch => ch.name && ch.name.toLowerCase().includes(query));
     if (categoryHeader) categoryHeader.innerText = 'Search Results';
-    document.getElementById('total-channels-count').innerText =
-        filtered.length + ' Channels found';
-
+    document.getElementById('total-channels-count').innerText = filtered.length + ' Channels found';
     renderChannels(filtered);
 });
 
