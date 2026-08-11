@@ -10,7 +10,7 @@ export default {
       const COOKIE_SECRET  = env.COOKIE_SECRET  || "s3t-th1s-1n-env-v4rs";
       const AUTH_COOKIE_NAME    = "iptv_auth_token";
       const AUTH_COOKIE_MAX_AGE = 60 * 60 * 24 * 30;
-      const DEFAULT_M3U_URL     = "https://raw.githubusercontent.com/yousefebrahimi0/Serverless-IPTV-Hub/main/active%2030k%20list%20iptv.m3u";
+      const DEFAULT_M3U_URL     = "https://raw.githubusercontent.com/yousefebrahimi0/Serverless-IPTV-Hub/main/active%2012k%20list%20iptv.m3u";
       const FAVICON_URL         = "https://raw.githubusercontent.com/yousefebrahimi0/Serverless-IPTV-Hub/main/favicon.svg";
 
       // ==========================================
