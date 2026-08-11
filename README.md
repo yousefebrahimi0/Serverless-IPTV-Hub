@@ -1,6 +1,6 @@
 # 📺 Serverless IPTV Hub
 
-A powerful, serverless IPTV web player powered entirely by Cloudflare Workers. It acts as a proxy to bypass CORS issues, manages M3U playlists using Cloudflare KV, and features a dual-sidebar UI with high-performance 30,000+ global channel search and paginated rendering!
+A powerful, serverless IPTV web player powered entirely by Cloudflare Workers. It acts as a proxy to bypass CORS issues, manages M3U playlists using Cloudflare KV, and features a dual-sidebar UI with high-performance 12,000+ global channel search and paginated rendering! (This is a fork!)
 
 <p align="center" dir="auto">
 <img width="1920" height="953" alt="Serverless IPTV Hub" src="https://github.com/user-attachments/assets/c00fdfa1-8027-4d7c-aa8c-5a877c64796c" />
@@ -10,11 +10,12 @@ A powerful, serverless IPTV web player powered entirely by Cloudflare Workers. I
 * **100% Serverless:** Runs purely on Cloudflare Workers edge network.
 * **CORS Bypass:** Proxies video streams and M3U8 files so they play seamlessly in the browser.
 * **Password Protected:** Built-in cookie-based authentication.
-* **Global & Category Search:** Fast search across all 30,000+ channels or filtered within a selected category with instant scope switching.
 * **High Performance & Paginated UI:** Scroll-based card loading ensures 60fps responsiveness even with massive playlists.
 * **Dual Sidebar Layout:** Interactive category panel with quick category filtering and rich channel management.
 * **Source Management:** Add, edit, and manage multiple M3U URLs directly from the UI (saved to Cloudflare KV).
 * **Favorites System:** Star your favorite channels (saved locally to your browser).
+
+#### NEW **Global & Category Search:** Fast search across all 12,000+ channels or filtered within a selected category with instant scope switching.
 
 ---
 
@@ -62,7 +63,9 @@ Want to access the player using your custom domain (e.g., `tv.yourdomain.com`) i
 
 ## 📂 Managing Playlists
 
-By default, the player loads the `active 30k list iptv.m3u` file hosted in this repository ([https://github.com/yousefebrahimi0/Serverless-IPTV-Hub](https://github.com/yousefebrahimi0/Serverless-IPTV-Hub)). 
+By default, the player loads the `active 12k list iptv.m3u` file hosted in this repository ([https://github.com/yousefebrahimi0/Serverless-IPTV-Hub](https://github.com/yousefebrahimi0/Serverless-IPTV-Hub)). 
+
+If you want to check the active m3u files you can use this service: ([https://www.free-codecs.com/app/m3u-checker/)](https://www.free-codecs.com/app/m3u-checker/))
 
 **The Easiest Way (UI):**
 You don't need to edit any code to use your own playlists! Once you log into the player, simply click the **Settings (Gear Icon)** in the left sidebar. From there, you can add, edit, or remove as many remote M3U URLs as you want. These changes are saved directly to your Cloudflare KV and will override the default playlist.
