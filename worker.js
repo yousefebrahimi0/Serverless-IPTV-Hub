@@ -1251,20 +1251,7 @@ navHome.addEventListener('click', () => {
     else { const fb = categoryListEl.querySelector('button'); if (fb) fb.click(); }
 });
 
-function applySearch() {
-    const query = (searchInput && searchInput.value ? searchInput.value : '').toLowerCase().trim();
-    if (!query) {
-        if (navFav.classList.contains('is-active')) { renderFavorites(); }
-        else if (activeCategoryBtn) { activeCategoryBtn.click(); }
-        else { renderChannels(globalChannelsData); }
-        return;
-    }
 
-    let pool = globalChannelsData;
-    if (searchScope === 'category' && activeCategoryBtn && activeCategoryBtn.dataset.group && activeCategoryBtn.dataset.group !== '__ALL__') {
-        const g = activeCategoryBtn.dataset.group;
-        pool = categories[g] || [];
-    }
 
 searchInput.addEventListener('input', (e) => {
     const query = e.target.value.toLowerCase().trim();
