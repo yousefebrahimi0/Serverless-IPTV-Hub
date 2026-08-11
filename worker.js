@@ -1050,15 +1050,15 @@ function renderCategories() {
         const allBtn = document.createElement('button');
         allBtn.className = "category-row w-full text-left p-2.5 flex items-center gap-3.5 focus:outline-none cursor-pointer rounded-xl transition-all";
         allBtn.dataset.group = '__ALL__';
-        allBtn.innerHTML = `
+        allBtn.innerHTML = \`
         <div class="cat-avatar w-8 h-8 rounded-full bg-gradient-to-tr from-blue-600 to-indigo-500 flex items-center justify-center text-white text-xs font-bold shrink-0 shadow-sm">
             <span class="material-icons" style="font-size: 16px;">public</span>
         </div>
         <div class="cat-text-container flex flex-col overflow-hidden">
             <span class="text-xs font-semibold text-white truncate">All Channels</span>
-            <span class="text-[10px] text-gray-400 mt-0.5">${globalChannelsData.length} Channels</span>
+            <span class="text-[10px] text-gray-400 mt-0.5">\${{globalChannelsData.length} Channels</span>
         </div>
-        `;
+        \`;
         allBtn.onclick = () => {
             if (activeCategoryBtn) activeCategoryBtn.classList.remove('is-active');
             allBtn.classList.add('is-active');
@@ -1084,13 +1084,13 @@ function renderCategories() {
         const btn = document.createElement('button');
         btn.className = "category-row w-full text-left p-2.5 flex items-center gap-3.5 focus:outline-none cursor-pointer rounded-xl transition-all";
         btn.dataset.group = groupName;
-        btn.innerHTML = `
-        <div class="cat-avatar w-8 h-8 rounded-full ${colorClass} flex items-center justify-center text-white text-xs font-bold shrink-0 shadow-inner">${initial}</div>
+        btn.innerHTML = \`
+        <div class="cat-avatar w-8 h-8 rounded-full \${{colorClass} flex items-center justify-center text-white text-xs font-bold shrink-0 shadow-inner">\${{initial}</div>
         <div class="cat-text-container flex flex-col overflow-hidden">
-            <span class="text-xs font-medium text-white truncate">${displayGroupName}</span>
-            <span class="text-[10px] text-gray-400 mt-0.5">${groupChannels.length} Channels</span>
+            <span class="text-xs font-medium text-white truncate">\${{displayGroupName}</span>
+            <span class="text-[10px] text-gray-400 mt-0.5">\${{groupChannels.length} Channels</span>
         </div>
-        `;
+        \`;
 
         btn.onclick = () => {
             if (activeCategoryBtn) activeCategoryBtn.classList.remove('is-active');
@@ -1149,7 +1149,7 @@ function renderChannels(channelsArray, append = false) {
         currentFilteredChannels = channelsArray;
         renderedCount = 0;
         channelListEl.innerHTML = '';
-        document.getElementById('total-channels-count').innerText = `${currentFilteredChannels.length} Channels`;
+        document.getElementById('total-channels-count').innerText = \`\${{currentFilteredChannels.length} Channels\`;
     }
 
     if (!currentFilteredChannels.length) {
@@ -1171,7 +1171,7 @@ function renderChannels(channelsArray, append = false) {
             const isFav = getFavorites().includes(ch.id);
             starEl.classList.toggle('text-[#E87A31]', isFav);
             starEl.classList.toggle('text-gray-600', !isFav);
-            starEl.innerHTML = `<span class="material-icons" style="font-size:18px;">${isFav ? 'star' : 'star_border'}</span>`;
+            starEl.innerHTML = \`<span class="material-icons" style="font-size:18px;">\${{isFav ? 'star' : 'star_border'}</span>\`;
         } else {
             btn = buildDesktopCard(ch);
             addToCache(ch.id, btn);
@@ -1201,8 +1201,8 @@ function buildDesktopCard(ch) {
     const safeName    = escHtml(ch.name);
     const initial     = escHtml(ch.name.charAt(0));
     const logoHtml = ch.logo
-        ? `<img src="${safeLogoUrl}" loading="lazy" class="w-full h-full object-contain" alt="${safeName}" onerror="this.outerHTML='<span class=&quot;text-xs font-bold text-gray-400&quot;>${initial}</span>'">`
-        : `<span class="text-xs font-bold text-gray-400">${initial}</span>`;
+        ? \`<img src="\${{safeLogoUrl}" loading="lazy" class="w-full h-full object-contain" alt="\${{safeName}" onerror="this.outerHTML='<span class=&quot;text-xs font-bold text-gray-400&quot;>\${{initial}</span>'">\`
+        : \`<span class="text-xs font-bold text-gray-400">\${{initial}</span>\`;
 
     const isFav = getFavorites().includes(ch.id);
     const starColor = isFav ? "text-[#E87A31]" : "text-gray-600 hover:text-[#E87A31]";
@@ -1215,19 +1215,19 @@ function buildDesktopCard(ch) {
     let catTag = '';
     if (ch.group) {
         const cleanGroup = ch.group.replace(/^.*?>\s*/, '');
-        catTag = `<span class="text-[8px] font-medium bg-[#1C1D26] text-gray-400 border border-[#2A2B38] px-1.5 py-0.5 rounded truncate max-w-[110px]" title="${escHtml(ch.group)}">${escHtml(cleanGroup)}</span>`;
+        catTag = \`<span class="text-[8px] font-medium bg-[#1C1D26] text-gray-400 border border-[#2A2B38] px-1.5 py-0.5 rounded truncate max-w-[110px]" title="\${{escHtml(ch.group)}">\${{escHtml(cleanGroup)}</span>\`;
     }
 
-    btn.innerHTML = `
-    <div class="w-12 h-12 bg-[#1C1D26] border border-[#2D2E3D] rounded-lg flex items-center justify-center shrink-0 overflow-hidden shadow-inner">${logoHtml}</div>
+    btn.innerHTML = \`
+    <div class="w-12 h-12 bg-[#1C1D26] border border-[#2D2E3D] rounded-lg flex items-center justify-center shrink-0 overflow-hidden shadow-inner">\${{logoHtml}</div>
     <div class="flex-1 flex flex-col overflow-hidden py-0.5">
-        <span class="text-xs font-semibold text-white truncate">${safeName}</span>
-        <div class="flex items-center gap-1 mt-1.5 flex-wrap">${badgesHtml}${catTag}</div>
+        <span class="text-xs font-semibold text-white truncate">\${{safeName}</span>
+        <div class="flex items-center gap-1 mt-1.5 flex-wrap">\${{badgesHtml}\${{catTag}</div>
     </div>
-    <div class="star-btn p-1.5 shrink-0 ${starColor} transition-colors" data-id="${ch.id}">
-        <span class="material-icons" style="font-size: 18px;">${starIcon}</span>
+    <div class="star-btn p-1.5 shrink-0 \${{starColor} transition-colors" data-id="\${{ch.id}">
+        <span class="material-icons" style="font-size: 18px;">\${{starIcon}</span>
     </div>
-    `;
+    \`;
 
     let hideBannerTimeout;
     btn.onclick = (e) => {
@@ -1238,7 +1238,7 @@ function buildDesktopCard(ch) {
         nowPlayingContainer.classList.remove('opacity-0');
         clearTimeout(hideBannerTimeout);
         hideBannerTimeout = setTimeout(() => nowPlayingContainer.classList.add('opacity-0'), 4000);
-        playStream(`?action=proxy&url=${encodeURIComponent(ch.url)}`);
+        playStream(\`?action=proxy&url=\${{encodeURIComponent(ch.url)}\`);
     };
 
     const starEl = btn.querySelector('.star-btn');
@@ -1247,7 +1247,7 @@ function buildDesktopCard(ch) {
         toggleFavorite(ch.id, starEl, () => {
             if (navFav.classList.contains('is-active')) {
                 btn.remove();
-                document.getElementById('total-channels-count').innerText = `${getFavorites().length} Channels`;
+                document.getElementById('total-channels-count').innerText = \`\${{getFavorites().length} Channels\`;
             }
         });
     };
