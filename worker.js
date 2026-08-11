@@ -1114,19 +1114,10 @@ if (catFilterInput) {
     catFilterInput.addEventListener('input', () => renderCategories());
 }
 
-function setSearchScope(scope) {
-    searchScope = scope;
-    const allBtn = document.getElementById('scope-all-btn');
-    const catBtn = document.getElementById('scope-cat-btn');
-
-    if (scope === 'all') {
-        allBtn.className = "flex-1 py-1 px-2.5 rounded-md text-[11px] font-semibold transition-all flex items-center justify-center gap-1 bg-[#2D5BE3] text-white shadow-sm";
-        catBtn.className = "flex-1 py-1 px-2.5 rounded-md text-[11px] font-semibold transition-all flex items-center justify-center gap-1 bg-transparent text-gray-400 hover:text-white";
-    } else {
-        catBtn.className = "flex-1 py-1 px-2.5 rounded-md text-[11px] font-semibold transition-all flex items-center justify-center gap-1 bg-[#2D5BE3] text-white shadow-sm";
-        allBtn.className = "flex-1 py-1 px-2.5 rounded-md text-[11px] font-semibold transition-all flex items-center justify-center gap-1 bg-transparent text-gray-400 hover:text-white";
+    // Re-run search if there’s an active query
+    if (searchInput && searchInput.value.trim()) {
+        searchInput.dispatchEvent(new Event('input'));
     }
-    applySearch();
 }
 
 function renderFavorites() {
