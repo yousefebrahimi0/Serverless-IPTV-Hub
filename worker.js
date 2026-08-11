@@ -1260,17 +1260,31 @@ navHome.addEventListener('click', () => {
     else { const fb = categoryListEl.querySelector('button'); if (fb) fb.click(); }
 });
 
-searchInput.addEventListener('input', (e) => {
-    const query = e.target.value.toLowerCase().trim();
-    if (query === '') {
+function applySearch() {
+    const query = (searchInput && searchInput.value ? searchInput.value : '').toLowerCase().trim();
+    if (!query) {
         if (navFav.classList.contains('is-active')) { renderFavorites(); }
         else if (activeCategoryBtn) { activeCategoryBtn.click(); }
+        else { renderChannels(globalChannelsData); }
         return;
     }
-    const filtered = globalChannelsData.filter(ch => ch.name.toLowerCase().includes(query));
-    categoryHeader.innerText = "Search Results";
-    document.getElementById('total-channels-count').innerText = \`\${filtered.length} Channels found\`;
+
+    let pool = globalChannelsData;
+    if (searchScope === 'category' && activeCategoryBtn && activeCategoryBtn.dataset.group && activeCategoryBtn.dataset.group !== '__ALL__') {
+        const g = activeCategoryBtn.dataset.group;
+        pool = categories[g] || [];
+    }
+
+    const filtered = pool.filter(ch => ch.name.toLowerCase().includes(query));
+    if (categoryHeader) categoryHeader.innerText = 'Search Results';
+    channelHeaderTitle.innerText = searchScope === 'category' ? 'In Category' : 'All Channels';
+    document.getElementById('total-channels-count').innerText = filtered.length + ' Channels found';
     renderChannels(filtered);
+}
+
+searchInput.addEventListener('input', () => {
+    clearTimeout(searchDebounceTimeout);
+    searchDebounceTimeout = setTimeout(applySearch, 120);
 });
 
 function toggleFavorite(channelId, starEl, onRemoveCallback) {
