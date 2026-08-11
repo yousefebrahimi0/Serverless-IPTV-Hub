@@ -5777,7 +5777,6 @@ https://bozztv.com/gusa/gusa-tvswsn/index.m3u8
 https://unbeaten-tcl.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-id="RTP1.pt" tvg-logo="https://raw.githubusercontent.com/LITUATUI/M3UPT/main/logos/RTP1.png" group-title="TV",RTP 1
 https://streaming-live.rtp.pt/liverepeater/smil:rtp1HD.smil/playlist.m3u8
-#EXTINF:-1 tvg-id="RTP2.pt" tvg-logo="https://raw.githubusercontent.com/LITUATUI/M3UPT/main/logos/RTP2.png" group-title="TV",RTP 2
 #EXTINF:-1 tvg-id="SIC.pt" tvg-logo="https://raw.githubusercontent.com/LITUATUI/M3UPT/main/logos/SIC.png" group-title="TV",SIC
 https://sic.live.impresa.pt/sic1080p.m3u8
 #EXTINF:-1 tvg-id="TVI.pt" tvg-logo="https://raw.githubusercontent.com/LITUATUI/M3UPT/main/logos/TVI.png" group-title="TV",TVI
@@ -19021,8 +19020,6 @@ http://urtmpkal-f.akamaihd.net/i/077zoqxzy_1@130091/index_3_av-p.m3u8
 http://38.104.228.230:1938/info7/info7_512/playlist.m3u8
 #EXTINF:0,Proyecto 40
 http://urtmpkal-f.akamaihd.net/i/05i15qzql_1@149710/index_2_av-p.m3u8
-#EXTINF:0,HBO
-rtmp://www1.iguide.to/iguide playpath=0bf02qe6msgtu4s swfUrl=http://www.iguide.to/player/secure_player_iguide_token.swf pageUrl=http://www.iguide.to/view/1/watch-live-HBO-channel-for-free flashver=WIN/2019,0,0,185 live=1 token=#ed%h0#w18623jsda6523lDGD timeout=10
 #EXTINF:0,True TV
 http://llnw.live.simplestream.com/coder5/coder.channels.channel2/hls/4/playlist.m3u8
 #EXTINF:0,Miami TV
@@ -19037,10 +19034,6 @@ http://nasatv-lh.akamaihd.net/i/NASA_101@319270/master.m3u8
 http://cdnapi.kaltura.com/p/931702/sp/93170200/playManifest/entryId/1_oorxcge2/format/applehttp/protocol/http/uiConfId/28428751/a.m3u8
 #EXTINF:-1,CARTOON NETWORK
 http://d1hya96e2cm7qi.cloudfront.net/Live/_definst_/sweetbcha1novD28_W_250.sdp/playlist.m3u8
-#EXTINF:-1,HSN
-rtmp://hsn.mpl.miisolutions.net:1935/hsn-live01/_definst_/mp4:420p500kB31 playpath=mp4:420p500kB31
-#EXTINF:-1,HSN 2
-rtmp://hsn.mpl.miisolutions.net:1935/hsn-live01/_definst_/mp4:468p500kB31 playpath=mp4:468p500kB31
 #EXTINF:-1,TWiT Live
 http://iphone-streaming.ustream.tv/uhls/1524/streams/live/iphone/playlist.m3u8
 #EXTINF:-1,NBC GOLF SD
@@ -19099,8 +19092,6 @@ https://www.youtube.com/watch?v=QzQnFY6CioA.m3u8
 http://hindiabp-lh.akamaihd.net/i/hindiabp1new_1@192103/index_3_av-b.m3u8
 #EXTINF:0 tvg-name="ANN" tvg-language="Arabic" tvg-country="UK" tvg-id="ANN" tvg-logo="http://vignette1.wikia.nocookie.net/masseffect/images/c/c0/Alliance_News_Network_Icon.png/revision/latest?cb=20120306204228" group-title="News",ANN (News) (UK) (Arabic)
 http://38.99.146.36:7777/ANN_HD.m3u8
-#EXTINF:0 tvg-name="AO Vivo" tvg-language="Portuguese" tvg-country="BR" tvg-id="AO Vivo" tvg-logo="https://pbs.twimg.com/profile_images/2722537135/b531823696eb9e864710dd49102b7704_400x400.png" group-title="News",AO Vivo (News) (BR) (Portuguese)
-rtmp://srvvenus.canaldoboi.com/livecb/livestream
 #EXTINF:0 tvg-name="ARY News" tvg-language="Urdu" tvg-country="PK" tvg-id="ARY News" tvg-logo="http://daikhotv.com/wp-content/uploads/2015/08/ARY-Live-Streaming.jpg" group-title="News",ARY News (News) (PK) (Urdu)
 http://93.115.85.17:1935/ARYNEWS_2/myStream_240p/chunklist_w880235420.m3u8
 #EXTINF:0 tvg-name="Aaj Tak Delhi" tvg-language="Hindi" tvg-country="IN" tvg-id="Aaj Tak Delhi" tvg-logo="http://malayalamhdtv2.com/admin_mhdtv/mhdtv/numbers/aaj_tak_delhi.png" group-title="News",Aaj Tak Delhi (News) (IN) (Hindi)
@@ -19143,8 +19134,6 @@ http://ns8.indexforce.com:1935/home/mystream/playlist.m3u8
 http://live.paltoday.tv:1935/paltv/live/gmswf.m3u8
 #EXTINF:0 tvg-name="Andalucia TV" tvg-language="Spanish" tvg-country="ES" tvg-id="Andalucia TV" tvg-logo="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQUmGkOUj_g3HAX8Iy3gZVaXUxAwPfU_L86Ir3CmIBR9Z43l0Tqr0uhuQ" group-title="News",Andalucia TV (News) (ES) (Spanish)
 http://iphone-andaluciatelevision.rtva.stream.flumotion.com/rtva/andaluciatelevision-iphone-multi/main.m3u8
-#EXTINF:0 tvg-name="Asianet" tvg-language="Malayalam/Hindi" tvg-country="IN" tvg-id="Asianet" tvg-logo="http://www.onlinemoviesgold.com/wp-content/uploads/2014/11/asianet-news.jpg" group-title="News",Asianet (News) (IN) (Malayalam/Hindi)
-rtmp://209.133.205.226/live/asianetnews
 #EXTINF:0 tvg-name="Astro Awani" tvg-language="Malayalam" tvg-country="MY" tvg-id="Astro Awani" tvg-logo="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcT-j7C0DErUVHjgSY2cmOKTYfAEFr4gVhIiNZPPnV-ZlD-nl_VqkqbKIKc" group-title="News",Astro Awani (News) (MY) (Malayalam)
 http://playback01.aotg-video.astro.com.my/AOTGHLS/master_AWANI.m3u8
 #EXTINF:0 tvg-name="B1 TV" tvg-language="Romanian" tvg-country="RO" tvg-id="B1 TV" tvg-logo="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTqE5Myonw4h15eDnqTnW8fjU4Y4pz53lWT2kfaALWdt1udSwALBxYrIA" group-title="News",B1 TV (News) (RO) (Romanian)
@@ -19299,12 +19288,8 @@ http://63.237.48.3/ios/IRINN/IRINN.m3u8
 http://118.179.35.11/hls/JamunaTVNs4ME/04.m3u8
 #EXTINF:0 tvg-name="Janta Tv" tvg-language="Hindi" tvg-country="IN" tvg-id="Janta Tv" tvg-logo="http://t0.gstatic.com/images?q=tbn:ANd9GcRtyfME8RF8sz4V7ouPaeNsToFoD0JyI8y53187pqVscKgqWGCiVMvvNQ" group-title="News",Janta Tv (News) (IN) (Hindi)
 http://jlive.itv.net.in:1935/jantatv/myStream.sdp/playlist.m3u8
-#EXTINF:0 tvg-name="Jaya Plus" tvg-language="Tamil" tvg-country="IN" tvg-id="Jaya Plus" tvg-logo="http://static.aka.yupp.yuppcdn.net/yupptv/roku/images/jayaplus.jpg" group-title="News",Jaya Plus (News) (IN) (Tamil)
-rtmp://78.46.17.7/live/myStream.sdp
 #EXTINF:0 tvg-name="Jaya TV" tvg-language="Tamil" tvg-country="UK" tvg-id="Jaya TV" tvg-logo="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSMVY62nU1afzvheW8cFYOVHcvRVk3e5Kb_FJ0c1zlE3WHofqsWXR8mEg" group-title="News",Jaya TV (News) (UK) (Tamil)
 http://hlsengextra-lh.akamaihd.net/i/hls26_jayatvuk5@4914/index_1000.m3u8
-#EXTINF:0 tvg-name="KBS World" tvg-language="Korean" tvg-country="MY" tvg-id="KBS World" tvg-logo="https://rayvblog.files.wordpress.com/2011/10/kbs_world2.png" group-title="News",KBS World (News) (MY) (Korean)
-rtmp://118.97.183.196/jhos//kbs
 #EXTINF:0 tvg-name="KTVU 2" tvg-language="English" tvg-country="US" tvg-id="KTVU 2" tvg-logo="http://www.habitot.org/hab/newsletter/logos/ktvu_logo.jpg" group-title="News",KTVU 2 (News) (US) (English)
 http://ktvulive-i.akamaihd.net/hls/live/224677/ktvu1/master.m3u8
 #EXTINF:0 tvg-name="KURDSAT NEWS TV" tvg-language="Kurdish" tvg-country="IQ" tvg-id="KURDSAT NEWS TV" tvg-logo="http://garmyani.com/tvradios/images/kurdsatnews.jpg" group-title="News",KURDSAT NEWS TV (News) (IQ) (Kurdish)
@@ -19319,8 +19304,6 @@ http://63.237.48.23/ios/KURDISTAN_TV/KURDISTAN_TV.m3u8
 http://rt.ashttp14.visionip.tv/live/rt-doc-live-HD/playlist.m3u8
 #EXTINF:0 tvg-name="La Red TV" tvg-language="Spanish" tvg-country="CL" tvg-id="La Red TV" tvg-logo="http://www.redescena.net/imagenes/interfaz/logo_laRedNew.gif" group-title="News",La Red TV (News) (CL) (Spanish)
 http://wow1.lax.digitalproserver.com/redtv/redtvvivo/livestream1/hasbahca.m3u8
-#EXTINF:0 tvg-name="Lancelot TV" tvg-language="Spanish" tvg-country="ES" tvg-id="Lancelot TV" tvg-logo="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRONX6V4oteOIE8_uC0MqaShyw5-6ZP92XLlT5khwIvRQMDB1zpKxrQ9Mc" group-title="News",Lancelot TV (News) (ES) (Spanish)
-rtmp://62.210.141.18:1935/directo/lancelot.television
 #EXTINF:0 tvg-name="Libya TV" tvg-language="Arabic" tvg-country="LY" tvg-id="Libya TV" tvg-logo="http://www.tv-logo.com/pt-data/uploads/images/logo/libya_al_ahrar_tv.jpg" group-title="News",Libya TV (News) (LY) (Arabic)
 http://wpc.C1A9.edgecastcdn.net/hls-live/20C1A9/libyatv/ls_satlink/b_%2C264%2C528%2C828%2C.m3u8
 #EXTINF:0 tvg-name="Life News" tvg-language="Russian" tvg-country="RU" tvg-id="Life News" tvg-logo="http://anytimecar.ru/images/news/lifenews.png" group-title="News",Life News (News) (RU) (Russian)
@@ -19331,8 +19314,6 @@ http://d1hya96e2cm7qi.cloudfront.net/Live/_definst_/sweetbcha1novD215_W_150.sdp/
 http://bcoveliveios-i.akamaihd.net/hls/live/217434/3083279840001/master_900.m3u8
 #EXTINF:0 tvg-name="METRO TV" tvg-language="Indonesian" tvg-country="ID" tvg-id="METRO TV" tvg-logo="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSm3ulqEFqVEvHfTTRZS9mYP82tbxpMVP-r5Qzg20iEZGKr80nDTv2d1Ug" group-title="News",METRO TV (News) (ID) (Indonesian)
 http://edge.nim.mivo.tv/mp17pjqx1esapruf/metrotv2_all/playlist.m3u8
-#EXTINF:0 tvg-name="MH1 News" tvg-language="Hindi" tvg-country="IN" tvg-id="MH1 News" tvg-logo="http://www.customercarephonenumber.in/wp-content/uploads/2013/02/MH-One-News-Logo.jpg" group-title="News",MH1 News (News) (IN) (Hindi)
-rtmp://edge-ind.inapcdn.in:1935/berry/sfmacb3.stream_aac
 #EXTINF:0 tvg-name="MSNBC" tvg-language="English" tvg-country="US" tvg-id="MSNBC" tvg-logo="http://vignette4.wikia.nocookie.net/uncyclopedia/images/c/ca/Msnbc-logo.jpg/revision/latest?cb=20091105112316" group-title="News",MSNBC (News) (US) (English)
 http://iphone-streaming.ustream.tv/ustreamVideo/21957727/streams/live/playlist.m3u8
 #EXTINF:0 tvg-name="Maan News" tvg-language="Arabic" tvg-country="PS" tvg-id="Maan News" tvg-logo="http://civiccoalition-jerusalem.org/system/files/images/maan_logo_med_q_0.jpg" group-title="News",Maan News (News) (PS) (Arabic)
@@ -19351,20 +19332,6 @@ http://tv7-hls-eu-perm-live.hls.adaptive.level3.net/news7live.m3u8
 http://nrttv.iptv-playoutcenter.de:1935/nrt2/nrt2.stream_1/playlist.m3u8
 #EXTINF:0 tvg-name="NRT HD" tvg-language="Kurdish" tvg-country="IQ" tvg-id="NRT HD" tvg-logo="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xaf1/v/t1.0-1/c20.0.100.100/p100x100/10988492_706543286133301_1064764163848882081_n.jpg?oh=0c63fc37838ae95565a9e7381040848e&oe=56C16AB9&__gda__=1455814847_39a33411d3947f030f035c144490d8e2" group-title="News",NRT HD (News) (IQ) (Kurdish)
 http://nrttv.iptv-playoutcenter.de:1935/nrt1/nrt1.stream_1/playlist.m3u8
-#EXTINF:0 tvg-name="News 12 (Brooklyn)" tvg-language="English" tvg-country="US" tvg-id="News 12 (Brooklyn)" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsUqTCoj255I9m0X5lMGYMPR34_YatKrDX2tILQT3032DbCo0hRbmU9qI" group-title="News",News 12 (Brooklyn) (News) (US) (English)
-rtmp://fs-ace3010000000000.id.cdn.cv.net/vxedge/fs-ace3010000000000/fs-ace3010000000000
-#EXTINF:0 tvg-name="News 12 (Connecticut)" tvg-language="English" tvg-country="US" tvg-id="News 12 (Connecticut)" tvg-logo="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcR-eUDHQM_YmdoXpQ_EYQMvMVXS1rCT2NgE6fuLi2muoF_ZIltIQIlgRLM" group-title="News",News 12 (Connecticut) (News) (US) (English)
-rtmp://fs-bbe3010000000000.id.cdn.cv.net/vxedge/fs-bbe3010000000000/fs-bbe3010000000000
-#EXTINF:0 tvg-name="News 12 (Hudson Valley)" tvg-language="English" tvg-country="US" tvg-id="News 12 (Hudson Valley)" tvg-logo="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQ19MtNC89JKqcq_sLSjGcauWC-cDSWRjtxLQTMbh5vA_czBIGOWlEWSg" group-title="News",News 12 (Hudson Valley) (News) (US) (English)
-rtmp://fs-bae3010000000000.id.cdn.cv.net/vxedge/fs-bae3010000000000/fs-bae3010000000000
-#EXTINF:0 tvg-name="News 12 (Long Island)" tvg-language="English" tvg-country="US" tvg-id="News 12 (Long Island)" tvg-logo="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQfDLKVuP_P01PX3hnvnOlbpifm9PkJwJTBG7cSwaClSnxuQM_XpzG3ZEo" group-title="News",News 12 (Long Island) (News) (US) (English)
-rtmp://fs-b4e3010000000000.id.cdn.cv.net/vxedge/fs-b4e3010000000000/fs-b4e3010000000000
-#EXTINF:0 tvg-name="News 12 (New Jersey)" tvg-language="English" tvg-country="US" tvg-id="News 12 (New Jersey)" tvg-logo="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcShStmM6Xg2vTHNHYWqVoXWptj9rhuCpfds6wI3sG11JNUgmvArR6tUPYc" group-title="News",News 12 (New Jersey) (News) (US) (English)
-rtmp://fs-b9e3010000000000.id.cdn.cv.net/vxedge/fs-b9e3010000000000/fs-b9e3010000000000
-#EXTINF:0 tvg-name="News 12 (The Bronx)" tvg-language="English" tvg-country="US" tvg-id="News 12 (The Bronx)" tvg-logo="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTkmDiK2hs2QeOIXq1WSpHv7uPkBv7fziX1lQ7C-LtzGc9R3vI6iOJrfAE" group-title="News",News 12 (The Bronx) (News) (US) (English)
-rtmp://fs-b5e3010000000000.id.cdn.cv.net/vxedge/fs-b5e3010000000000/fs-b5e3010000000000
-#EXTINF:0 tvg-name="News 12 (Westchester)" tvg-language="English" tvg-country="US" tvg-id="News 12 (Westchester)" tvg-logo="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRK4_JxTnigEpOICfzdaWmgPOd1tEF_FnIYoGaKJKU5OSwxpJQL0-q5J-w" group-title="News",News 12 (Westchester) (News) (US) (English)
-rtmp://fs-bce3010000000000.id.cdn.cv.net/vxedge/fs-bce3010000000000/fs-bce3010000000000
 #EXTINF:0 tvg-name="News 24" tvg-language="Hindi" tvg-country="IN" tvg-id="News 24" tvg-logo="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcStMaTwJ-_5ZjlNOuFJ8T8PumB1pWCIFAvbMZPg1rWa5o9v3HGEhWhympk" group-title="News",News 24 (News) (IN) (Hindi)
 http://d20vhs4gtao945.cloudfront.net/bagnetworks/ngrp:news24_all/playlist.m3u8
 #EXTINF:0 tvg-name="News 7" tvg-language="Tamil" tvg-country="LK" tvg-id="News 7" tvg-logo="http://extreme.com/media/img/extreme/tv_guide.png" group-title="News",News 7 (News) (LK) (Tamil)
@@ -19425,8 +19392,6 @@ http://178.21.120.198:1935/live3/_definst_/mp4:rtv/playlist.m3u8
 http://livestreaming.itworkscdn.net/rudawlive/rudawtv_360p/playlist.m3u8
 #EXTINF:0 tvg-name="S Channel TV" tvg-language="Vietnamese" tvg-country="VN" tvg-id="S Channel TV" tvg-logo="http://schannel.com/wp-content/uploads/2015/08/CropperCapture37.jpg" group-title="News",S Channel TV (News) (VN) (Vietnamese)
 http://54.152.24.55:1935/schannel/myStream/chunklist_w1927396712.m3u8
-#EXTINF:0 tvg-name="SCTVHD Phim Nuoc Ngoai" tvg-language="Vietnamese" tvg-country="VN" tvg-id="SCTVHD Phim Nuoc Ngoai" tvg-logo="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSkXQJxRZ3OluBK8Aki-2nXrZHNjDoaCN-aYw6Ke7kqPoSpmAN2iSW2Ccw" group-title="News",SCTVHD Phim Nuoc Ngoai (News) (VN) (Vietnamese)
-rtmp://112.197.2.135:1935/colive/C015_HD_2
 #EXTINF:0 tvg-name="SET TV" tvg-language="Vietnamese" tvg-country="VN" tvg-id="SET TV" tvg-logo="http://www.chomchomadvertising.com/wp-content/uploads/2009/02/set-logo1.jpg" group-title="News",SET TV (News) (VN) (Vietnamese)
 http://54.152.24.55:1935/vietset574tvv/myStream/playlist.m3u8
 #EXTINF:0 tvg-name="SNTV" tvg-language="Arabic" tvg-country="SO" tvg-id="SNTV" tvg-logo="http://static.itnproductions.co.uk/itn/2013/04/SNTV-logo-240x132.jpg" group-title="News",SNTV (News) (SO) (Arabic)
@@ -19481,12 +19446,6 @@ http://live-edge01.telecentro.net.ar/live/tlx-480/playlist.m3u8
 http://wpc.fc2a.edgecastcdn.net/hls-live/20FC2A/ecpl/pl/jdTezNewss84au.m3u8?3c0e986a453f9d57304a806b441b3f2b2ed8a2673c56e63821bf4a795704d2bb31347b13b186d277641b8389514290295786
 #EXTINF:0 tvg-name="Times Now" tvg-language="English" tvg-country="IN" tvg-id="Times Now" tvg-logo="http://www.zoptv.com/assets/logo/times-now.png" group-title="News",Times Now (News) (IN) (English)
 http://d1hya96e2cm7qi.cloudfront.net/Live/_definst_/sweetbcha1novD96_W_350.sdp/chunklist.m3u8
-#EXTINF:0 tvg-name="Tv New" tvg-language="Malayalam" tvg-country="IN" tvg-id="Tv New" tvg-logo="http://freelivechannels.in/uploadimage/logoimage/70904-tvlogo.jpg" group-title="News",Tv New (News) (IN) (Malayalam)
-rtmp://209.133.205.226/live/tvnew
-#EXTINF:0 tvg-name="Tv9 gujarati" tvg-language="English" tvg-country="IN" tvg-id="Tv9 Gujarati" tvg-logo="http://www.userlogos.org/files/logos/14505_deva/ccloud1.png" group-title="News",Tv9 gujarati (News) (IN) (English)
-rtmp://$OPT:rtmp-raw=rtmp://maaya.live-s.cdn.bitgravity.com/cdn-live-b1 playpath=/maaya/secure/live/feed011?e=0&h=2a0800618ceda06c0c3fe527df4c9bd5&bgsecuredir=1 swfUrl=http://maaya.tv/Videos/player.swf live=1
-#EXTINF:0 tvg-name="Tv9 gujarati" tvg-language="Gujarati" tvg-country="IN" tvg-id="Tv9 gujarati" tvg-logo="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQcRMsoJA-5CA92n6wDS-UwBdyYPSaBOC8OlbwxSVZ2U1awgS8si9B2QtE" group-title="News",Tv9 gujarati (News) (IN) (Gujarati)
-rtmp://$OPT:rtmp-raw=rtmp://maaya.live-s.cdn.bitgravity.com/cdn-live-b1 
 #EXTINF:0 tvg-name="Tva" tvg-language="French" tvg-country="CA" tvg-id="Tva" tvg-logo="http://static.telus.com/common/cms/images/tv/optik/channel-logos/79/TVA-HD.gif" group-title="News",Tva (News) (CA) (French)
 http://tva_chaine_uls-lh.akamaihd.net/i/chaine_tva_1@125892/master.m3u8
 #EXTINF:0 tvg-name="Twit Tech News" tvg-language="English" tvg-country="US" tvg-id="Twit Tech News" tvg-logo="https://yt3.ggpht.com/-FGimyfCH1HQ/AAAAAAAAAAI/AAAAAAAAAAA/867PAIRYTJc/s100-c-k-no/photo.jpg" group-title="News",Twit Tech News (News) (US) (English)
@@ -19499,18 +19458,6 @@ http://210.245.60.242:1935/vov1/vov1/playlist.m3u8
 http://fpt-live.flix.vn/spsklfl/_definst_/vtc3.720p.stream/chunklist_w750388571.m3u8
 #EXTINF:0 tvg-name="VTV" tvg-language="English" tvg-country="MV" tvg-id="VTV" tvg-logo="http://imaf.me/mv/t/VTV.png" group-title="News",VTV (News) (MV) (English)
 http://fl1.viastreaming.net:1935/vtvlive/vtv/playlist.m3u8
-#EXTINF:0 tvg-name="VTV1HD" tvg-language="Vietnamese" tvg-country="VN" tvg-id="VTV1HD" tvg-logo="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcT6FhoBukfgfEaMC2BgewhPOAlRgTAya6qc1Fh-XaumrhKxFy5_Fc_EYKs" group-title="News",VTV1HD (News) (VN) (Vietnamese)
-rtmp://123.30.238.125/live/_definst_/vtv1-high
-#EXTINF:0 tvg-name="VTV2HD" tvg-language="Vietnamese" tvg-country="VN" tvg-id="VTV2HD" tvg-logo="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQxUjrkW64EBmibtrJdy8zfBDUxpt2buyRJFp04rYNNm-oLUgqEiBW3q5I" group-title="News",VTV2HD (News) (VN) (Vietnamese)
-rtmp://123.30.238.125/live/_definst_/vtv2-high
-#EXTINF:0 tvg-name="VTV3HD" tvg-language="Vietnamese" tvg-country="VN" tvg-id="VTV3HD" tvg-logo="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRxhOtQioRiHHgH8en_t-Vhx3SJqtSPyZK-VaZPvjD9mDNw-xpSRJ_dqw" group-title="News",VTV3HD (News) (VN) (Vietnamese)
-rtmp://123.30.238.125/live/_definst_/vtv3-high
-#EXTINF:0 tvg-name="VTV6HD" tvg-language="Vietnamese" tvg-country="VN" tvg-id="VTV6HD" tvg-logo="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRm2bxu3ETzD3YmajEmMwNmtzUGdf6ueYYJGO_v0KcIwQ8wSQ-iTzrPgcc" group-title="News",VTV6HD (News) (VN) (Vietnamese)
-rtmp://123.30.238.125/live/_definst_/vtv6-high
-#EXTINF:0 tvg-name="VTV8" tvg-language="Vietnamese" tvg-country="VN" tvg-id="VTV8" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKrHNqUUfneKTreQDdefNokfKH1yA0KP5GJo1ju2DaiW7C7XW68GwL8e4" group-title="News",VTV8 (News) (VN) (Vietnamese)
-rtmp://123.30.238.125/live/_definst_/vtv8-mid
-#EXTINF:0 tvg-name="VTVcab4" tvg-language="Vietnamese" tvg-country="VN" tvg-id="VTVcab4" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWRLZSDlnApwPLsU-ir8n0qQPRb7zBpaw_ypuguXW70DnIuaGkE981hA0" group-title="News",VTVcab4 (News) (VN) (Vietnamese)
-rtmp://118.70.203.130/channel/_definst_/vtvcab4_profile1.stream
 #EXTINF:0 tvg-name="Voa Persian" tvg-language="Arabic" tvg-country="IR" tvg-id="Voa Persian" tvg-logo="http://iran-livetv.com/tv/images/voa.jpg" group-title="News",Voa Persian (News) (IR) (Arabic)
 http://63.237.48.23/ios/VOA_PERSIAN/VOA_PERSIAN.m3u8
 #EXTINF:0 tvg-name="WFTV ABC Florida" tvg-language="English" tvg-country="US" tvg-id="WFTV" tvg-logo="http://rogersimmons.com/wp-content/uploads/2010/06/wftv-9-abc-HORT-PEARL.jpg" group-title="News",WFTV ABC Florida (News) (US) (English)
@@ -19597,24 +19544,16 @@ http://keshethlslive-lh.akamaihd.net/i/24live_1@195271/index_2000_av-p.m3u8
 http://iphonelive.rtve.es/LA2_LV3_IPH/bitrate_2.m3u8
 #EXTINF:0 tvg-name="Lifestyle US" tvg-language="English" tvg-country="US" tvg-id="Lifestyle US" tvg-logo="http://www.buildingalifestyle.com/wp-content/uploads/2013/12/logo1.png" group-title="Documentary",Lifestyle US (Documentary) (US) (English)
 http://state.ak.tvwmedia.net:1935/ktoo-live/_definst_/360north/playlist.m3u8
-#EXTINF:0 tvg-name="Mexiquense TV" tvg-language="Spanish" tvg-country="MX" tvg-id="Mexiquense TV" tvg-logo="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcS8KdcEjXECJbFgghdINF_Eqp51cCLyBMe68brwIr2k9Nl2-ROpb5621t8" group-title="Documentary",Mexiquense TV (Documentary) (MX) (Spanish)
-rtmp://fss28.streamhoster.com:1935/lv_tvmexiquense/_definst_/broadcast1 
 #EXTINF:0 tvg-name="Nasa TV Education" tvg-language="English" tvg-country="US" tvg-id="Nasa TV Education" tvg-logo="http://cdn-radiotime-logos.tunein.com/s18889q.png" group-title="Documentary",Nasa TV Education (Documentary) (US) (English)
 http://nasatv-lh.akamaihd.net/i/NASA_102@319272/master.m3u8
 #EXTINF:0 tvg-name="Nasa TV Media" tvg-language="English" tvg-country="US" tvg-id="Nasa TV Media" tvg-logo="http://talkiesnow.com/wp-content/uploads/2015/07/Nasa-Television-230x150.jpg" group-title="Documentary",Nasa TV Media (Documentary) (US) (English)
 http://nasatv-lh.akamaihd.net/i/NASA_103@319271/master.m3u8
-#EXTINF:0 tvg-name="National Geographic France" tvg-language="French" tvg-country="FR" tvg-id="National Geographic France" tvg-logo="http://extreme.com/media/img/extreme/tv_guide.png" group-title="Documentary",National Geographic France (Documentary) (FR) (French)
-rtmp://1657.proiptv.net/iptv/ch0238?code=161987777697454
 #EXTINF:0 tvg-name="National Geographic" tvg-language="English" tvg-country="US" tvg-id="National Geographic" tvg-logo="http://famouslogos.net/images/national-geographic-logo.jpg" group-title="Documentary",National Geographic (Documentary) (US) (English)
 http://167.114.102.27/live/NVptKMJBW2Lkn_2oocxFKQ/1455735915/e08dd4627a3cf468a30d8a357956d6f8.m3u8|User-Agent=Mozilla%2F5.0%20(Windows%20NT%206.1%3B%20WOW64)%20AppleWebKit%2F537.36%20(KHTML%2C%20like%20Gecko)%20Chrome%2F47.0.2526.106%20Safari%2F537.36
 #EXTINF:0 tvg-name="RT Documentary HD" tvg-language="English" tvg-country="RU" tvg-id="RT Documentary HD" tvg-logo="https://upload.wikimedia.org/wikipedia/en/a/ae/RTD-TV-logo.png" group-title="Documentary",RT Documentary HD (Documentary) (RU) (English)
 http://rt-a.akamaihd.net/ch_05@325609/720p.m3u8
 #EXTINF:0 tvg-name="RTVida" tvg-language="Spanish" tvg-country="ES" tvg-id="RTVida" tvg-logo="http://www.eniyitv.com/wp-content/uploads/2013/03/rtvida-tv-logo.png" group-title="Documentary",RTVida (Documentary) (ES) (Spanish)
 http://178.32.53.254/radiovida/livestream/playlist.m3u8
-#EXTINF:0 tvg-name="Rodja TV" tvg-language="Indonesian" tvg-country="ID" tvg-id="Rodja TV" tvg-logo="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSEKJW-FycOM6IbUJ13RfdYxS8B9gptkmSF6veaLxH7hgrpcxGQFKwoVQ" group-title="Documentary",Rodja TV (Documentary) (ID) (Indonesian)
-rtmp://vids.rodja.tv/live/rodja
-#EXTINF:0 tvg-name="SCTV Du Lich & Kham Pha" tvg-language="Vietnamese" tvg-country="VN" tvg-id="SCTV Du Lich & Kham Pha" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1kJM1OtHu-s_z3X-0yc8azwB2ffVVxkcj5upbACskFFZ9_bRPByKVKg" group-title="Documentary",SCTV Du Lich & Kham Pha (Documentary) (VN) (Vietnamese)
-rtmp://112.197.2.135:1935/colive/C007_HD_4
 #EXTINF:0 tvg-name="SCTVHD Du Lich" tvg-language="Vietnamese" tvg-country="VN" tvg-id="SCTVHD Du Lich" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScCjLqS4JJdscHFoEZSSgmgH7v_ybI9-sDrW_KmVoxCUmrXR8Kuqfa2js" group-title="Documentary",SCTVHD Du Lich (Documentary) (VN) (Vietnamese)
 http://112.197.2.135:1935/colive/C007_HD_4/chunklist.m3u8
 #EXTINF:0 tvg-name="SVBC TV" tvg-language="Telugu" tvg-country="IN" tvg-id="SVBC TV" tvg-logo="http://malayalamhdtv2.com/admin_mhdtv/mhdtv/numbers/svbc_in.png" group-title="Documentary",SVBC TV (Documentary) (IN) (Telugu)
@@ -19627,8 +19566,6 @@ http://213.13.26.11:1935/live/santuario.stream/livestream.m3u8
 http://82.137.248.16:1935/Sat/SatLive3/playlist.m3u8
 #EXTINF:0 tvg-name="TRT Belgesel" tvg-language="Turkish" tvg-country="TR" tvg-id="TRT Belgesel" tvg-logo="https://upload.wikimedia.org/wikipedia/en/e/e5/Trt_belgesel_logo.png" group-title="Documentary",TRT Belgesel (Documentary) (TR) (Turkish)
 http://trtcanlitv-lh.akamaihd.net/i/TRTBELGESEL_1@182145/master.m3u8
-#EXTINF:0 tvg-name="University of California TV" tvg-language="English" tvg-country="US" tvg-id="University of California TV" tvg-logo="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTqingYWdLztB2ym8o2Y-MNY_Yn4QN01gDI9lSYqZHqp_T8O0dWtcNUYw" group-title="Documentary",University of California TV (Documentary) (US) (English)
-rtmp://ucsdtv-wowza.ucsd.edu:1935/live/live_800
 #EXTINF:0 tvg-name="Vincent Van Gough" tvg-language="English" tvg-country="US" tvg-id="Van Gough IMAX" tvg-logo="http://t3.gstatic.com/images?q=tbn:ANd9GcQhul4XQ0rgNE18KX69Dm-1tXeaX2NgctnUc0FrpzHtfglJ8bpkS5zjAg" group-title="Documentary",Vincent Van Gough (Documentary) (US) (English)
 http://217.219.143.104/9204/documentry/IMAX%20Van%20Gogh%20Brush%20With%20Genius/IMAX.Van.Gogh.Brush.With.Genius.2009.BluRay.720p.mp4
 #EXTINF:0 tvg-name="Viajar TV" tvg-language="Spanish" tvg-country="AR" tvg-id="Viajar TV" tvg-logo="http://i.imgur.com/jmrpUj2.png" group-title="Documentary",Viajar TV (Documentary) (AR) (Spanish)
@@ -19657,8 +19594,6 @@ http://46.249.213.93/iPhone/broadcast/9xmtashan-tablet.3gp/9xmtashan-tablet.3gp-
 http://d2ckk42trw29cy.cloudfront.net/9xmedia/ngrp:9xmusic_all/chunklist_b650000.m3u8
 #EXTINF:0 tvg-name="A&E" tvg-language="English" tvg-country="US" tvg-id="A&E" tvg-logo="http://canigetawordin.com/wp-content/uploads/2013/12/photo_320x240_ae.jpg" group-title="Entertainment",A&E (Entertainment) (US) (English)
 http://167.114.102.27/live/lhJQk_GTW2dG1uTdpeYVyQ/1455735252/bb38d9048b7b91706264169a031f32a4.m3u8|User-Agent=Mozilla%2F5.0%20(Windows%20NT%206.1%3B%20WOW64)%20AppleWebKit%2F537.36%20(KHTML%2C%20like%20Gecko)%20Chrome%2F47.0.2526.106%20Safari%2F537.36
-#EXTINF:0 tvg-name="ABC HD" tvg-language="English" tvg-country="US" tvg-id="ABC HD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/American_Broadcasting_Company_Logo.svg/220px-American_Broadcasting_Company_Logo.svg.png" group-title="Entertainment",ABC HD (Entertainment) (US) (English)
-rtmp://play.uktvnow.net/live?wmsAuthSign=c2VydmVyX3RpbWU9Mi8yLzIwMTYgNjoxNTozNCBQTSZoYXNoX3ZhbHVlPUx1cFEyd0xWYkRoemRNRitFVU9qamc9PSZ2YWxpZG1pbnV0ZXM9MjA=/abchd.stream
 #EXTINF:0 tvg-name="ALSAT 2" tvg-language="Macedonian" tvg-country="MK" tvg-id="ALSAT 2" tvg-logo="http://www.tv14.net/images/Alsat_tv.jpg" group-title="Entertainment",ALSAT 2 (Entertainment) (MK) (Macedonian)
 http://fms.zulu.mk:554/zulu/alsat_2/playlist.m3u8
 #EXTINF:0 tvg-name="AMC" tvg-language="English" tvg-country="US" tvg-id="AMC" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Amc_logo.svg/150px-Amc_logo.svg.png" group-title="Entertainment",AMC (Entertainment) (US) (English)
@@ -19687,8 +19622,6 @@ http://amazingfacts.live-s.cdn.bitgravity.com/cdn-live/_definst_/amazingfacts/li
 http://ambaaltv.adstream.eu:1935/live/ambaaltv/chunklist_w14253647.m3u8
 #EXTINF:0 tvg-name="American Chinese" tvg-language="Mandarin" tvg-country="CH" tvg-id="American Chinese" tvg-logo="http://blog.wishlantern.com/wp-content/uploads/2011/03/chinese-american-museum-wish-lantern-festival.jpg" group-title="Entertainment",American Chinese (Entertainment) (CH) (Mandarin)
 http://ktv008.cdnak.ds.kylintv.net/nlds/kylin/snvn/as/live/snvn_4.m3u8
-#EXTINF:0 tvg-name="Amrita TV" tvg-language="Malyalam" tvg-country="IN" tvg-id="Amrita TV" tvg-logo="http://www.livetvant.com/wp-content/uploads/2012/12/Amrita-TV.png" group-title="Entertainment",Amrita TV (Entertainment) (IN) (Malyalam)
-rtmp://209.133.205.226/live/amrita
 #EXTINF:0 tvg-name="Anime" tvg-language="Spanish" tvg-country="MX" tvg-id="Anime" tvg-logo="http://www.teenblab.com/assets/images/Anime-Logo.jpg" group-title="Entertainment",Anime (Entertainment) (MX) (Spanish)
 http://video7.stream.mx:1935/raxatv/raxatv/chunklist_w884577146.m3u8?monclovacaliente.m3u8
 #EXTINF:0 tvg-name="Antena 3 HD" tvg-language="Spanish" tvg-country="ES" tvg-id="Antena 3 HD" tvg-logo="http://img4.wikia.nocookie.net/__cb20141014151714/logopedia/images/0/05/Logo_Antena_3_HD_Premium.png" group-title="Entertainment",Antena 3 HD (Entertainment) (ES) (Spanish)
@@ -19711,22 +19644,12 @@ http://aztecalive-lh.akamaihd.net/i/0oxnvzh8a_1@175671/master.m3u8
 http://118.179.35.11/hls/Bangla_VisionhS43B/02.m3u8
 #EXTINF:0 tvg-name="Bejing TV" tvg-language="Mandarin" tvg-country="CH" tvg-id="Bejing TV" tvg-logo="http://www.swiss-cast.com/wp-content/uploads/Logos/China/Beijing_TV.jpg" group-title="Entertainment",Bejing TV (Entertainment) (CH) (Mandarin)
 http://ktv026.cdnllnwnl.ds.kylintv.net/nlds/kylin/btv/as/live/btv_4.m3u8
-#EXTINF:0 tvg-name="Benze TV" tvg-language="Tamil" tvg-country="IN" tvg-id="Benze TV" tvg-logo="http://extreme.com/media/img/extreme/tv_guide.png" group-title="Entertainment",Benze TV (Entertainment) (IN) (Tamil)
-rtmp://162.249.6.51/demo/myStream
 #EXTINF:0 tvg-name="Bollywood Masala" tvg-language="English/Hindi" tvg-country="US" tvg-id="Bollywood Masala" tvg-logo="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRvvEzzrCdzIgdPgbW8mxkN3JXmSnzVIA8GebNrXwtyjftdoeN3_bOccg" group-title="Entertainment",Bollywood Masala (Entertainment) (US) (English/Hindi)
 http://d1hya96e2cm7qi.cloudfront.net/Live/_definst_/sweetbcha1novD191_W_350.sdp/chunklist.m3u8?time%3D1451081767404
-#EXTINF:0 tvg-name="Boss TV" tvg-language="Tamil" tvg-country="IN" tvg-id="Boss TV" tvg-logo="http://extreme.com/media/img/extreme/tv_guide.png" group-title="Entertainment",Boss TV (Entertainment) (IN) (Tamil)
-rtmp://bosstv1.chennaistream.net/bosstv/bosstv.stream
 #EXTINF:0 tvg-name="CBC" tvg-language="Arabic" tvg-country="EG" tvg-id="CBC" tvg-logo="http://www.3arablive.com/wp-content/uploads/2013/01/cbc-logo.jpg" group-title="Entertainment",CBC (Entertainment) (EG) (Arabic)
 http://185.5.222.231:4242/bysid/5108
-#EXTINF:0 tvg-name="CBS Action" tvg-language="English" tvg-country="UK" tvg-id="CBS Action" tvg-logo="http://i.imgur.com/7o8gos9.png" group-title="Entertainment",CBS Action (Entertainment) (UK) (English)
-rtmp://play.uktvnow.net/live?wmsAuthSign=c2VydmVyX3RpbWU9Mi8yLzIwMTYgNjowMDowNSBQTSZoYXNoX3ZhbHVlPXZkTnpRM1Z1VGdXRFh6MGlRakI0M3c9PSZ2YWxpZG1pbnV0ZXM9MjA=/cbsaction.stream
 #EXTINF:0 tvg-name="CNXN TV" tvg-language="Malyalam" tvg-country="KW" tvg-id="CNXN TV" tvg-logo="http://malayalamhdtv2.com/admin_mhdtv/mhdtv/numbers/cnxn.png" group-title="Entertainment",CNXN TV (Entertainment) (KW) (Malyalam)
 http://malayalamhdtv2.com/admin_mhdtv/mhdtv/numbers/cnxn.png
-#EXTINF:0 tvg-name="CO TV" tvg-language="Tamil" tvg-country="IN" tvg-id="CO TV" tvg-logo="http://extreme.com/media/img/extreme/tv_guide.png" group-title="Entertainment",CO TV (Entertainment) (IN) (Tamil)
-rtmp://162.249.6.51/cotv/myStream
-#EXTINF:0 tvg-name="CTN TV" tvg-language="Tamil" tvg-country="IN" tvg-id="CTN TV" tvg-logo="http://extreme.com/media/img/extreme/tv_guide.png" group-title="Entertainment",CTN TV (Entertainment) (IN) (Tamil)
-rtmp://162.249.6.51/ctntv/myStream
 #EXTINF:0 tvg-name="Canal 10 Mar De Plata TV" tvg-language="Spanish" tvg-country="AR" tvg-id="Canal 10 Mar De Plata TV" tvg-logo="http://static.tvlive32.com/logo/Canal-10-Mar-del-Plata_7164.jpg" group-title="Entertainment",Canal 10 Mar De Plata TV (Entertainment) (AR) (Spanish)
 http://ionlive1-lh.akamaihd.net/i/canal10_1@125367/master.m3u8
 #EXTINF:0 tvg-name="Canal 13 Nicaragua" tvg-language="Spanish" tvg-country="NI" tvg-id="Canal 13 Nicaragua" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/6/66/Logo_Viva_Nicaragua_Canal_13.png" group-title="Entertainment",Canal 13 Nicaragua (Entertainment) (NI) (Spanish)
@@ -19759,8 +19682,6 @@ http://ktv017.cdnak.ds.kylintv.net/nlds/kylin/gdtv2/as/live/gdtv2_4.m3u8
 http://akamaihd.wowzahls21.yuppcdn.net/live/chithiram/chunklist.m3u8
 #EXTINF:0 tvg-name="CineStreamTV" tvg-language="English" tvg-country="BB" tvg-id="CineStreamTV" tvg-logo="http://static.filmon.com/assets/channels/3175/big_logo.png" group-title="Entertainment",CineStreamTV (Entertainment) (BB) (English)
 http://68.71.42.179/live/livestream1/playlist.m3u8
-#EXTINF:0 tvg-name="Cnc3" tvg-language="English" tvg-country="TT" tvg-id="Cnc3" tvg-logo="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRs7bMoD5c7mf0WvrxdL8e3KrSoeCTQdIFF1dZwYo-SSjyaLNV1oZ5yMw" group-title="Entertainment",Cnc3 (Entertainment) (TT) (English)
-rtmp://live.cnc3.co.tt:1935/livepkgr/livestream
 #EXTINF:0 tvg-name="Color Vision" tvg-language="Spanish" tvg-country="ES" tvg-id="Color Vision" tvg-logo="http://canalesdominicanosenvivo.com/wp-content/uploads/2013/09/Color-Vision-Canal-9.jpg" group-title="Entertainment",Color Vision (Entertainment) (ES) (Spanish)
 http://ss8.domint.net:2048/cvis_str/video/playlist.m3u8
 #EXTINF:0 tvg-name="Colors TV Kannada" tvg-language="Kannada" tvg-country="IN" tvg-id="Colors TV Kannada" tvg-logo="http://www.colorskannada.com/images/header/logo.png" group-title="Entertainment",Colors TV Kannada (Entertainment) (IN) (Kannada)
@@ -19773,8 +19694,6 @@ http://95.81.165.21/5958/index.m3u8
 http://daserste_live-lh.akamaihd.net/i/daserste_de@91204/master.m3u8?b?b*t$
 #EXTINF:0 tvg-name="Daiji world" tvg-language="Kannada" tvg-country="IN" tvg-id="Daiji World" tvg-logo="http://www.daijiworld247.com/images/daijiworld247Logo.png" group-title="Entertainment",Daiji world (Entertainment) (IN) (Kannada)
 http://live.wmncdn.net/daijiworld24x7/9e8d2ee8ddf0223a8a2c0b78cc58d555.sdp/playlist.m3u8
-#EXTINF:0 tvg-name="Darshan Tv" tvg-language="Malyalam" tvg-country="IN" tvg-id="Darshan Tv" tvg-logo="https://lh4.ggpht.com/qVGlhKBHN6eScJM5oLShbyxJhgcTcACbWeItrDCfi2QPkXc5arno6HoEz-MikFq2dXOI=w300" group-title="Entertainment",Darshan Tv (Entertainment) (IN) (Malyalam)
-rtmp://209.133.205.226/live/darshana
 #EXTINF:0 tvg-name="Deepam TV" tvg-language="Tamil" tvg-country="UK" tvg-id="Deepam TV" tvg-logo="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTVWQCEP5dqKKUW1asbUwuQyt9chxcJurr53DweAuVb_Zd5q0wKMqR7jCk" group-title="Entertainment",Deepam TV (Entertainment) (UK) (Tamil)
 http://185.59.222.89:1935/cdn/deepamtvuk.stream/chunklist_w32033995.m3u8
 #EXTINF:0 tvg-name="Desh TV" tvg-language="Bengali" tvg-country="BD" tvg-id="Desh TV" tvg-logo="http://www.karnaphuli.com/images/desh-tv-logo.png" group-title="Entertainment",Desh TV (Entertainment) (BD) (Bengali)
@@ -19783,8 +19702,6 @@ http://118.179.35.11/hls/Desh_TVYCjrz/05.m3u8
 http://wpc.fc2a.edgecastcdn.net/hls-live/20FC2A/ecpl/pl/jdDhammalTv5018au.m3u8?3c0e986a453f9d57304a806b441b3f2b2ed8a2673c56e63821bf4a795704d2bb31347b13b186d277641b8389514290295786
 #EXTINF:0 tvg-name="Dheeran Tv" tvg-language="Tamil" tvg-country="IN" tvg-id="Dheeran Tv" tvg-logo="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRpAM1mSvc9g7_nvUL-zeazQcnEvfe2cs4aQP6dsWum2ZtHdAfMyWk48g" group-title="Entertainment",Dheeran Tv (Entertainment) (IN) (Tamil)
 http://dogwamnhemjme.cloudfront.net/dheeranorg/smil:dheeran.smil/chunklist_b512000.m3u8
-#EXTINF:0 tvg-name="Digital 15" tvg-language="Spanish" tvg-country="DO" tvg-id="Digital 15" tvg-logo="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSzXWjftp_VKDobUby1YGlVgy8BbBblAf7A_E9gx1rGy7WlcjioAHqpIU4" group-title="Entertainment",Digital 15 (Entertainment) (DO) (Spanish)
-rtmp://stream.grupotelemicro.com:9095/live16/telemicro1515_1_96 playpath=telemicro1515_1_96 swfUrl=http://ssl.p.jwpcdn.com/player/v/7.2.4/jwplayer.flash.swf live=1 pageUrl=http://telemicro.com.do/web/digital-15-en-vivo/
 #EXTINF:0 tvg-name="Distrito Comedia" tvg-language="Spanish" tvg-country="MX" tvg-id="Distrito Comedia" tvg-logo="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRTTonWPpncLlNAi3tRkRMXqOSHf4UGnV7BLMX_SUFFCUI_EVXI-YB5AGM" group-title="Entertainment",Distrito Comedia (Entertainment) (MX) (Spanish)
 http://200.76.77.237/LIVE/H01/CANAL272/PROFILE03.m3u8?-1332%2F1499-20150816T153535.ts=-1
 #EXTINF:0 tvg-name="Dubai Drama" tvg-language="Arabic" tvg-country="AE" tvg-id="Dubai Drama" tvg-logo="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQtQlWZc5hlUPlsCX5aE8pZaHu43NRPcYvHRr5ia02-gB_ztEvWuvbxbQ" group-title="Entertainment",Dubai Drama (Entertainment) (AE) (Arabic)
@@ -19815,10 +19732,6 @@ http://38.111.46.40:8134/hls-live/MehwarTV/_definst_/liveevent/livestream.m3u8?v
 http://live.streamjo.com/eettv/engadatv/chunks.m3u8
 #EXTINF:0 tvg-name="English Club TV" tvg-language="English" tvg-country="UK" tvg-id="English Club TV" tvg-logo="http://www.bboxnews.fr/public/2013/.English-Club-TV_s.jpg" group-title="Entertainment",English Club TV (Entertainment) (UK) (English)
 http://213.81.153.241/live001/channel020_p5.stream/DVR.m3u8
-#EXTINF:0 tvg-name="Express Entertainment" tvg-language="Urdu" tvg-country="PK" tvg-id="Express Entertainment" tvg-logo="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRJ2AkhBibWyW8lJUZ7W37mV4U_7Y7A640IUSnkebhc8Bz4yZkG6KyGUG4" group-title="Entertainment",Express Entertainment (Entertainment) (PK) (Urdu)
-rtmp://cdn.ebound.tv:1935/tv/expressentertainment
-#EXTINF:0 tvg-name="FOX HD" tvg-language="English" tvg-country="US" tvg-id="FOX HD" tvg-logo="http://img1.wikia.nocookie.net/__cb20150526154305/logopedia/images/5/57/724_300.png" group-title="Entertainment",FOX HD (Entertainment) (US) (English)
-rtmp://play.uktvnow.net/live?wmsAuthSign=c2VydmVyX3RpbWU9Mi8yLzIwMTYgNjoyODo1OCBQTSZoYXNoX3ZhbHVlPU4raGN6dHJ1VFN2RmtQT3F1bkNZRlE9PSZ2YWxpZG1pbnV0ZXM9MjA=/foxhd.stream
 #EXTINF:0 tvg-name="FOX TV" tvg-language="Malayalam" tvg-country="IN" tvg-id="FOX TV" tvg-logo="http://malayalamhdtv2.com/admin_mhdtv/mhdtv/numbers/fox-tv-logo-punalur.jpg" group-title="Entertainment",FOX TV (Entertainment) (IN) (Malayalam)
 http://livestream.5centscdn.com/santhosh/ef4af395a3adbe2993b4b62aa7c332f0.sdp/chunklist.m3u8
 #EXTINF:0 tvg-name="FOX" tvg-language="English" tvg-country="US" tvg-id="FOX" tvg-logo="http://i.imgur.com/15rP8l3.png" group-title="Entertainment",FOX (Entertainment) (US) (English)
@@ -19831,8 +19744,6 @@ http://live.tutvgratis.tv/ch/101.m3u8
 http://167.114.102.27/live/ySPK7vkDUZAsr2QjQpLfkA/1455736391/b8b5089c70ae62534970e2d8aa67e96d.m3u8|User-Agent=Mozilla%2F5.0%20(Windows%20NT%206.1%3B%20WOW64)%20AppleWebKit%2F537.36%20(KHTML%2C%20like%20Gecko)%20Chrome%2F47.0.2526.106%20Safari%2F537.36
 #EXTINF:0 tvg-name="Farsi 1 TV" tvg-language="Arabic" tvg-country="IR" tvg-id="Farsi 1 TV" tvg-logo="http://www.satfrequency.com/wp-content/uploads/2015/01/Farsi-1-Sat.jpg" group-title="Entertainment",Farsi 1 TV (Entertainment) (IR) (Arabic)
 http://63.237.48.23/ios/FARSI1/FARSI1.m3u8
-#EXTINF:0 tvg-name="Flowers TV" tvg-language="Malayalam" tvg-country="IN" tvg-id="Flowers TV" tvg-logo="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcR5VGzhAJQPZoryl_aO08lBPOzjTKbsIofgJs_DbC1_Dy4JpbTsR-4Waw" group-title="Entertainment",Flowers TV (Entertainment) (IN) (Malayalam)
-rtmp://live.wmncdn.net/flowerstv123
 #EXTINF:0 tvg-name="Future TV" tvg-language="Arabic" tvg-country="LB" tvg-id="Future TV" tvg-logo="http://www.tv-logo.com/pt-data/uploads/images/logo/future_tv_satellite.jpg" group-title="Entertainment",Future TV (Entertainment) (LB) (Arabic)
 http://futuretv.cdn.mangomolo.com/futuretv/smil:futuretv.smil/gmswf.m3u8
 #EXTINF:0 tvg-name="Galicia" tvg-language="Spanish" tvg-country="ES" tvg-id="Galicia" tvg-logo="http://i.imgur.com/R0CSkHm.jpg" group-title="Entertainment",Galicia (Entertainment) (ES) (Spanish)
@@ -19841,12 +19752,8 @@ http://media3.crtvg.es/live/tvga/.m3u8
 http://63.237.48.23/ios/GEL_LIFE/GEL_LIFE.m3u8
 #EXTINF:0 tvg-name="HEB TV" tvg-language="Mandarin" tvg-country="CN" tvg-id="HEB TV" tvg-logo="http://referenceur-tv.com/wp-content/uploads/2010/09/heb-tv3-150x150.png" group-title="Entertainment",HEB TV (Entertainment) (CN) (Mandarin)
 http://202.199.27.91/hebtv.m3u8
-#EXTINF:0 tvg-name="HTP" tvg-language="Spanish" tvg-country="ES" tvg-id="HTP" tvg-logo="http://1.bp.blogspot.com/-yNDWbH8srCc/Tx6ZAwctjrI/AAAAAAAAAjY/cKFnPu2_3oQ/s1600/Logo%2BHuesca2.jpg" group-title="Entertainment",HTP (Entertainment) (ES) (Spanish)
-rtmp://streaming2.radiohuesca.com/live/huescatv
 #EXTINF:0 tvg-name="Hiru TV" tvg-language="Sinhalese" tvg-country="LK" tvg-id="Hiru TV" tvg-logo="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcR-djKaMHfThkjIw-tS1hAuaZ2SAhqTbPcyUjLThvijpoIkZGSI3jPWD4g" group-title="Entertainment",Hiru TV (Entertainment) (LK) (Sinhalese)
 http://cdncities.com/8012/8012/playlist.m3u8
-#EXTINF:0 tvg-name="IBC Tamil" tvg-language="Tamil" tvg-country="IN" tvg-id="IBC Tamil" tvg-logo="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRKbV28SuLnPhIELDfTXpb8o4cTZ_tEqJqQWcfQ6qWu6eaCLHJLrC4twos" group-title="Entertainment",IBC Tamil (Entertainment) (IN) (Tamil)
-rtmp://151.252.39.132/live/ibctamil_tv
 #EXTINF:0 tvg-name="ICN International" tvg-language="Mandarin" tvg-country="CH" tvg-id="ICN International" tvg-logo="https://upload.wikimedia.org/wikipedia/en/e/e7/ICN_logo.png" group-title="Entertainment",ICN International (Entertainment) (CH) (Mandarin)
 http://ktv032.cdnak.ds.kylintv.net/nlds/kylin/iavc/as/live/iavc_4.m3u8
 #EXTINF:0 tvg-name="IGN1" tvg-language="English" tvg-country="US" tvg-id="IGN1" tvg-logo="https://pbs.twimg.com/media/CTULYveUEAAghPd.png:large" group-title="Entertainment",IGN1 (Entertainment) (US) (English)
@@ -19855,8 +19762,6 @@ http://videochannel.ign.com/stitcher/playlist_1080.m3u8
 http://63.237.48.23/ios/ITN/ITN.m3u8
 #EXTINF:0 tvg-name="ITV Be" tvg-language="English" tvg-country="UK" tvg-id="ITV Be" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/ITV_logo_2013.svg/200px-ITV_logo_2013.svg.png" group-title="Entertainment",ITV Be (Entertainment) (UK) (English)
 http://iptv-supplier.com:8000/live/mad/mad/447.m3u8
-#EXTINF:0 tvg-name="Imayam TV" tvg-language="Tamil" tvg-country="IN" tvg-id="Imayam TV" tvg-logo="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRMF5ZNOwfueg7OY31e_o4_GZb6bvMjDdtqAy6rUPNe8DWgrYIqfE-lZg" group-title="Entertainment",Imayam TV (Entertainment) (IN) (Tamil)
-rtmp://stream.akamain.info/live/imayamtv
 #EXTINF:0 tvg-name="Irib Tv 1" tvg-language="Arabic" tvg-country="IR" tvg-id="Irib Tv 1" tvg-logo="http://vignette1.wikia.nocookie.net/kidvskat/images/2/2d/IRIB_TV1.png/revision/latest?cb=20141215004853" group-title="Entertainment",Irib Tv 1 (Entertainment) (IR) (Arabic)
 http://63.237.48.23/ios/IRIB_TV1/IRIB_TV1.m3u8
 #EXTINF:0 tvg-name="Irib Tv 2" tvg-language="Arabic" tvg-country="IR" tvg-id="Irib Tv 2" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/IRIB_TV2_logo.svg/2000px-IRIB_TV2_logo.svg.png" group-title="Entertainment",Irib Tv 2 (Entertainment) (IR) (Arabic)
@@ -19875,26 +19780,14 @@ http://367449830.r.cdnsun.net/367449830/_definst_/isaiaruvi/index.m3u8
 http://367449830.r.cdnsun.net/367449830/_definst_/sneha/playlist.m3u8
 #EXTINF:0 tvg-name="Jame Jam" tvg-language="Arabic" tvg-country="IR" tvg-id="Jame Jam" tvg-logo="http://www.satfrequency.com/wp-content/uploads/2015/01/Jame-Jam-Sat.jpg" group-title="Entertainment",Jame Jam (Entertainment) (IR) (Arabic)
 http://63.237.48.3/ios/JAME_JAM_TV_NETWORK_1/JAME_JAM_TV_NETWORK_1.m3u8
-#EXTINF:0 tvg-name="Janataa TV" tvg-language="Kannada" tvg-country="IN" tvg-id="Janataa TV" tvg-logo="https://img.youtube.com/vi/YBQdPmd5u0A/default.jpg" group-title="Entertainment",Janataa TV (Entertainment) (IN) (Kannada)
-rtmp://202.53.68.202/live/instance1
 #EXTINF:0 tvg-name="Jaya TV" tvg-language="Tamil" tvg-country="IN" tvg-id="Jaya TV" tvg-logo="http://extreme.com/media/img/extreme/tv_guide.png" group-title="Entertainment",Jaya TV (Entertainment) (IN) (Tamil)
 http://185.59.222.89:1935/cdn/jayatvhd/chunklist_w2141576240.m3u8
-#EXTINF:0 tvg-name="KCV TV" tvg-language="Malayalam" tvg-country="IN" tvg-id="KCV TV" tvg-logo="http://static-cdn1.ustream.tv/i/channel/picture/1/6/6/8/16681608/16681608%2C66x66%2Cr:5.jpg" group-title="Entertainment",KCV TV (Entertainment) (IN) (Malayalam)
-rtmp://cdn.live5.in/live//kcv
-#EXTINF:0 tvg-name="Keirali We TV" tvg-language="Malyalam" tvg-country="IN" tvg-id="Kairali We TV" tvg-logo="https://lh6.googleusercontent.com/-uyJa87XDE8g/AAAAAAAAAAI/AAAAAAAAAAA/8J0PasO4M98/photo.jpg" group-title="Entertainment",Keirali We TV (Entertainment) (IN) (Malyalam)
-rtmp://209.133.205.226/live/wetv
 #EXTINF:0 tvg-name="Kanal 3" tvg-language="Bulgarian" tvg-country="BG" tvg-id="Kanal 3" tvg-logo="http://avo-bell.com/source/logo_kanal3.png" group-title="Entertainment",Kanal 3 (Entertainment) (BG) (Bulgarian)
 http://ios.cdn.bg:2017/fls/kanal3.stream/playlist.m3u8
 #EXTINF:0 tvg-name="Kanal D" tvg-language="Turkish" tvg-country="TR" tvg-id="Kanal D" tvg-logo="https://upload.wikimedia.org/wikipedia/tr/thumb/c/ca/Kanal_D_logo.svg/522px-Kanal_D_logo.svg.png" group-title="Entertainment",Kanal D (Entertainment) (TR) (Turkish)
 http://212.224.108.80/S1/HLS_LIVE/kanald/1000/prog_index.m3u8
-#EXTINF:0 tvg-name="Kathir TV" tvg-language="Tamil" tvg-country="IN" tvg-id="Kathir TV" tvg-logo="http://extreme.com/media/img/extreme/tv_guide.png" group-title="Entertainment",Kathir TV (Entertainment) (IN) (Tamil)
-rtmp://162.249.6.51/kathirtv/myStream
 #EXTINF:0 tvg-name="Kaumudy TV" tvg-language="Malyalam" tvg-country="IN" tvg-id="Kaumudy TV" tvg-logo="http://malayalamhdtv2.com/admin_mhdtv/mhdtv/numbers/kaumudy_tv.png" group-title="Entertainment",Kaumudy TV (Entertainment) (IN) (Malyalam)
 http://live.wmncdn.net/kaumuditv/243b319495a3640437b42f4d49bbb107.sdp/playlist.m3u8
-#EXTINF:0 tvg-name="Kay2" tvg-language="Urdu" tvg-country="PK" tvg-id="Kay2" tvg-logo="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRV3rDlvjpxIAmkYFeaBNX-WKyNXofv0syDyg3FXQ4a19pbsEjg3cQFDik" group-title="Entertainment",Kay2 (Entertainment) (PK) (Urdu)
-rtmp://cdn.ebound.tv:1935/tv/k2tv
-#EXTINF:0 tvg-name="Krishna TV" tvg-language="Tamil" tvg-country="IN" tvg-id="Krishna TV" tvg-logo="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTlOUpid7BFjykX8aObmdAGbxycK9cEtmh8AQz1opNajemUFc5DoJguqA" group-title="Entertainment",Krishna TV (Entertainment) (IN) (Tamil)
-rtmp://krishnatv.livewebcast.in/krishnatv/krishnatv.stream
 #EXTINF:0 tvg-name="Krishna TV" tvg-language="Tamil" tvg-country="LK" tvg-id="Krishna TV" tvg-logo="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTlOUpid7BFjykX8aObmdAGbxycK9cEtmh8AQz1opNajemUFc5DoJguqA" group-title="Entertainment",Krishna TV (Entertainment) (LK) (Tamil)
 http://krishnatv1.livewebcast.in/krishnatv1/_definst_/mp4:krishnatvlive/playlist.m3u8
 #EXTINF:0 tvg-name="Kunlun Theatre" tvg-language="Mandarin" tvg-country="CH" tvg-id="Kunlun Theatre" tvg-logo="http://images.bwwstatic.com/columnpic7/29093CC5B-E5A1-27B0-B001D5558E842CC2.jpg" group-title="Entertainment",Kunlun Theatre (Entertainment) (CH) (Mandarin)
@@ -19903,14 +19796,10 @@ http://ktv009.cdnak.ds.kylintv.net/nlds/kylin/kunlunhd/as/live/kunlunhd_4.m3u8
 http://la7live-lh.akamaihd.net/i/test_1@143593/master.m3u8
 #EXTINF:0 tvg-name="LA TELE" tvg-language="French" tvg-country="FR" tvg-id="LA TELE" tvg-logo="http://www.brandsoftheworld.com/sites/default/files/styles/logo-thumbnail/public/0022/0381/brand.gif%3Fitok%3DbaSH93b8" group-title="Entertainment",LA TELE (Entertainment) (FR) (French)
 http://rtmp.infomaniak.ch/livecast/latele/playlist.m3u8
-#EXTINF:0 tvg-name="LUX Mallorca TV" tvg-language="Spanish" tvg-country="ES" tvg-id="LUX Mallorca TV" tvg-logo="http://i.imgur.com/3TTmo4V.jpg" group-title="Entertainment",LUX Mallorca TV (Entertainment) (ES) (Spanish)
-rtmp://fl1.viastreaming.net/canal37/livestream
 #EXTINF:0 tvg-name="LY TV" tvg-language="Mandarin" tvg-country="CN" tvg-id="LY TV" tvg-logo="http://logok.org/wp-content/uploads/2015/03/The-Travel-Channel-logo-slogan.png" group-title="Entertainment",LY TV (Entertainment) (CN) (Mandarin)
 http://202.199.27.91/lytv.m3u8
 #EXTINF:0 tvg-name="La Sexta" tvg-language="Spanish" tvg-country="ES" tvg-id="La Sexta" tvg-logo="http://progratele.wikispaces.com/file/view/7tocf98kclyo2bm7hr4c62e72db4fa3_la-sexta.gif/335085396/208x208/7tocf98kclyo2bm7hr4c62e72db4fa3_la-sexta.gif" group-title="Entertainment",La Sexta (Entertainment) (ES) (Spanish)
 http://a3live-lh.akamaihd.net/i/lasexta_1@35272/master.m3u8
-#EXTINF:0 tvg-name="Levante TV" tvg-language="Spanish" tvg-country="ES" tvg-id="Levante TV" tvg-logo="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQicXskuymDUbfaftJuBc1kOejzsUPjCdDiA_3x1_urJTIdoTyiqCQsKPM" group-title="Entertainment",Levante TV (Entertainment) (ES) (Spanish)
-rtmp://teledifusion.tv:1935/levantetvlive/levantetvlive
 #EXTINF:0 tvg-name="M Net" tvg-language="Korean" tvg-country="MY" tvg-id="M Net" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Music_Makes_One_Mnet_Logo.png/200px-Music_Makes_One_Mnet_Logo.png" group-title="Entertainment",M Net (Entertainment) (MY) (Korean)
 http://ios.live.mnet.gscdn.com/liveIPhoneMNETsD/protected/liveIPhoneMNET2s_1000k.stream/chunklist_w0.m3u8?tid=0
 #EXTINF:0 tvg-name="M6" tvg-language="French" tvg-country="FR" tvg-id="M6" tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/a/a8/M6-tv-logo.png/286px-M6-tv-logo.png" group-title="Entertainment",M6 (Entertainment) (FR) (French)
@@ -19943,8 +19832,6 @@ http://63.237.48.23/ios/MERCI_TV/MERCI_TV.m3u8
 http://tcc-streaming2.cloudapp.net:1935/micro10/microvision10/chunklist_w911586869.m3u8
 #EXTINF:0 tvg-name="Moldova 1" tvg-language="Romanian" tvg-country="RO" tvg-id="Moldova 1" tvg-logo="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRi4W-3h3TPXqKG3JGwN9dNd2wte1-t5vhKTaq6P3Hs8pVSpdKWiyV6UaE" group-title="Entertainment",Moldova 1 (Entertainment) (RO) (Romanian)
 http://87.248.160.8/edge/smil:m1/playlist.m3u8
-#EXTINF:0 tvg-name="Moon TV" tvg-language="Tamil" tvg-country="IN" tvg-id="Moon TV" tvg-logo="http://extreme.com/media/img/extreme/tv_guide.png" group-title="Entertainment",Moon TV (Entertainment) (IN) (Tamil)
-rtmp://49.207.182.189:1953/hls/moonvision
 #EXTINF:0 tvg-name="Murasu Tamil" tvg-language="Tamil" tvg-country="IN" tvg-id="Murasu Tamil" tvg-logo="http://extreme.com/media/img/extreme/tv_guide.png" group-title="Entertainment",Murasu Tamil (Entertainment) (IN) (Tamil)
 http://185.59.222.89:1935/cdn/murasuhd/chunklist_w2023623538.m3u8
 #EXTINF:0 tvg-name="N24" tvg-language="German" tvg-country="DE" tvg-id="N24" tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/2/20/N24_logo.svg/200px-N24_logo.svg.png" group-title="Entertainment",N24 (Entertainment) (DE) (German)
@@ -19975,8 +19862,6 @@ http://ktv039.cdnak.ds.kylintv.net/nlds/kylin/pxhkus/as/live/pxhkus_4.m3u8
 http://ktv005.cdnak.ds.kylintv.net/nlds/kylin/pxinhd/as/live/pxinhd_4.m3u8
 #EXTINF:0 tvg-name="Pogo TV" tvg-language="Hindi/Gujarati" tvg-country="IN" tvg-id="Pogo TV" tvg-logo="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRDvHv7Z_SGe3Lw8FMLSwdu0Nysv7sdIWce9L13ZZ_MoaggYcbZkfnPnOo" group-title="Entertainment",Pogo TV (Entertainment) (IN) (Hindi/Gujarati)
 http://d1hya96e2cm7qi.cloudfront.net/Live/_definst_/sweetbcha1novD29_W_350.sdp/chunklist.m3u8?time=1451081559535
-#EXTINF:0 tvg-name="Pravasi Channel" tvg-language="Malyalam" tvg-country="IN" tvg-id="Pravasi Channel" tvg-logo="http://emalayalee.us/getPhoto.php?photo=107797resize_1442541274.jpg" group-title="Entertainment",Pravasi Channel (Entertainment) (IN) (Malyalam)
-rtmp://65.51.67.127:1935/live/miptv2
 #EXTINF:0 tvg-name="Puthuyugam TV" tvg-language="Tamil" tvg-country="IN" tvg-id="Puthuyugam TV" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnTC1Uwf0SwpK1Mti94I_0hq5mELI32SQyrwcHHhfRkvfqluR1o_1S5vUp" group-title="Entertainment",Puthuyugam TV (Entertainment) (IN) (Tamil)
 http://d211bpuke56xnv.cloudfront.net/ngmedia/pym_400/chunklist.m3u8
 #EXTINF:0 tvg-name="RETV" tvg-language="English" tvg-country="JM" tvg-id="RETV" tvg-logo="https://static-media.streema.com/media/cache/6e/46/6e46cb1d28b60b21842029d5ba43b793.jpg" group-title="Entertainment",RETV (Entertainment) (JM) (English)
@@ -19989,8 +19874,6 @@ http://iphone.rtpa.stream.flumotion.com/rtpa/tv-iphone/main.m3u8
 http://87.248.160.8/edge/smil:rtrp/playlist.m3u8
 #EXTINF:0 tvg-name="RTV" tvg-language="Bengali" tvg-country="BD" tvg-id="RTV" tvg-logo="https://upload.wikimedia.org/wikipedia/en/4/41/Rtv_bangladesh.PNG" group-title="Entertainment",RTV (Entertainment) (BD) (Bengali)
 http://118.179.35.11/hls/RTVBHp5Y/05.m3u8
-#EXTINF:0 tvg-name="Ragam TV" tvg-language="Tamil" tvg-country="IN" tvg-id="Ragam TV" tvg-logo="http://extreme.com/media/img/extreme/tv_guide.png" group-title="Entertainment",Ragam TV (Entertainment) (IN) (Tamil)
-rtmp://103.235.104.53/live/livestream
 #EXTINF:0 tvg-name="Rai 1" tvg-language="Italian" tvg-country="IT" tvg-id="Rai 1" tvg-logo="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSj25EfYZDc7R0wtCY17pHIyNnEQ_snD8AQtzoJ-C1sEz8yuMoibxSH2K8" group-title="Entertainment",Rai 1 (Entertainment) (IT) (Italian)
 http://b2everyrai-lh.akamaihd.net/i/rai1_1@398068/master.m3u8
 #EXTINF:0 tvg-name="Rai 2" tvg-language="Italian" tvg-country="IT" tvg-id="Rai 2" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Rai_2_logo.svg/200px-Rai_2_logo.svg.png" group-title="Entertainment",Rai 2 (Entertainment) (IT) (Italian)
@@ -20017,18 +19900,12 @@ http://xsbcgrx.api.channel.livestream.com/3.0/playlist.m3u8
 http://nlive.sbs.co.kr/sbsch6pc/sbs1ch61.stream/chunklist.m3u8?wowzasessionid=0&u=sbs&q=35jZ5rfJ2eoUHqODGGFSfwOKZotz0KlWW7IxDJiEGew=
 #EXTINF:0 tvg-name="SCTV Du Lich" tvg-language="Vietnamese" tvg-country="VN" tvg-id="SCTV Du Lich" tvg-logo="http://www.userlogos.org/files/logos/14505_deva/ccloud1.png" group-title="Entertainment",SCTV Du Lich (Entertainment) (VN) (Vietnamese)
 http://vtsstr6.sctv.vn/colive/C007_HD_3/playlist.m3u8?us=dd16fb71b3bd69c5d3e69017505b44db12d3b9e984c142fb2c1879a7dda0b162942998a80fa5787247c1772777f7d105-1058588
-#EXTINF:0 tvg-name="SCTV12" tvg-language="Vietnamese" tvg-country="VN" tvg-id="SCTV12" tvg-logo="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQFyYjFBepBtPtSPuy_gRvzlaQkhCS89YR3LYsZ6G9fsG5698VuYXuATw" group-title="Entertainment",SCTV12 (Entertainment) (VN) (Vietnamese)
-rtmp://112.197.2.135:1935/colive/C067_SD_3
-#EXTINF:0 tvg-name="SCTVHD Giai Tri TH" tvg-language="Vietnamese" tvg-country="VN" tvg-id="SCTVHD Giai Tri TH" tvg-logo="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcT4IJiHluvwnZWMJ01zn3dz5_giY3sYzjXVG590yuBuVfVdxiM5VF0Vig" group-title="Entertainment",SCTVHD Giai Tri TH (Entertainment) (VN) (Vietnamese)
-rtmp://112.197.2.135:1935/colive/C014_HD_2
 #EXTINF:0 tvg-name="SETEVIZOR" tvg-language="Russian" tvg-country="RU" tvg-id="SETEVIZOR" tvg-logo="https://d13yacurqjgara.cloudfront.net/users/21937/screenshots/206487/setevizor_teaser.png" group-title="Entertainment",SETEVIZOR (Entertainment) (RU) (Russian)
 http://213.85.95.70:1935/echomsk/echomsk.stream/index.m3u8
 #EXTINF:0 tvg-name="Sakshi TV" tvg-language="Malyalam" tvg-country="IN" tvg-id="Sakshi TV" tvg-logo="http://screentouchonline.com/registeredusers/associates-promoters/stp_1364084282.jpeg" group-title="Entertainment",Sakshi TV (Entertainment) (IN) (Malyalam)
 http://live.wmncdn.net/sakhitv1/dc0d08e5fe6e54e47190bac53aded426.sdp/chunklist_w639830194.m3u8
 #EXTINF:0 tvg-name="Sama Dubai" tvg-language="Arabic" tvg-country="AE" tvg-id="Sama Dubai" tvg-logo="http://2.bp.blogspot.com/-tg6QOa91VKo/T-Dezc2rPLI/AAAAAAAAABE/YUiTkyOEAnc/s1600/sama_dubai.jpg" group-title="Entertainment",Sama Dubai (Entertainment) (AE) (Arabic)
 http://dmi.mangomolo.com:1935/samadubai/smil:samadubai.smil/playlist.m3u8
-#EXTINF:0 tvg-name="Santhora TV" tvg-language="Tamil" tvg-country="DE" tvg-id="Santhora TV" tvg-logo="http://www.weebly.com/uploads/1/0/6/7/10670567/3468369.png" group-title="Entertainment",Santhora TV (Entertainment) (DE) (Tamil)
-rtmp://rtmp.santhoratv.zecast.net/santhoratv/santhoratv
 #EXTINF:0 tvg-name="Se?al U Argentina" tvg-language="Spanish" tvg-country="AR" tvg-id="Se?al U Argentina" tvg-logo="http://3.bp.blogspot.com/-USbbXU1ow2g/UhVWSxgRFoI/AAAAAAAAbqc/kPI3SJAYc9U/s435/Se%2525C3%2525B1al%2BColombia%2BSdMP%2Blogo%2B2013.png" group-title="Entertainment",Se?al U Argentina (Entertainment) (AR) (Spanish)
 http://iphone-streaming.ustream.tv/ustreamVideo/20087208/streams/live/playlist.m3u8
 #EXTINF:0 tvg-name="Shandong TV" tvg-language="Mandarin" tvg-country="CH" tvg-id="Shandong Tv" tvg-logo="http://download.4-designer.com/files/20121213/68-Signs-of-domestic-television-stations-22139-thumb.jpg" group-title="Entertainment",Shandong TV (Entertainment) (CH) (Mandarin)
@@ -20089,8 +19966,6 @@ http://media3.crtvg.es/live/tvga/playlist.m3u8
 http://95.87.0.78:8080/tvstz.m3u8
 #EXTINF:0 tvg-name="TV Stoichev" tvg-language="Bulgarian" tvg-country="BG" tvg-id="TV Stoichev" tvg-logo="https://lh3.googleusercontent.com/-w60PMzyQEPI/AAAAAAAAAAI/AAAAAAAAAAA/2m_B9kqZEqc/photo.jpg" group-title="Entertainment",TV Stoichev (Entertainment) (BG) (Bulgarian)
 http://ios.cdn.bg:2015/fls/tvstoichev.stream/playlist.m3u8
-#EXTINF:0 tvg-name="TV UNO 1" tvg-language="Spanish" tvg-country="ES" tvg-id="TV UNO 1" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSI510-KczLZJBxa0gb_XPaYY6HCZZHlxmdIqvqFoGsVwUMsbmeNvw2B4k" group-title="Entertainment",TV UNO 1 (Entertainment) (ES) (Spanish)
-rtmp://k3.usastreams.com:1935/tvuno1/tvuno1
 #EXTINF:0 tvg-name="TV Vratza" tvg-language="Bulgarian" tvg-country="BG" tvg-id="TV Vratza" tvg-logo="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRo7sYXB0LIVmej1l0IZBrES8lNC00GSZr9FXpsdNw3hjN5XBUI" group-title="Entertainment",TV Vratza (Entertainment) (BG) (Bulgarian)
 http://77.76.140.249:4022/udp/1.mp4
 #EXTINF:0 tvg-name="TV3 Cat" tvg-language="Catalan" tvg-country="ES" tvg-id="TV3 Cat" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/5/51/Tv3_logo2005.jpg" group-title="Entertainment",TV3 Cat (Entertainment) (ES) (Catalan)
@@ -20121,8 +19996,6 @@ http://87.248.160.8/edge/smil:tvr/playlist.m3u8
 http://univ-i.akamaihd.net/hls/live/222629/HLS11/chunklist.m3u8
 #EXTINF:0 tvg-name="Tamil Aruvi" tvg-language="Tamil" tvg-country="IN" tvg-id="Tamil Aruvi" tvg-logo="http://extreme.com/media/img/extreme/tv_guide.png" group-title="Entertainment",Tamil Aruvi (Entertainment) (IN) (Tamil)
 http://91.82.85.44:1935/scr8174/lives078.sdp/playlist.m3u8?wowzasessionid=636827979
-#EXTINF:0 tvg-name="Tamilan Tv" tvg-language="Tamil" tvg-country="IN" tvg-id="Tamilan Tv" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3ZqA-D58jx7tPh--eK3kQHXFkmZ-PJf0v5B_OoyRGfnhkOnVyTgYAQzY" group-title="Entertainment",Tamilan Tv (Entertainment) (IN) (Tamil)
-rtmp://38.96.175.192:1943/live/tamilantelevision1
 #EXTINF:0 tvg-name="Tapesh Tv" tvg-language="Farsi" tvg-country="IR" tvg-id="Tapesh Tv" tvg-logo="http://jadootv.com/wp-content/uploads/2015/05/ar9.jpg" group-title="Entertainment",Tapesh Tv (Entertainment) (IR) (Farsi)
 http://63.237.48.3/ios/TAPESH/TAPESH.m3u8
 #EXTINF:0 tvg-name="Tele 8" tvg-language="Italian" tvg-country="IT" tvg-id="Tele 8" tvg-logo="http://seeklogo.com/images/T/Tele__-logo-0D8DF576D4-seeklogo.com.gif" group-title="Entertainment",Tele 8 (Entertainment) (IT) (Italian)
@@ -20165,44 +20038,20 @@ https://video05-lax.streamup.com/app/univision2chivas_69s-stream/playlist.m3u8
 http://streamer-cache.grnet.gr/parliament/hls/webtv.m3u8
 #EXTINF:0 tvg-name="V TV2" tvg-language="Vietnamese" tvg-country="VN" tvg-id="VTV 2" tvg-logo="http://img2.wikia.nocookie.net/__cb20121202075910/logopedia/images/8/82/Vtv2.jpg" group-title="Entertainment",V TV2 (Entertainment) (VN) (Vietnamese)
 http://112.197.2.135:1935/colive/C044_SD_4/chunklist.m3u8
-#EXTINF:0 tvg-name="VTVcab1" tvg-language="Vietnamese" tvg-country="VN" tvg-id="VTVcab1" tvg-logo="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSPcwIXkl5pG1mX8-jeSvWVs4j5Isz4ngpVZE0WOC4n7m2VBGzGZoCCf1M" group-title="Entertainment",VTVcab1 (Entertainment) (VN) (Vietnamese)
-rtmp://118.70.203.130/channel/_definst_/vtvcab1_profile1.stream
-#EXTINF:0 tvg-name="VTVcab11" tvg-language="Vietnamese" tvg-country="VN" tvg-id="VTVcab11" tvg-logo="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQOAjkSnqZUil8yqfFAoreqgA0EQLgMZ5GrGcaQ1HJgnYds_N2lAp0KyKI" group-title="Entertainment",VTVcab11 (Entertainment) (VN) (Vietnamese)
-rtmp://118.70.203.130/channel/_definst_/vtvcab11_profile1.stream
-#EXTINF:0 tvg-name="VTVcab12" tvg-language="Vietnamese" tvg-country="VN" tvg-id="VTVcab12" tvg-logo="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSKNkSdlIzLxv0r10HeI0Y0yY5Y47ybE5WX3fx_LheaQ7JpwwWdfFgVJA" group-title="Entertainment",VTVcab12 (Entertainment) (VN) (Vietnamese)
-rtmp://118.70.203.130/channel/_definst_/vtvcab12_profile1.stream
-#EXTINF:0 tvg-name="VTVcab14" tvg-language="Vietnamese" tvg-country="VN" tvg-id="VTVcab14" tvg-logo="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSx4rFwiOcW2qkk8jeLj9H_aXRvsf6kiSQbvaSUkR839b7xpU5tr_iTLVc" group-title="Entertainment",VTVcab14 (Entertainment) (VN) (Vietnamese)
-rtmp://118.70.203.130/channel/_definst_/vtvcab14_profile1.stream
-#EXTINF:0 tvg-name="VTVcab15" tvg-language="Vietnamese" tvg-country="VN" tvg-id="VTVcab15" tvg-logo="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSH8tXqYfI5x2qESB_YbdMuNI7GsNyEMgWVYOw9WdoSJY_8ZaqRLeEpuQ" group-title="Entertainment",VTVcab15 (Entertainment) (VN) (Vietnamese)
-rtmp://118.70.203.130/channel/_definst_/vtvcab15_profile1.stream
-#EXTINF:0 tvg-name="VTVcab2" tvg-language="Vietnamese" tvg-country="VN" tvg-id="VTVcab2" tvg-logo="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQ5Hu7zUkCS074FubelSmHwcegWuH2gUkEkUGOfuXBCKQQ_l1dwsZPakg" group-title="Entertainment",VTVcab2 (Entertainment) (VN) (Vietnamese)
-rtmp://118.70.203.130/channel/_definst_/vtvcab2_profile1.stream
-#EXTINF:0 tvg-name="VTVcab3" tvg-language="Vietnamese" tvg-country="VN" tvg-id="VTVcab3" tvg-logo="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRgA4J7t9j4WS4En1jduSEwsEvQW8Mzi_0iWk5W8d822Xid9xJHQFqyJg" group-title="Entertainment",VTVcab3 (Entertainment) (VN) (Vietnamese)
-rtmp://118.70.203.130/channel/_definst_/vtvcab3_profile1.stream
-#EXTINF:0 tvg-name="VTVcab9" tvg-language="Vietnamese" tvg-country="VN" tvg-id="VTVcab9" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQid9Un9t44Hcn-cIiqYL_o3ylykehCsWmD6QOCTKlAG3XIvkYkILTmFw" group-title="Entertainment",VTVcab9 (Entertainment) (VN) (Vietnamese)
-rtmp://118.70.203.130/channel/_definst_/vtvcab9_profile1.stream
 #EXTINF:0 tvg-name="Valle vision Canal 10 la vega" tvg-language="Spanish" tvg-country="ES" tvg-id="Valle vision Canal 10 la vega" tvg-logo="http://dominicanchannel.info/wp-content/uploads/2013/07/vallevision3.jpg" group-title="Entertainment",Valle vision Canal 10 la vega (Entertainment) (ES) (Spanish)
 http://asx.domiplay.net:1935/rtplive/vallevision.sdp/playlist.m3u8
-#EXTINF:0 tvg-name="Vanavil Plus" tvg-language="Tamil" tvg-country="IN" tvg-id="Vanavil Plus" tvg-logo="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQnfMdSIWG-TxZrOrOvaYoW2znNTw4JYixwz5YjwKQaEU6WqXSjJtE7lQ" group-title="Entertainment",Vanavil Plus (Entertainment) (IN) (Tamil)
-rtmp://162.249.6.51/vanavil/myStream
 #EXTINF:0 tvg-name="Vasanth TV Tamil" tvg-language="Tamil" tvg-country="IN" tvg-id="Vasanth TV Tamil" tvg-logo="http://extreme.com/media/img/extreme/tv_guide.png" group-title="Entertainment",Vasanth TV Tamil (Entertainment) (IN) (Tamil)
 http://vasanth.live-s.cdn.bitgravity.com/cdn-live/_definst_/vasanth/secure/live/feed01/chunklist_w163082460.m3u8?e=0&h=54e44f64b2e6d5122acdf77d01ab7f9f
 #EXTINF:0 tvg-name="Vasantham TV" tvg-language="Tamil" tvg-country="LK" tvg-id="Vasantham TV" tvg-logo="http://www.weebly.com/uploads/1/0/6/7/10670567/9736031.png" group-title="Entertainment",Vasantham TV (Entertainment) (LK) (Tamil)
 http://cdncities.com/vasanthamtv/vasanthamtv/playlist.m3u8
-#EXTINF:0 tvg-name="Vendhar TV" tvg-language="Tamil" tvg-country="IN" tvg-id="Vendhar TV" tvg-logo="http://extreme.com/media/img/extreme/tv_guide.png" group-title="Entertainment",Vendhar TV (Entertainment) (IN) (Tamil)
-rtmp://162.249.6.51/vendhar/myStream
 #EXTINF:0 tvg-name="Vietnam Tv 1" tvg-language="Vietnamese" tvg-country="VN" tvg-id="Vietnam Tv 1" tvg-logo="http://bookingquangcao.com.vn/upload/images/VTV1.jpg" group-title="Entertainment",Vietnam Tv 1 (Entertainment) (VN) (Vietnamese)
 http://203.162.121.230:1935/live/2channel/index.m3u8?
-#EXTINF:0 tvg-name="Vimbam TV Tamil" tvg-language="Tamil" tvg-country="IN" tvg-id="Vimbam TV Tamil" tvg-logo="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRuAcIahTH9OtJyPmeNpaoxyx_tClkNGqN8iVYYp09LTinhzD7mLOLGdEI" group-title="Entertainment",Vimbam TV Tamil (Entertainment) (IN) (Tamil)
-rtmp://91.219.43.148/vimbamtv/vimbamtv
 #EXTINF:0 tvg-name="WAPA TV" tvg-language="Spanish" tvg-country="PR" tvg-id="WAPA TV" tvg-logo="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRS_R00PJuT3KjlnPZ9JaHGIjXo60TgZGcxFd56cN8agGpKfWX-p28HgUxS" group-title="Entertainment",WAPA TV (Entertainment) (PR) (Spanish)
 http://31.220.40.119:80/LiveEdge/WPA2PR/playlist.m3u8?token=1e05d5fdd8854709aef4cf58108a6987
 #EXTINF:0 tvg-name="Xiamen TV" tvg-language="Mandarin" tvg-country="CH" tvg-id="Xiamen TV" tvg-logo="http://www.tv-logo.com/pt-data/uploads/images/logo/xiamen_star.jpg" group-title="Entertainment",Xiamen TV (Entertainment) (CH) (Mandarin)
 http://ktv010.cdnak.ds.kylintv.net/nlds/kylin/xmtv/as/live/xmtv_4.m3u8
 #EXTINF:0 tvg-name="Yangtze River Theatre" tvg-language="Mandarin" tvg-country="CH" tvg-id="Yangtze River Theatre" tvg-logo="http://c3270052.r52.cf0.rackcdn.com/yangtze-river-basics.jpg" group-title="Entertainment",Yangtze River Theatre (Entertainment) (CH) (Mandarin)
 http://ktv042.cdnak.ds.kylintv.net/nlds/kylin/yangtse/as/live/yangtse_4.m3u8
-#EXTINF:0 tvg-name="Yugam TV" tvg-language="Tamil" tvg-country="UK" tvg-id="Yugam TV" tvg-logo="http://extreme.com/media/img/extreme/tv_guide.png" group-title="Entertainment",Yugam TV (Entertainment) (UK) (Tamil)
-rtmp://162.249.6.51/live/myStream
 #EXTINF:0 tvg-name="Zee TV HD" tvg-language="Hindi" tvg-country="US" tvg-id="Zee TV HD" tvg-logo="http://www.afaqs.com/all/news/images/news_story_grfx/2011/30843_1_home_big.jpg" group-title="Entertainment",Zee TV HD (Entertainment) (US) (Hindi)
 http://zeeapp-lh.akamaihd.net/i/zeetvuk_1@140491/index_864_av-p.m3u8
 #EXTINF:0 tvg-name="Zee Tamil" tvg-language="Tamil" tvg-country="IN" tvg-id="Zee Tamil" tvg-logo="http://images.filmiclub.com/img/channel/zee-tamil.png" group-title="Entertainment",Zee Tamil (Entertainment) (IN) (Tamil)
@@ -20233,10 +20082,6 @@ http://albaghdadiahls-i.akamaihd.net/hls/live/218980/albaghdadia-ios/01.m3u8
 http://bcoveliveios-i.akamaihd.net/hls/live/206572/2014288370001/stream1/masterPlaylist.m3u8
 #EXTINF:0 tvg-name="An Binh Hanh Phuc - Tin Lanh" tvg-language="Vietnamese" tvg-country="VN" tvg-id="An Binh Hanh Phuc - Tin Lanh" tvg-logo="http://abhp.us/templates/js_argos/wright/images/logo.png" group-title="Family",An Binh Hanh Phuc - Tin Lanh (Family) (VN) (Vietnamese)
 http://54.152.24.55:1935/abhp/myStream/playlist.m3u8
-#EXTINF:0 tvg-name="Aruljothi Tv" tvg-language="Tamil" tvg-country="IN" tvg-id="Aruljothi Tv" tvg-logo="http://extreme.com/media/img/extreme/tv_guide.png" group-title="Family",Aruljothi Tv (Family) (IN) (Tamil)
-rtmp://162.249.6.51/aruljothi/myStream
-#EXTINF:0 tvg-name="Ary Zindagi" tvg-language="Urdu" tvg-country="PK" tvg-id="Ary Zindagi" tvg-logo="https://lh5.ggpht.com/AT0EX1Pz6RCwHcwX2dwkXDuPa9EKuKmuEZVdz1NHw4Td1t1BSSgmGnWR8EbOjDwffcw=w300" group-title="Family",Ary Zindagi (Family) (PK) (Urdu)
-rtmp://93.115.85.17:1935/ARYNEWS_1/myStream
 #EXTINF:0 tvg-name="Astro Ceria" tvg-language="Malayalam" tvg-country="MY" tvg-id="Astro Ceria" tvg-logo="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRQ6x2T60OkeVbR151p_5BEDUHJePSD4V6aBAwRUc1yhVOJpN8uXwbqcRQ" group-title="Family",Astro Ceria (Family) (MY) (Malayalam)
 http://www.layarku.tv/media/ceria.m3u8
 #EXTINF:0 tvg-name="CCTV4" tvg-language="Mandarin" tvg-country="MY" tvg-id="CCTV4" tvg-logo="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcT8vZM7O6guU5YQ1IjF4MXRLGc7xQsRecaLU_Ss6P_2KwTLCQ5aPfwo1A" group-title="Family",CCTV4 (Family) (MY) (Mandarin)
@@ -20299,8 +20144,6 @@ http://212.40.98.166/intstreams/mtva/mtv1live.smil/chunklist.m3u8
 http://212.40.98.166/intstreams/mtva/mtv2live.smil/chunklist.m3u8
 #EXTINF:0 tvg-name="MK" tvg-language="Tamil" tvg-country="LK" tvg-id="MK" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtAYdNgflWdyzqTS7_AqktdSX5kxABz1tBDLSzt46M47B7Dv36h2J3jD8" group-title="Family",MK (Family) (LK) (Tamil)
 http://d2tunwguqq620e.cloudfront.net/mktv/ngrp:mknews_all/playlist.m3u8
-#EXTINF:0 tvg-name="Microvision" tvg-language="Spanish" tvg-country="DO" tvg-id="Microvision" tvg-logo="http://www.microvision.com.do/logo-micro-10-.png" group-title="Family",Microvision (Family) (DO) (Spanish)
-rtmp://tcc-streaming2.cloudapp.net:1935/micro10/microvision10 playpath=microvision10 swfUrl=http://microvision.com.do/tv/player/microtvradio/player_by_micro.swf live=1 pageUrl=http://microvision.com.do/tv/microvision.php
 #EXTINF:0 tvg-name="NHK World TV" tvg-language="English" tvg-country="JP" tvg-id="NHK World TV" tvg-logo="http://www.pbshawaii.org/ourproductions/images/nhk_world_logo.jpg" group-title="Family",NHK World TV (Family) (JP) (English)
 http://nhkwglobal-i.akamaihd.net/hls/live/222714/nhkwglobal/index_1180.m3u8
 #EXTINF:0 tvg-name="NRT 2" tvg-language="Kurdish" tvg-country="IQ" tvg-id="NRT 2" tvg-logo="http://files.hevitv.webnode.com/system_preview_detail_200000012-ac9ccad93b/nrt2.jpg" group-title="Family",NRT 2 (Family) (IQ) (Kurdish)
@@ -20327,14 +20170,6 @@ http://rtp-pull-live.hls.adaptive.level3.net/liverepeater/smil:rtpmem.smil/playl
 http://rtp-pull-live.hls.adaptive.level3.net/liverepeater/smil:rtpafrica.smil/playlist.m3u8
 #EXTINF:0 tvg-name="Revelation TV" tvg-language="English" tvg-country="US" tvg-id="Revelation TV" tvg-logo="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcT0GCYiIBp82rchMg0WNy2NyB6hP3vIdGlZfJ39sgljTlrneqaw3-A_x1s" group-title="Family",Revelation TV (Family) (US) (English)
 http://llnw.live.simplestream.com/coder5/coder.channels.channel11/hls/3/playlist.m3u8
-#EXTINF:0 tvg-name="SCTVHD Hai" tvg-language="Vietnamese" tvg-country="VN" tvg-id="SCTVHD Hai" tvg-logo="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTMQVquYYlWPktegSfIJdV68MYDBcEpDa_E9nkhq1JpMkrFYI6gtsyFTUQ" group-title="Family",SCTVHD Hai (Family) (VN) (Vietnamese)
-rtmp://112.197.2.135:1935/colive/C011_HD_4
-#EXTINF:0 tvg-name="SCTVHD Phu Nu" tvg-language="Vietnamese" tvg-country="VN" tvg-id="SCTVHD Phu Nu" tvg-logo="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRC_F5or1f-VKx-_2_QKPmT7GTiFHu9p-uisLd5FpXhw4peH8dOWMtQ6Q" group-title="Family",SCTVHD Phu Nu (Family) (VN) (Vietnamese)
-rtmp://112.197.2.135:1935/colive/C017_HD_2
-#EXTINF:0 tvg-name="SCTVHD San Khau" tvg-language="Vietnamese" tvg-country="VN" tvg-id="SCTVHD San Khau" tvg-logo="http://extreme.com/media/img/extreme/tv_guide.png" group-title="Family",SCTVHD San Khau (Family) (VN) (Vietnamese)
-rtmp://112.197.2.135:1935/colive/C012_HD_4
-#EXTINF:0 tvg-name="SCTVHD Thieu Nhi" tvg-language="Vietnamese" tvg-country="VN" tvg-id="SCTVHD Thieu Nhi" tvg-logo="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSg--eitt-rwgJnqyxSvLA9nRAB0vRPEG4ta6Oenc9r_H0k7qTA69NmW1Q" group-title="Family",SCTVHD Thieu Nhi (Family) (VN) (Vietnamese)
-rtmp://112.197.2.135:1935/colive/C016_HD_2
 #EXTINF:0 tvg-name="SHOW TV" tvg-language="Turkish" tvg-country="TR" tvg-id="SHOW TV" tvg-logo="http://www.ecanlihdtvizle.com/wp-content/uploads/2012/08/showhd.png" group-title="Family",SHOW TV (Family) (TR) (Turkish)
 http://mn-l.mncdn.com/showtv//showtv2/playlist.m3u8
 #EXTINF:0 tvg-name="Sakhi TV" tvg-language="Hindi" tvg-country="IN" tvg-id="Sakhi TV" tvg-logo="http://malayalamhdtv2.com/admin_mhdtv/mhdtv/numbers/sakhi_tv_in.png" group-title="Family",Sakhi TV (Family) (IN) (Hindi)
@@ -20347,8 +20182,6 @@ http://www.streamwebtown.com/player/sat7/arabic/stream.m3u8
 http://acaooyalahd2-lh.akamaihd.net/i/TBN04_delivery@186242/master.m3u8
 #EXTINF:0 tvg-name="Solidaria TV" tvg-language="Spanish" tvg-country="AR" tvg-id="Solidaria TV" tvg-logo="http://www.cctvradio.com/uploads/4/9/9/8/4998504/3637504.jpg" group-title="Family",Solidaria TV (Family) (AR) (Spanish)
 http://188.165.135.22/remararg/livestream/playlist.m3u8
-#EXTINF:0 tvg-name="Spacetoon" tvg-language="Arabic" tvg-country="US" tvg-id="Spacetoon" tvg-logo="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQtAWf0gq-mTAuHpCB7vlSYDT2LJA156tXHRvXI_Pr1iAXs6ptpouD28Q" group-title="Family",Spacetoon (Family) (US) (Arabic)
-rtmp://$OPT:rtmp-raw=rtmp://www.arabic-toons.com/animetv playpath=spacetoon?code=abcdefgh swfUrl=http://www.arabic-toons.com/flowplayer-3.2.7.swf live=1 pageUrl=http://www.arabic-toons.com/
 #EXTINF:0 tvg-name="Spike Tv" tvg-language="English" tvg-country="US" tvg-id="Spike Tv" tvg-logo="http://www.myentertainment.tv/wp-content/uploads/2013/02/Spike-Logo.jpg" group-title="Family",Spike Tv (Family) (US) (English)
 http://167.114.102.27/live/OaAREYg3eRU5q5XP2fT6AQ/1455735578/a01d4a2d79052d6b1c2c63bf2d284202.m3u8|User-Agent=Mozilla%2F5.0%20(Windows%20NT%206.1%3B%20WOW64)%20AppleWebKit%2F537.36%20(KHTML%2C%20like%20Gecko)%20Chrome%2F47.0.2526.106%20Safari%2F537.36
 #EXTINF:0 tvg-name="TRT Cocuk" tvg-language="Turkish" tvg-country="TR" tvg-id="TRT Cocuk" tvg-logo="https://upload.wikimedia.org/wikipedia/en/d/de/Trt_cocuk.png" group-title="Family",TRT Cocuk (Family) (TR) (Turkish)
@@ -20363,20 +20196,12 @@ http://202.102.79.114:554/live/tvb8.stream/playlist.m3u8
 http://video-live.iol.pt:1935/live_tvi/smil:LIVE_TVI/playlist.m3u8?Grupo_UP_e_DOWN
 #EXTINF:0 tvg-name="Tateti TV" tvg-language="Spanish" tvg-country="AR" tvg-id="Tateti TV" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/7/79/TaTeTi12.png" group-title="Family",Tateti TV (Family) (AR) (Spanish)
 http://ionlive1-lh.akamaihd.net/i/tateti_1@126174/master.m3u8
-#EXTINF:0 tvg-name="Telemicro 5" tvg-language="Spanish" tvg-country="DO" tvg-id="Telemicro 5" tvg-logo="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTe6Li_ltQnA792c9IIizNg9h4dPTREoHyJfe1bQZCIP9loHwFlHkTvzNQ" group-title="Family",Telemicro 5 (Family) (DO) (Spanish)
-rtmp://stream.grupotelemicro.com:9095/live16/telemicro0505_1_96 playpath=telemicro0505_1_96 swfUrl=http://ssl.p.jwpcdn.com/player/v/7.2.4/jwplayer.flash.swf live=1 pageUrl=http://telemicro.com.do/web/telemicro-en-vivo-5/
 #EXTINF:0 tvg-name="The CW Network" tvg-language="English" tvg-country="US" tvg-id="The CW Network" tvg-logo="https://encrypted-tbn3.gstatic.com/images?q=tbn%3AANd9GcQO4WEZsIKEfe7n7dyKqaIxF6FwyrhqPZtz0_2hG54zFWIY0YmB49TAOhA" group-title="Family",The CW Network (Family) (US) (English)
 http://167.114.102.27/live/zZbxs_opJB_95TjpiLJyTw/1455735605/d61960e75b1a90a23ebfb02f0bb46678.m3u8|User-Agent=Mozilla%2F5.0%20(Windows%20NT%206.1%3B%20WOW64)%20AppleWebKit%2F537.36%20(KHTML%2C%20like%20Gecko)%20Chrome%2F47.0.2526.106%20Safari%2F537.36
 #EXTINF:0 tvg-name="Tin Trinidad" tvg-language="English" tvg-country="TT" tvg-id="Tin Trinidad" tvg-logo="http://4.bp.blogspot.com/-M1CvKlYl890/TnpAUHY_Z4I/AAAAAAAAArU/HywzPyrabOg/s1600/clt20+2011+Trinidad+and+Tobago+logo.jpg" group-title="Family",Tin Trinidad (Family) (TT) (English)
 http://daruttarbiyah.srfms.com:2215/live/daruttarbiyah/playlist.m3u8
 #EXTINF:0 tvg-name="USA Network" tvg-language="English" tvg-country="US" tvg-id="USA Network" tvg-logo="http://www.tvinsider.com/wp-content/uploads/2016/01/usa-network-logo.jpg" group-title="Family",USA Network (Family) (US) (English)
 http://167.114.102.27/live/QJeEFC3pFUxThNwCt2Cb3A/1455735958/6e41f30f946d9327c3322a05250735a7.m3u8|User-Agent=Mozilla%2F5.0%20(Windows%20NT%206.1%3B%20WOW64)%20AppleWebKit%2F537.36%20(KHTML%2C%20like%20Gecko)%20Chrome%2F47.0.2526.106%20Safari%2F537.36
-#EXTINF:0 tvg-name="VTV 7" tvg-language="Vietnamese" tvg-country="VN" tvg-id="VTV 7" tvg-logo="http://extreme.com/media/img/extreme/tv_guide.png" group-title="Family",VTV 7 (Family) (VN) (Vietnamese)
-rtmp://123.30.238.125/live/_definst_/vtv7-high
-#EXTINF:0 tvg-name="VTVcab10" tvg-language="Vietnamese" tvg-country="VN" tvg-id="VTVcab10" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9St2GF29U9orfhGeDizlcPmoOuNoKYBcXIVgDm6k394j3oXFdFjvVX44" group-title="Family",VTVcab10 (Family) (VN) (Vietnamese)
-rtmp://118.70.203.130/channel/_definst_/vtvcab10_profile1.stream
-#EXTINF:0 tvg-name="VTVcab8" tvg-language="Vietnamese" tvg-country="VN" tvg-id="VTVcab8" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNWNwHwP7iUEacQr0AUdntZXiORdOL1Yv-THB007EYTU6BgNNjH4RcEj8" group-title="Family",VTVcab8 (Family) (VN) (Vietnamese)
-rtmp://118.70.203.130/channel/_definst_/vtvcab8_profile1.stream
 #EXTINF:0 tvg-name="WPSO Kids" tvg-language="Greek" tvg-country="GR" tvg-id="WPSO Kids" tvg-logo="http://1.bp.blogspot.com/-eHwhR--jchA/UNayvHsQunI/AAAAAAAACNo/BQPCBkIIoYk/s1600/GREEK%2BVOICE%2Bwpso.com%2BGREEK%2BVOICE%2BTv%2BChannel%2BLive%2BStreaming%2BGreek%2BTv.jpg" group-title="Family",WPSO Kids (Family) (GR) (Greek)
 http://wpso.com:200/kids
 #EXTINF:0 tvg-name="???? HD" tvg-language="Mandarin" tvg-country="MY" tvg-id="???? HD" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZA5hIz43-9s5nDtSA3U_xdUlJlPUdqxwce88PHo5sYik2SJHOy-6LQCs" group-title="Family",???? HD (Family) (MY) (Mandarin)
@@ -20469,8 +20294,6 @@ http://a3.fabricahost.com.br:1935/multitv/stream/live.m3u8
 http://dmi.mangomolo.com:1935/noordubaitv/smil:noordubaitv.smil/chunklist_w932561967_b1200000.m3u8
 #EXTINF:0 tvg-name="Paigham TV" tvg-language="Urdu" tvg-country="PK" tvg-id="Paigham TV" tvg-logo="https://lh3.googleusercontent.com/kX4QQIpgJCBi8gJcmjkf6zjv5BtYVD2WROfuZsOtXYGMdjlIyGnGNH7lhV_8P3hkDQ=w300" group-title="Lifestyle",Paigham TV (Lifestyle) (PK) (Urdu)
 http://125.209.77.130:1935/live/livestream1/playlist.m3u8
-#EXTINF:0 tvg-name="Peace TV" tvg-language="Urdu" tvg-country="UK" tvg-id="Peace TV" tvg-logo="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSpC-vEr7TGD4WKJNu9gb36ECdWt5Y7tZRmzG8uOewwGoCS74H2qaWKf-Q" group-title="Lifestyle",Peace TV (Lifestyle) (UK) (Urdu)
-rtmp://peace.fms.visionip.tv/live/b2b-peace_asia-live-25f-4x3-sdh_1
 #EXTINF:0 tvg-name="QVC Beauty" tvg-language="English" tvg-country="UK" tvg-id="QVC Beauty" tvg-logo="http://services.qvc.de/vendor/gif/qvc_beautystyle_logo.jpg" group-title="Lifestyle",QVC Beauty (Lifestyle) (UK) (English)
 http://llnw.live.qvc.simplestream.com/hera/remote/qvcuk_primary_sdi6/1/prog_index.m3u8
 #EXTINF:0 tvg-name="QVC DE" tvg-language="German" tvg-country="DE" tvg-id="QVC DE" tvg-logo="http://themecraft.net/wwwdata/thumbs/q/qvc.de.jpg" group-title="Lifestyle",QVC DE (Lifestyle) (DE) (German)
@@ -20521,10 +20344,6 @@ http://178.21.120.198:1935/live3/_definst_/mp4:axn/playlist.m3u8
 http://94.23.35.42/cCloudTv/parser.php?surl=http://stream.anluong.info/xemlivetv/axn_nexttv.php
 #EXTINF:0 tvg-name="B4u Masti" tvg-language="Hindi" tvg-country="IN" tvg-id="B4u Masti" tvg-logo="http://www.webrockerz.co.in/media/our-work/Logos/7.jpg" group-title="Movie Channels",B4u Masti (Movie Channels) (IN) (Hindi)
 http://wpc.fc2a.edgecastcdn.net/80FC2A/la2/ECpull/b4umasti.stream/playlist.m3u8?3c0e986a453f9d57304a806b441b3f2b2ed8a2673c56e63821bf4a795704d2bb31347b13b186d277641b8389514290295786
-#EXTINF:0 tvg-name="Bein Movies 1 HD" tvg-language="English" tvg-country="US" tvg-id="Bein Movies 1 HD" tvg-logo="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRi69x6NHCwhc-6q9uKYMSKzHQ9NWh12W1iIUbzP5RMe-gSZN3UcLM2Ug" group-title="Movie Channels",Bein Movies 1 HD (Movie Channels) (US) (English)
-rtmp://149.100.11.163:8080/udp/225.170.45.1:1234
-#EXTINF:0 tvg-name="Celestial Movies" tvg-language="Cantonese/Mandarin" tvg-country="MY" tvg-id="Celestial Movies" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqxGjU4Yu7Cd1usqPiWXEQRhds-auMjqxC5622xbRIQVEva0sfZ5gEnQ" group-title="Movie Channels",Celestial Movies (Movie Channels) (MY) (Cantonese/Mandarin)
-rtmp://victorynet.tv:1935/live/mvcelesx01
 #EXTINF:0 tvg-name="China Movie" tvg-language="Mandarin" tvg-country="CH" tvg-id="China Movie" tvg-logo="http://www.ariase.com/media/television/logo-132x99/china_movie.jpg" group-title="Movie Channels",China Movie (Movie Channels) (CH) (Mandarin)
 http://ktv044.cdnak.ds.kylintv.net/nlds/kylin/chinamovie/as/live/chinamovie_4.m3u8
 #EXTINF:0 tvg-name="Dabangg Tv" tvg-language="Hindi" tvg-country="IN" tvg-id="Dabangg Tv" tvg-logo="http://tvimages.burrp.com/images/channels2/entertainment/Dabangg-TV.png" group-title="Movie Channels",Dabangg Tv (Movie Channels) (IN) (Hindi)
@@ -20565,14 +20384,8 @@ http://ktv028.cdnak.ds.kylintv.net/nlds/kylin/pxasia/as/live/pxasia_4.m3u8
 http://d1hya96e2cm7qi.cloudfront.net/Live/_definst_/sweetbcha1novD258_W_350.sdp/chunklist.m3u8
 #EXTINF:0 tvg-name="Rai Movies" tvg-language="Italian" tvg-country="IT" tvg-id="Rai Movies" tvg-logo="https://upload.wikimedia.org/wikipedia/en/a/ae/RAI_Movie_2010_Logo.svg" group-title="Movie Channels",Rai Movies (Movie Channels) (IT) (Italian)
 http://stream10.rai.it/italy/smil:raimovie.smil/playlist.m3u8
-#EXTINF:0 tvg-name="SCTV HD Phim Viet" tvg-language="Vietnamese" tvg-country="VN" tvg-id="SCTV HD Phim Viet" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCU2C4EevxaNiT4cH4UTemJEqnVaNuvgwB2vRwVVIhPQxy3CjoqLs_0Q " group-title="Movie Channels",SCTV HD Phim Viet (Movie Channels) (VN) (Vietnamese)
-rtmp://112.197.2.135:1935/colive/C009_HD_4
 #EXTINF:0 tvg-name="SCTV Phim Chau A" tvg-language="Vietnamese" tvg-country="VN" tvg-id="SCTV Phim Chau A" tvg-logo="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTM4T_ZUhoLYt3I8XoNkHTSWK_QVuzYQlbDqiFdLddYHxxEuUSdQvG6Ww" group-title="Movie Channels",SCTV Phim Chau A (Movie Channels) (VN) (Vietnamese)
 http://112.197.2.135:1935/colive/C010_HD_4/chunklist.m3u8
-#EXTINF:0 tvg-name="SCTVHD Phim TH" tvg-language="Vietnamese" tvg-country="VN" tvg-id="SCTVHD Phim TH" tvg-logo="http://extreme.com/media/img/extreme/tv_guide.png" group-title="Movie Channels",SCTVHD Phim TH (Movie Channels) (VN) (Vietnamese)
-rtmp://112.197.2.135:1935/colive/C013_HD_4
-#EXTINF:0 tvg-name="SCTVHD Starmovies" tvg-language="Vietnamese" tvg-country="VN" tvg-id="SCTVHD Starmovies" tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/5/54/STAR_Movies_logo.svg/1280px-STAR_Movies_logo.svg.png" group-title="Movie Channels",SCTVHD Starmovies (Movie Channels) (VN) (Vietnamese)
-rtmp://112.197.2.135:1935/colive/C001_HD_4 
 #EXTINF:0 tvg-name="Sahara Filmy" tvg-language="Hindi" tvg-country="IN" tvg-id="Sahara Filmy" tvg-logo="http://1.bp.blogspot.com/-NmkGVpz3NKw/VPKXRoI1VjI/AAAAAAAAAH4/-n9jLWBYe-k/s1600/sahara-filmy-logo.png" group-title="Movie Channels",Sahara Filmy (Movie Channels) (IN) (Hindi)
 http://d1hya96e2cm7qi.cloudfront.net/Live/_definst_/sweetbcha1novD66_W_150.sdp/playlist.m3u8
 #EXTINF:0 tvg-name="Sepl Movies" tvg-language="Hindi" tvg-country="IN" tvg-id="Sepl Movies" tvg-logo="http://oklivetv.com/wp-content/uploads/2015/02/sepl-movies-hindi-channel-images-logo-large.png" group-title="Movie Channels",Sepl Movies (Movie Channels) (IN) (Hindi)
@@ -20603,10 +20416,6 @@ http://63.237.48.23/ios/TVP/TVP.m3u8
 http://top-iptv.zapto.org:8000/live/Aria/Aria/563.m3u8
 #EXTINF:0 tvg-name="True Movies 2" tvg-language="English" tvg-country="UK" tvg-id="True Movies 2" tvg-logo="http://vignette4.wikia.nocookie.net/logopedia/images/f/f7/True_Movies_2_2006.png" group-title="Movie Channels",True Movies 2 (Movie Channels) (UK) (English)
 http://top-iptv.zapto.org:8000/live/Aria/Aria/564.m3u8
-#EXTINF:0 tvg-name="VTVcab5" tvg-language="Vietnamese" tvg-country="VN" tvg-id="VTVcab5" tvg-logo="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcR4CfWA4Vnb3bvQ1DQtk8DioNoJwYpG0P_BguXbHD809_CBgFtB1lxgHb8" group-title="Movie Channels",VTVcab5 (Movie Channels) (VN) (Vietnamese)
-rtmp://118.70.203.130/channel/_definst_/vtvcab5_profile1.stream
-#EXTINF:0 tvg-name="VTVcab7" tvg-language="Vietnamese" tvg-country="VN" tvg-id="VTVcab7" tvg-logo="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTTILgZa57a1eER_CDlzKf4QV7fpvOkvflclqR-njJP_wchgei5ZNr1FA" group-title="Movie Channels",VTVcab7 (Movie Channels) (VN) (Vietnamese)
-rtmp://118.70.203.130/channel/_definst_/vtvcab7_profile1.stream
 #EXTINF:0 tvg-name="Zee Cinema UK" tvg-language="Hindi" tvg-country="UK" tvg-id="Zee Cinema UK" tvg-logo="http://www.media247.co.uk/bizasia/wp-content/uploads/2015/04/zeecinema001.jpg" group-title="Movie Channels",Zee Cinema UK (Movie Channels) (UK) (Hindi)
 http://zeeapp-lh.akamaihd.net/i/zeecinemauk_1@140345/index_864_av-p.m3u8
 #EXTINF:0 tvg-name="1 Music HD" tvg-language="English" tvg-country="RU" tvg-id="1 Music Hd" tvg-logo="http://i.imgur.com/XeKNrEC.jpg?1" group-title="Music",1 Music HD (Music) (RU) (English)
@@ -20673,8 +20482,6 @@ http://wz3.dnip.com.br:1935/dmtv/dmtv.sdp/live.m3u8
 http://live.wmncdn.net/desichannel/7e2dd0aed46b70a5c77f4affdb702e4b.sdp/playlist.m3u8
 #EXTINF:0 tvg-name="Dibi Tv Music" tvg-language="Romanian" tvg-country="RO" tvg-id="Dibi Tv Music" tvg-logo="http://www.dibitv.ro/img/logo/logo_2.png" group-title="Music",Dibi Tv Music (Music) (RO) (Romanian)
 http://tv.dibitv.ro:1935/dibitv/live2/playlist.m3u8
-#EXTINF:0 tvg-name="DnBTV" tvg-language="English" tvg-country="GE" tvg-id="DnBTV" tvg-logo="http://drumandbasslines.com/image/dnblinestvlogo80.jpg" group-title="Music",DnBTV (Music) (GE) (English)
-rtmp://vs2.drumandbasslines.com/DnBTV/ch1
 #EXTINF:0 tvg-name="Dream TV" tvg-language="Turkish" tvg-country="TK" tvg-id="Dream TV" tvg-logo="http://2.bp.blogspot.com/-VjspsntmQrU/UOXzEd-azBI/AAAAAAAAA6o/3mj0N-xhRS8/s1600/Dreamtv.gif" group-title="Music",Dream TV (Music) (TK) (Turkish)
 http://live.netd.com.tr/S1/HLS_LIVE/dreamtv/1000/prog_index.m3u8
 #EXTINF:0 tvg-name="E 24" tvg-language="Hindi/English" tvg-country="IN" tvg-id="E 24" tvg-logo="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTgs_-dx29PrRUr1cz_gWxoz-N9afZXexHfT0KH1eFF4MgTm-G6DsxOPfQ" group-title="Music",E 24 (Music) (IN) (Hindi/English)
@@ -20705,16 +20512,10 @@ http://63.237.48.3/ios/GEM_KURD/GEM_KURD.m3u8
 http://ooyalahd2-f.akamaihd.net/i/globalradio02_delivery@156522/master.m3u8
 #EXTINF:0 tvg-name="Heavy Metal Television" tvg-language="English" tvg-country="US" tvg-id="HMTV" tvg-logo="http://jimmyachenbach.com/testsite/HEAVY_METAL_files/HEAVY%20METAL%20TV2.jpg" group-title="Music",Heavy Metal Television (Music) (US) (English)
 http://70.166.98.130:1935/hmtv/myStream/playlist.m3u8
-#EXTINF:0 tvg-name="Hamdard TV" tvg-language="Punjabi" tvg-country="IN" tvg-id="Hamdard TV" tvg-logo="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRDPwQjaBMdoSp_uObhcjN284nqTjrFZl26r1FjrJ21PqvhFRpy-wnRtg" group-title="Music",Hamdard TV (Music) (IN) (Punjabi)
-rtmp://live.wmncdn.net/hamdard/997831f276885a936ac3ce2dc96d82aa.sdp
 #EXTINF:0 tvg-name="Hawacom Tv" tvg-language="Arabic" tvg-country="LB" tvg-id="Hawacom Tv" tvg-logo="http://www.businessnews.com.lb/cms/Portals/2/Business/2013/hawacom.gif" group-title="Music",Hawacom Tv (Music) (LB) (Arabic)
 http://mobilestreaming.itworkscdn.com/hawacom/hawacomlive/playlist.m3u8
-#EXTINF:0 tvg-name="HitTV" tvg-language="English" tvg-country="US" tvg-id="HitTV" tvg-logo="http://s9.postimg.org/d999hamvz/Capture.png" group-title="Music",HitTV (Music) (US) (English)
-rtmp://tst.es.flash.glb.ipercast.net/tst.es-live/live
 #EXTINF:0 tvg-name="Joo Music Tv" tvg-language="Hindi/English" tvg-country="IN" tvg-id="Joo Music Tv" tvg-logo="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQjfncy0kOaHMpk-oQRGvWcLpDZ47abdFKAhP0Qbd3ksdLYcyL-2px6Tw" group-title="Music",Joo Music Tv (Music) (IN) (Hindi/English)
 http://wowzacontrol.com:1935/8038/8038/chunklist_w1440951984.m3u8
-#EXTINF:0 tvg-name="Kenh 9 Music" tvg-language="Vietnamese" tvg-country="VN" tvg-id="Kenh 9 Music" tvg-logo="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSJzV5Y0DAqoLwLsZL5aSHLyqOG3pC1RsALvA3LnZV84vFiO1OLq33BFxA" group-title="Music",Kenh 9 Music (Music) (VN) (Vietnamese)
-rtmp://203.162.121.230/live/9_music?securetoken=#ed?#w@1
 #EXTINF:0 tvg-name="Kiss TV" tvg-language="English" tvg-country="US" tvg-id="Kiss TV" tvg-logo="https://upload.wikimedia.org/wikipedia/en/6/67/Kiss_(TV_channel_logo).png" group-title="Music",Kiss TV (Music) (US) (English)
 http://tst.es.flash.glb.ipercast.net/tst.es-live/live/playlist.m3u8
 #EXTINF:0 tvg-name="Lembranca" tvg-language="Portuguese" tvg-country="BR" tvg-id="Lembranca TV" tvg-logo="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/4/000/169/0c9/136ea49.jpg" group-title="Music",Lembranca (Music) (BR) (Portuguese)
@@ -20787,8 +20588,6 @@ http://rtmp.infomaniak.ch/livecast/rougetv/hasbahca.m3u8
 http://199.217.118.90:1935/smotv/stream/playlist.m3u8
 #EXTINF:0 tvg-name="Slam TV" tvg-language="English" tvg-country="NL" tvg-id="Slam TV" tvg-logo="http://t1.gstatic.com/images?q=tbn:ANd9GcT7PC2Uw_f_9MBpiypVQcUM36wMXXb5UR38IgaK58ErdJLuHU2nL2FxSmw" group-title="Music",Slam TV (Music) (NL) (English)
 http://hls2.slamfm.nl/content/slamtv/slamtv_1.m3u8
-#EXTINF:0 tvg-name="Sony Mix" tvg-language="Hindi" tvg-country="IN" tvg-id="Sony Mix" tvg-logo="http://vignette3.wikia.nocookie.net/logopedia/images/a/a7/Sony_Mix.png" group-title="Music",Sony Mix (Music) (IN) (Hindi)
-rtmp://50.7.175.253:1939/base2/dd17.stream
 #EXTINF:0 tvg-name="Soy FM TV" tvg-language="English" tvg-country="MX" tvg-id="Soy FM TV" tvg-logo="https://yt3.ggpht.com/-AGfSKmVWCZs/AAAAAAAAAAI/AAAAAAAAAAA/QYVc5AP1Ipg/s900-c-k-no/photo.jpg" group-title="Music",Soy FM TV (Music) (MX) (English)
 http://cdn8.iviplanet.com:1935/SoyFM/myStream.sdp/playlist.m3u8
 #EXTINF:0 tvg-name="Sporttime TV 1" tvg-language="English" tvg-country="UK" tvg-id="Sporttime TV 1" tvg-logo="http://3.bp.blogspot.com/-F4oNbo2SQ9Q/UJaSuEgCS4I/AAAAAAAAL6s/etSeYt_sIog/s1600/sport-time-tv-logo.png" group-title="Music",Sporttime TV 1 (Music) (UK) (English)
@@ -20817,8 +20616,6 @@ http://hlslive.lcdn.une.net.co/v1/AUTH_HLSLIVE/MESH/tu1_1.m3u8?
 http://58.97.57.152:1935/live/hd06.stream/playlist.m3u8?id=298&type=live&ch=hd06
 #EXTINF:0 tvg-name="Trace urban" tvg-language="French" tvg-country="FR" tvg-id="Trace urban" tvg-logo="http://564ccca6a641eac6e5b0-38e3bbf162f44470d3635a7244f7971b.r55.cf3.rackcdn.com/tracetv-urban-channel-images-logo-large.jpg" group-title="Music",Trace urban (Music) (FR) (French)
 http://stream01.yamgo.com/iPhone/broadcast/trace_tv_urban-tablet.3gp.m3u8
-#EXTINF:0 tvg-name="Tune 6" tvg-language="Tamil" tvg-country="IN" tvg-id="Tune 6" tvg-logo="http://extreme.com/media/img/extreme/tv_guide.png" group-title="Music",Tune 6 (Music) (IN) (Tamil)
-rtmp://live.wmncdn.net/tunes6/72781e965e0681e980034a778ee7067b.sdp
 #EXTINF:0 tvg-name="Urban TV" tvg-language="English" tvg-country="US" tvg-id="Urban TV" tvg-logo="http://www.tv14.net/wp-content/uploads/2010/10/UTV.jpeg" group-title="Music",Urban TV (Music) (US) (English)
 http://82.76.249.77:80/utvedge/utvlive/index.m3u8
 #EXTINF:0 tvg-name="VEVO 1 HD" tvg-language="English" tvg-country="US" tvg-id="VEVO 1 HD" tvg-logo="http://techcircle.vccircle.com/wp-content/uploads/2013/03/vevo-logo.jpg" group-title="Music",VEVO 1 HD (Music) (US) (English)
@@ -20863,8 +20660,6 @@ http://wow01.105.net/live/virgin1/chunklist_w25732073.m3u8
 http://stream.smcloud.net/live2/wawa/wawa_360p/playlist.m3u8
 #EXTINF:0 tvg-name="Xite" tvg-language="English" tvg-country="NL" tvg-id="Xite" tvg-logo="http://t0.gstatic.com/images?q=tbn:ANd9GcRT6y9fgnyl_kiiEjqtyPi6cn9-2GAMfNx6UP3qhEQr0WAqYDr4cg-sv9Eo" group-title="Music",Xite (Music) (NL) (English)
 http://highvolume02.streampartner.nl:1935/vleugels/livestream/playlist.m3u8
-#EXTINF:0 tvg-name="Y TV" tvg-language="Hindi" tvg-country="IN" tvg-id="Y TV" tvg-logo="http://www.ytvindia.com/images/index_02.png" group-title="Music",Y TV (Music) (IN) (Hindi)
-rtsp://live.wmncdn.net/ytv_mbt/live2001.stream
 #EXTINF:0 tvg-name="ZOUGLA" tvg-language="Greek" tvg-country="GR" tvg-id="ZOUGLA" tvg-logo="http://www.streamerhut.com/wp-content/uploads/2014/10/Zougla-TV-greece-live-streaming-logo.jpg" group-title="Music",ZOUGLA (Music) (GR) (Greek)
 http://zouglahd-f.akamaihd.net/i/zougla_1@56341/index_700_av-b.m3u8
 #EXTINF:0 tvg-name="tunes6" tvg-language="Hindi" tvg-country="IN" tvg-id="tunes6" tvg-logo="https://lh3.googleusercontent.com/9Li1ifus7bFBIorh_WnHkjRKjDM9tzgRssW_aUiIfzH8EyrLOTnWkHAEwc0SUjSUpEo=h900" group-title="Music",tunes6 (Music) (IN) (Hindi)
@@ -21434,8 +21229,6 @@ http://88.212.15.19/live/test_ct1_25p/playlist.m3u8
 https://live.ctbperth.net.au/hls/0/stream.m3u8
 #EXTINF:-1 tvg-id="CTiVariety.tw@SD" tvg-logo="https://i.imgur.com/tqsKObw.png" group-title="General",CTi Variety (中天綜合台) (720p)
 http://23.237.10.66:16372
-#EXTINF:-1 tvg-id="CTS.tw@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/zh/8/8a/CTS_Logo.png" group-title="General",CTS (HUA-CHI CTS) (1080p)
-rtmp://59.124.75.138:1935/sat/tv111
 #EXTINF:-1 tvg-id="CTV.bo@SD" tvg-logo="https://i.imgur.com/ljKb0UX.png" group-title="General",CTV (1080p)
 http://15.204.246.24:8080/CTVHD/index.m3u8
 #EXTINF:-1 tvg-id="CTV2Atlantic.ca@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/CTV_2_2018.svg/960px-CTV_2_2018.svg.png" group-title="General",CTV 2 Atlantic (720p)
@@ -21547,8 +21340,6 @@ https://stmv2.voxtvhd.com.br/evavision/evavision/playlist.m3u8
 https://live-fi.tvkaista.net/eveo/live.m3u8?hd=true
 #EXTINF:-1 tvg-id="EvolucionTV.pe@SD" tvg-logo="https://i.imgur.com/OUsT530.jpeg" group-title="General",Evolucion TV (576p)
 https://edgectc.com/CTC_SAN_RAFAEL/index.m3u8
-#EXTINF:-1 tvg-id="ExclusivTV.md@SD" tvg-logo="https://i.imgur.com/5OhE6N8.png" group-title="General",Exclusiv TV
-rtmp://89.28.25.122/live/tnt_md
 #EXTINF:-1 tvg-id="F10HD.bo@SD" tvg-logo="https://i.imgur.com/OEsT0KN.png" group-title="General",F10 HD (720p)
 http://15.204.246.24:8080/F10HD/index.m3u8
 #EXTINF:-1 tvg-id="FanoTV.it@SD" tvg-logo="https://i.imgur.com/rN6h7XU.png" group-title="General",Fano TV (1080p)
@@ -23971,8 +23762,6 @@ http://115.42.65.142:9981/stream/channelid/966869781
 https://mdstrm.com/live-stream-playlist/60b578b060947317de7b57ac.m3u8
 #EXTINF:-1 tvg-id="Adnkronos.it@SD" tvg-logo="https://i.imgur.com/mEoDAf1.png" group-title="News",Adnkronos (720p)
 https://5e73cf528f404.streamlock.net/GR_sport/livestream/playlist.m3u8
-#EXTINF:-1 tvg-id="AdvocateBroadcastingNetwork.ng@SD" tvg-logo="https://i.imgur.com/ZkBEAp7.png" group-title="News",Advocate Broadcasting Network
-srt://105.113.54.98:4001
 #EXTINF:-1 tvg-id="AfricanewsEnglish.fr@Poland" tvg-logo="https://i.imgur.com/5UxU4zc.png" group-title="News",Africanews (720p)
 https://c3c275b999764df8a2dd55ffe2996818.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6576/bitok/eyJzdGlkIjoiOTU0NDAyODQtOTU0My00Yzc2LThmZjQtNDRhY2YwYmQxYTYwIiwibWt0IjoicGwiLCJjaCI6NjYwNiwicHRmIjo1fQ==/26036/africanews-en.m3u8
 #EXTINF:-1 tvg-id="Afrique54TV.cm@SD" tvg-logo="https://i.imgur.com/WIaRpiS.png" group-title="News",Afrique54 TV (720p)
@@ -24993,4 +24782,3 @@ https://lenz.splus.ir/PLTV/88888888/224/3221227023/index.m3u8
 https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg02104-imagicommcommun-whbqbreaking-ono/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/TRT_%C3%87ocuk_logo_%282021%29.svg/960px-TRT_%C3%87ocuk_logo_%282021%29.svg.png" group-title="Turkey",TRT Cocuk (1440p)
 https://tv-trtcocuk.medya.trt.com.tr/master.m3u8
-#EXTINF:-1 tvg-logo="https://i.imgur.com/4BNVhoC.png" group-title="Zimbabwe",Yadah TV (576p) [Not 24/7]
