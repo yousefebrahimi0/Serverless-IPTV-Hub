@@ -1,18 +1,19 @@
-# 📺 MOE IPTV Player
+# 📺 Serverless IPTV Hub
 
-A powerful, serverless IPTV web player powered entirely by Cloudflare Workers. It acts as a proxy to bypass CORS issues, manages M3U playlists using Cloudflare KV, and includes a built-in dead-link cleaner!
+A powerful, serverless IPTV web player powered entirely by Cloudflare Workers. It acts as a proxy to bypass CORS issues, manages M3U playlists using Cloudflare KV, and features a dual-sidebar UI with high-performance 30,000+ global channel search and paginated rendering!
 
 <p align="center" dir="auto">
-<img width="1920" height="953" alt="MOE IPTV Player" src="https://github.com/user-attachments/assets/c00fdfa1-8027-4d7c-aa8c-5a877c64796c" />
+<img width="1920" height="953" alt="Serverless IPTV Hub" src="https://github.com/user-attachments/assets/c00fdfa1-8027-4d7c-aa8c-5a877c64796c" />
 </p>
-
 
 ## ✨ Features
 * **100% Serverless:** Runs purely on Cloudflare Workers edge network.
 * **CORS Bypass:** Proxies video streams and M3U8 files so they play seamlessly in the browser.
 * **Password Protected:** Built-in cookie-based authentication.
+* **Global & Category Search:** Fast search across all 30,000+ channels or filtered within a selected category with instant scope switching.
+* **High Performance & Paginated UI:** Scroll-based card loading ensures 60fps responsiveness even with massive playlists.
+* **Dual Sidebar Layout:** Interactive category panel with quick category filtering and rich channel management.
 * **Source Management:** Add, edit, and manage multiple M3U URLs directly from the UI (saved to Cloudflare KV).
-* **Dead Link Cleaner:** Built-in tool to scan your playlists and permanently remove offline channels.
 * **Favorites System:** Star your favorite channels (saved locally to your browser).
 
 ---
@@ -25,11 +26,11 @@ You can deploy this to your own Cloudflare account for free in just a few minute
 1. Log in to your [Cloudflare Dashboard](https://dash.cloudflare.com/).
 2. Navigate to **Compute** -> **Workers & Pages** from the left sidebar.
 3. Click **Create Application**, then **Start with Hello World!**.
-4. Name your worker (e.g., `moe-iptv`) and click **Deploy**.
-5. Click **Edit code**. Clear the default code, paste the contents of `worker.js` from this repository, and click **Save and deploy**.
+4. Name your worker (e.g., `serverless-iptv-hub`) and click **Deploy**.
+5. Click **Edit code**. Clear the default code, paste the contents of `worker.js` from this repository ([https://github.com/yousefebrahimi0/Serverless-IPTV-Hub](https://github.com/yousefebrahimi0/Serverless-IPTV-Hub)), and click **Save and deploy**.
 
 ### 2. Setup Cloudflare KV (Storage)
-To save your custom M3U sources and cleaned playlists, you must bind a KV namespace.
+To save your custom M3U sources and settings, you can bind a KV namespace.
 1. Go back to your Cloudflare Dashboard.
 2. Navigate to **Storage & Databases** -> **Workers KV**.
 3. Click **Create Instance** and name it `IPTV_KV_STORE` (or whatever you like).
@@ -61,7 +62,7 @@ Want to access the player using your custom domain (e.g., `tv.yourdomain.com`) i
 
 ## 📂 Managing Playlists
 
-By default, the player loads a sample `default-playlist.m3u` file hosted in this repository. 
+By default, the player loads the `active 30k list iptv.m3u` file hosted in this repository ([https://github.com/yousefebrahimi0/Serverless-IPTV-Hub](https://github.com/yousefebrahimi0/Serverless-IPTV-Hub)). 
 
 **The Easiest Way (UI):**
 You don't need to edit any code to use your own playlists! Once you log into the player, simply click the **Settings (Gear Icon)** in the left sidebar. From there, you can add, edit, or remove as many remote M3U URLs as you want. These changes are saved directly to your Cloudflare KV and will override the default playlist.

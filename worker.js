@@ -10,8 +10,8 @@ export default {
       const COOKIE_SECRET  = env.COOKIE_SECRET  || "s3t-th1s-1n-env-v4rs";
       const AUTH_COOKIE_NAME    = "iptv_auth_token";
       const AUTH_COOKIE_MAX_AGE = 60 * 60 * 24 * 30;
-      const DEFAULT_M3U_URL     = "https://raw.githubusercontent.com/Mohammad-Aali/MOE-IPTV-Player/main/default-playlist.m3u";
-      const FAVICON_URL         = "https://raw.githubusercontent.com/Mohammad-Aali/MOE-IPTV-Player/main/favicon.svg";
+      const DEFAULT_M3U_URL     = "https://raw.githubusercontent.com/yousefebrahimi0/Serverless-IPTV-Hub/main/active%2030k%20list%20iptv.m3u";
+      const FAVICON_URL         = "https://raw.githubusercontent.com/yousefebrahimi0/Serverless-IPTV-Hub/main/favicon.svg";
 
       // ==========================================
       // 2. AUTH HELPERS
@@ -177,70 +177,7 @@ export default {
         }
       }
 
-      // ==========================================
-      // 7. CLEANER BACKEND LOGIC
-      // ==========================================
-      if (action === 'cleaner') {
-        return new Response(getCleanerHTML(FAVICON_URL), { headers: { 'Content-Type': 'text/html;charset=UTF-8' } });
-      }
 
-      if (action === 'test-stream' && request.method === 'POST') {
-        const formData = await request.formData();
-        const target = formData.get('url');
-        if (!target) return new Response("DEAD", { status: 404, headers: corsHeaders });
-
-        // FIX: validate protocol before fetching
-        try {
-          const parsed = new URL(target);
-          if (!['http:', 'https:'].includes(parsed.protocol)) {
-            return new Response("DEAD", { status: 404, headers: corsHeaders });
-          }
-        } catch {
-          return new Response("DEAD", { status: 404, headers: corsHeaders });
-        }
-
-        try {
-          const res = await fetch(target, {
-            method: 'GET',
-            headers: {
-              'Range': 'bytes=0-200',
-              'User-Agent': 'VLC/3.0.16 LibVLC/3.0.16'
-            },
-            cf: { cacheTtl: 0 }
-          });
-          if (res.ok || res.status === 206 || res.status < 400) {
-            return new Response("ALIVE", { status: 200, headers: corsHeaders });
-          }
-        } catch(e) {}
-        return new Response("DEAD", { status: 404, headers: corsHeaders });
-      }
-
-      if (action === 'save-cleaned-source' && request.method === 'POST') {
-        if (!env.IPTV_KV) return new Response(JSON.stringify({error: 'No KV'}), {status: 500});
-        const body = await request.json();
-        const id = 'clean_' + Date.now();
-
-        await env.IPTV_KV.put('m3u_file_' + id, body.content);
-
-        const rawSources = await env.IPTV_KV.get('m3u_sources', { cacheTtl: 60 });
-        let sources = rawSources ? JSON.parse(rawSources) : [];
-        const internalUrl = `${url.origin}${url.pathname}?action=serve-m3u&id=${id}`;
-        sources.push({ id, name: body.name, url: internalUrl });
-        await env.IPTV_KV.put('m3u_sources', JSON.stringify(sources));
-
-        return new Response(JSON.stringify({status: 'success'}), {headers: {'Content-Type': 'application/json'}});
-      }
-
-      if (action === 'serve-m3u') {
-        const id = url.searchParams.get('id');
-        if (env.IPTV_KV && id) {
-          const content = await env.IPTV_KV.get('m3u_file_' + id);
-          if (content) {
-            return new Response(content, { headers: { ...corsHeaders, 'Content-Type': 'audio/x-mpegurl' } });
-          }
-        }
-        return new Response("Not found", {status: 404});
-      }
 
       // ==========================================
       // 8. CHANNELS
@@ -462,221 +399,7 @@ ic.innerText = i.type === "password" ? "visibility_off" : "visibility";
 </html>`;
 }
 
-// ==========================================
-// CLEANER HTML
-// ==========================================
-function getCleanerHTML(faviconUrl) {
-    return `<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Playlist Cleaner</title>
-<meta name="robots" content="nofollow, noindex" />
-<link rel="icon" type="image/svg+xml" href="${faviconUrl}">
-<script src="https://cdn.tailwindcss.com"><\/script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<style>body{font-family:'Inter',sans-serif;}</style>
-</head>
-<body class="bg-[#12131C] text-white min-h-screen flex flex-col items-center justify-center p-6">
-<div class="bg-[#1C1D26] border border-[#2A2B36] p-10 rounded-2xl shadow-2xl w-full max-w-2xl">
-<div class="flex items-center gap-4 mb-6 border-b border-[#2A2B36] pb-6">
-<div class="w-12 h-12 rounded-full bg-red-500/20 flex items-center justify-center text-red-500 shrink-0">
-<span class="material-icons">cleaning_services</span>
-</div>
-<div>
-<h1 class="text-xl font-bold tracking-tight">Dead Link Cleaner</h1>
-<p class="text-sm text-gray-400">Scan your M3U and remove offline channels permanently.</p>
-</div>
-</div>
-<div id="step-1">
-<p class="text-sm text-gray-400 mb-4">Select how you want to provide your M3U playlist:</p>
-<div class="flex gap-2 mb-6">
-<button onclick="setTab('url')" id="tab-url" class="flex-1 py-2 rounded-lg bg-[#2D5BE3] text-white text-sm font-medium transition">URL</button>
-<button onclick="setTab('file')" id="tab-file" class="flex-1 py-2 rounded-lg bg-[#272733] text-gray-400 text-sm font-medium transition hover:text-white">File Upload</button>
-<button onclick="setTab('text')" id="tab-text" class="flex-1 py-2 rounded-lg bg-[#272733] text-gray-400 text-sm font-medium transition hover:text-white">Raw Text</button>
-</div>
-<div id="input-url" class="mb-6">
-<input type="text" id="m3u-url" placeholder="https://..." class="w-full bg-[#272733] rounded-xl px-4 py-3.5 text-sm text-white placeholder-gray-500 border border-transparent focus:border-gray-600 focus:outline-none transition-colors">
-</div>
-<div id="input-file" class="mb-6 hidden">
-<input type="file" id="m3u-file" accept=".m3u,.m3u8" class="w-full text-sm text-gray-400 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-[#2D5BE3] file:text-white hover:file:bg-blue-600">
-</div>
-<div id="input-text" class="mb-6 hidden">
-<textarea id="m3u-text" rows="5" placeholder="#EXTM3U..." class="w-full bg-[#272733] rounded-xl px-4 py-3.5 text-sm text-white placeholder-gray-500 border border-transparent focus:border-gray-600 focus:outline-none transition-colors font-mono text-xs resize-none"></textarea>
-</div>
-<div class="bg-yellow-500/10 border border-yellow-500/30 rounded-xl p-4 mb-6 flex gap-3 text-yellow-200 text-sm">
-<span class="material-icons shrink-0">warning</span>
-<p><strong>Warning:</strong> Testing thousands of channels consumes worker limits and takes time. Please use reduced playlists when possible. Recommended maximum: 500 channels.</p>
-</div>
-<button id="fetch-btn" onclick="fetchAndParse()" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-semibold py-3.5 rounded-xl shadow-lg transition flex items-center justify-center gap-2">
-<span class="material-icons" style="font-size: 20px;">radar</span> <span>Fetch & Prepare</span>
-</button>
-</div>
-<div id="step-2" class="hidden">
-<div id="status-area" class="bg-[#16161E] rounded-xl p-6 text-center border border-[#2A2B36] mb-6">
-<span id="status-icon" class="material-icons text-gray-500 mb-2" style="font-size: 32px;">rule_folder</span>
-<h2 id="status-title" class="text-lg font-semibold text-gray-300">Ready to Scan</h2>
-<div class="flex justify-center gap-6 mt-4" id="stats-container">
-<div class="text-center"><span class="block text-2xl font-bold text-blue-400" id="stat-total">0</span><span class="text-[10px] uppercase text-gray-500 tracking-wider">Total</span></div>
-<div class="text-center"><span class="block text-2xl font-bold text-green-400" id="stat-alive">0</span><span class="text-[10px] uppercase text-gray-500 tracking-wider">Alive</span></div>
-<div class="text-center"><span class="block text-2xl font-bold text-red-400" id="stat-dead">0</span><span class="text-[10px] uppercase text-gray-500 tracking-wider">Dead</span></div>
-</div>
-</div>
-<div id="progress-container" class="hidden mb-6">
-<div class="w-full bg-[#16161E] border border-[#2A2B36] rounded-full h-3 overflow-hidden">
-<div id="progress-bar" class="bg-blue-500 h-3 rounded-full transition-all duration-300" style="width: 0%"></div>
-</div>
-<p class="text-xs text-gray-500 text-center mt-2" id="progress-label">0 / 0</p>
-</div>
-<button id="scan-btn" onclick="startCleaning()" class="w-full bg-red-600 hover:bg-red-500 text-white font-semibold py-3.5 rounded-xl shadow-lg transition flex items-center justify-center gap-2">
-<span class="material-icons" style="font-size: 20px;">delete_sweep</span> <span>Start Cleaner</span>
-</button>
-</div>
-<div id="step-3" class="hidden">
-<div class="bg-[#16161E] rounded-xl p-6 text-center border border-green-500/30 mb-6">
-<span class="material-icons text-green-500 mb-2" style="font-size: 48px;">check_circle</span>
-<h2 class="text-xl font-bold text-white mb-2">Scan Complete!</h2>
-<p class="text-gray-400 text-sm mb-4">Removed <span id="final-dead" class="font-bold text-white">0</span> dead channels. <span id="final-alive" class="font-bold text-white">0</span> working channels remain.</p>
-<div class="flex flex-col gap-3 mt-6">
-<button onclick="downloadM3U()" class="w-full bg-[#272733] hover:bg-gray-600 text-white font-medium py-3 rounded-xl transition flex items-center justify-center gap-2"><span class="material-icons">download</span> Download .m3u File</button>
-<div class="flex gap-2">
-<input type="text" id="save-name" placeholder="Name for Panel Source" class="flex-1 bg-[#272733] rounded-xl px-4 py-3 text-sm text-white focus:outline-none">
-<button onclick="saveToPanel()" class="bg-[#2D5BE3] hover:bg-blue-500 text-white font-medium px-6 py-3 rounded-xl transition">Save to Panel</button>
-</div>
-</div>
-</div>
-</div>
-<button onclick="window.close()" class="block w-full text-center mt-4 text-sm text-gray-500 hover:text-white transition">Close Window</button>
-</div>
-<script>
-let currentTab='url',channels=[],workingText="";
-function setTab(tab){
-currentTab=tab;
-['url','file','text'].forEach(t=>{
-document.getElementById('input-'+t).classList.add('hidden');
-const b=document.getElementById('tab-'+t);
-b.classList.remove('bg-[#2D5BE3]','text-white');
-b.classList.add('bg-[#272733]','text-gray-400');
-});
-document.getElementById('input-'+tab).classList.remove('hidden');
-const a=document.getElementById('tab-'+tab);
-a.classList.remove('bg-[#272733]','text-gray-400');
-a.classList.add('bg-[#2D5BE3]','text-white');
-}
-async function fetchAndParse(){
-const btn=document.getElementById('fetch-btn');
-btn.innerHTML='<span class="material-icons animate-spin">refresh</span> Preparing...';
-btn.disabled=true;
-try{
-let text="";
-if(currentTab==='url'){
-const url=document.getElementById('m3u-url').value;
-if(!url)throw new Error("Empty URL");
-const res=await fetch('?action=proxy&url='+encodeURIComponent(url));
-text=await res.text();
-}else if(currentTab==='file'){
-const file=document.getElementById('m3u-file').files[0];
-if(!file)throw new Error("No file selected");
-text=await file.text();
-}else{
-text=document.getElementById('m3u-text').value;
-if(!text)throw new Error("Empty text");
-}
-parseContent(text);
-document.getElementById('step-1').classList.add('hidden');
-document.getElementById('step-2').classList.remove('hidden');
-}catch(e){
-alert("Error reading M3U: "+e.message);
-btn.innerHTML='<span class="material-icons">radar</span> Fetch & Prepare';
-btn.disabled=false;
-}
-}
-function parseContent(text){
-channels=[];
-const lines=text.split('\\n');
-let cb="";
-for(let l of lines){
-l=l.trim();
-if(l===''||l.startsWith('#EXTM3U'))continue;
-if(l.startsWith('#')){
-cb+=l+"\\n";
-}else if(l.startsWith('http')){
-channels.push({extinf:cb,url:l});
-cb="";
-}
-}
-document.getElementById('stat-total').innerText=channels.length;
-}
-async function startCleaning(){
-document.getElementById('scan-btn').classList.add('hidden');
-document.getElementById('progress-container').classList.remove('hidden');
-const title=document.getElementById('status-title'),icon=document.getElementById('status-icon');
-title.innerText="Testing Streams... Do not close.";
-icon.innerText="wifi_tethering";
-icon.classList.add('text-blue-500','animate-pulse');
-const total=channels.length;
-let done=0,alive=0,dead=0;
-const batchSize=8;
-for(let i=0;i<total;i+=batchSize){
-const batch=channels.slice(i,i+batchSize);
-await Promise.all(batch.map(async c=>{
-try{
-const fd=new FormData();
-fd.append('url',c.url);
-const res=await fetch('?action=test-stream',{method:'POST',body:fd});
-if(res.ok){
-alive++;
-document.getElementById('stat-alive').innerText=alive;
-workingText+=c.extinf+c.url+"\\n";
-}else{
-dead++;
-document.getElementById('stat-dead').innerText=dead;
-}
-}catch(e){
-dead++;
-document.getElementById('stat-dead').innerText=dead;
-}finally{
-done++;
-document.getElementById('progress-bar').style.width=Math.round((done/total)*100)+'%';
-// FIX: show numeric progress label
-document.getElementById('progress-label').innerText=done+' / '+total;
-}
-}));
-}
-document.getElementById('step-2').classList.add('hidden');
-document.getElementById('step-3').classList.remove('hidden');
-document.getElementById('final-dead').innerText=dead;
-document.getElementById('final-alive').innerText=alive;
-}
-function downloadM3U(){
-const blob=new Blob(["#EXTM3U\\n"+workingText],{type:'text/plain'});
-const a=document.createElement('a');
-a.href=URL.createObjectURL(blob);
-a.download='cleaned_playlist.m3u';
-a.click();
-}
-async function saveToPanel(){
-const name=document.getElementById('save-name').value.trim();
-if(!name)return alert("Enter a name first.");
-try{
-const res=await fetch('?action=save-cleaned-source',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name:name,content:"#EXTM3U\\n"+workingText})});
-const data=await res.json();
-if(data.status==='success'){
-alert("Saved successfully! You can close this tab and refresh the player.");
-window.close();
-}else{
-alert("Failed to save.");
-}
-}catch(e){
-alert("Error saving: "+e.message);
-}
-}
-<\/script>
-</body>
-</html>`;
-}
+
 
 // ==========================================
 // MAIN PLAYER HTML
@@ -1012,35 +735,56 @@ body.is-fullscreen #mobile-video-wrap {
 <button id="nav-settings" class="nav-btn w-12 h-12 rounded-full flex items-center justify-center text-gray-400 hover:text-white" title="M3U Sources">
 <span class="material-icons">settings</span>
 </button>
-<a href="?action=cleaner" target="_blank" class="nav-btn w-12 h-12 rounded-full flex items-center justify-center text-gray-400 hover:text-white" title="Dead Link Cleaner">
-<span class="material-icons">cleaning_services</span>
-</a>
 <a href="?action=logout" class="nav-btn mt-auto w-12 h-12 rounded-full flex items-center justify-center text-gray-400 hover:text-red-500 hover:bg-red-500/10" title="Logout">
 <span class="material-icons">logout</span>
 </a>
 </div>
-<div id="category-panel" class="w-[260px] min-w-[260px] shrink-0 flex flex-col py-10 px-4 relative z-10">
-<div class="mb-6 px-4">
-<h2 id="category-header" class="text-xl font-bold tracking-tight whitespace-nowrap">Live TV's</h2>
-<p id="total-channels-count" class="text-xs text-gray-500 mt-1">Loading ...</p>
+<div id="category-panel" class="w-[270px] min-w-[270px] shrink-0 flex flex-col py-8 px-4 relative z-10 border-r border-[#2A2B36]/40">
+<div class="mb-4 px-2">
+    <div class="flex items-center justify-between mb-2">
+        <h2 id="category-header" class="text-lg font-bold tracking-tight text-white">Categories</h2>
+        <span id="cat-total-badge" class="text-[10px] font-semibold text-gray-400 bg-[#242530] px-2 py-0.5 rounded-full border border-[#2A2B36]">0</span>
+    </div>
+    <div class="relative">
+        <span class="material-icons absolute left-2.5 top-1/2 -translate-y-1/2 text-gray-500" style="font-size: 15px;">filter_list</span>
+        <input type="text" id="cat-filter-input" placeholder="Filter categories..."
+            class="peer w-full bg-[#1C1D26] border border-[#2A2B36] rounded-lg pl-8 pr-7 py-1.5 text-xs text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 transition-colors">
+        <button onclick="clearSearch('cat-filter-input')" class="absolute right-2 top-1/2 -translate-y-1/2 text-gray-500 hover:text-white opacity-0 pointer-events-none peer-[:not(:placeholder-shown)]:opacity-100 peer-[:not(:placeholder-shown)]:pointer-events-auto transition-opacity duration-200 flex items-center justify-center focus:outline-none">
+            <span class="material-icons" style="font-size: 14px;">close</span>
+        </button>
+    </div>
 </div>
-<div id="category-list" class="flex-1 overflow-y-auto space-y-3 pr-2 pb-4 pt-1 px-1">
+<div id="category-list" class="flex-1 overflow-y-auto space-y-2 pr-1 pb-4 pt-1 px-1">
 <div class="flex justify-center mt-10"><div class="loader"></div></div>
 </div>
 </div>
 </div>
 
-<div id="desktop-channel-panel" class="w-[380px] shrink-0 bg-tv-panel flex flex-col py-10 px-6 z-10 relative">
-<div class="relative mb-6">
-    <span class="material-icons absolute left-3 top-1/2 -translate-y-1/2 text-gray-500" style="font-size: 18px;">search</span>
-    <input type="text" id="search-bar" placeholder="Search in all channels ..."
-        class="peer w-full bg-tv-card border border-transparent rounded-lg pl-10 pr-10 py-2.5 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-gray-600 transition-colors">
-    <button onclick="clearSearch('search-bar')" class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-white opacity-0 pointer-events-none peer-[:not(:placeholder-shown)]:opacity-100 peer-[:not(:placeholder-shown)]:pointer-events-auto transition-opacity duration-200 flex items-center justify-center focus:outline-none">
-        <span class="material-icons" style="font-size: 16px;">close</span>
-    </button>
+<div id="desktop-channel-panel" class="w-[380px] shrink-0 bg-tv-panel flex flex-col py-8 px-5 z-10 relative border-r border-[#2A2B36]/50">
+<div class="mb-4 space-y-2.5">
+    <div class="relative">
+        <span class="material-icons absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" style="font-size: 18px;">search</span>
+        <input type="text" id="search-bar" placeholder="Search 30k channels..."
+            class="peer w-full bg-[#16161E] border border-[#2A2B38] rounded-xl pl-10 pr-10 py-2.5 text-sm text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-all shadow-sm">
+        <button onclick="clearSearch('search-bar')" class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white opacity-0 pointer-events-none peer-[:not(:placeholder-shown)]:opacity-100 peer-[:not(:placeholder-shown)]:pointer-events-auto transition-opacity duration-200 flex items-center justify-center focus:outline-none">
+            <span class="material-icons" style="font-size: 16px;">close</span>
+        </button>
+    </div>
+    <div class="flex items-center gap-1.5 p-1 bg-[#12131C] rounded-lg border border-[#2A2B36]">
+        <button id="scope-all-btn" onclick="setSearchScope('all')" class="flex-1 py-1 px-2.5 rounded-md text-[11px] font-semibold transition-all flex items-center justify-center gap-1 bg-[#2D5BE3] text-white shadow-sm">
+            <span class="material-icons" style="font-size: 13px;">public</span> All Channels
+        </button>
+        <button id="scope-cat-btn" onclick="setSearchScope('category')" class="flex-1 py-1 px-2.5 rounded-md text-[11px] font-semibold transition-all flex items-center justify-center gap-1 bg-transparent text-gray-400 hover:text-white">
+            <span class="material-icons" style="font-size: 13px;">folder</span> In Category
+        </button>
+    </div>
 </div>
-<div id="channel-list" class="flex-1 overflow-y-auto flex flex-col gap-3 pr-2 pt-1 pb-4 px-1">
-<div class="text-sm text-gray-500 mt-4 px-2">Select a category to view channels.</div>
+<div class="flex items-center justify-between mb-3 px-1">
+    <h3 id="channel-header-title" class="text-sm font-bold text-gray-200 truncate max-w-[210px]">All Channels</h3>
+    <span id="total-channels-count" class="text-[11px] font-semibold text-blue-400 bg-blue-500/10 border border-blue-500/20 px-2.5 py-0.5 rounded-full shrink-0">Loading ...</span>
+</div>
+<div id="channel-list" class="flex-1 overflow-y-auto flex flex-col gap-2.5 pr-1 pt-1 pb-4">
+<div class="text-sm text-gray-500 mt-4 px-2">Loading channels...</div>
 </div>
 </div>
 
@@ -1131,9 +875,6 @@ body.is-fullscreen #mobile-video-wrap {
         <button class="mob-tab" id="mob-tab-settings"           onclick="openSettings()">
             <span class="material-icons">settings</span><span>Sources</span>
         </button>
-        <a href="?action=cleaner" target="_blank" class="mob-tab">
-            <span class="material-icons">cleaning_services</span><span>Cleaner</span>
-        </a>
         <a href="?action=logout" class="mob-tab logout-tab">
             <span class="material-icons">logout</span>
         </a>
@@ -1207,12 +948,8 @@ function placeVideoElement() {
         }
     }
     
-    // Re-init Plyr after move if a stream was playing
-    if (currentStreamUrl) {
-        playStream(currentStreamUrl);
-    } else {
-        initializePlyr();
-    }
+    if (currentStreamUrl) playStream(currentStreamUrl);
+    else initializePlyr();
 }
 
 placeVideoElement();
@@ -1221,7 +958,9 @@ window.addEventListener('resize', placeVideoElement);
 const categoryListEl  = document.getElementById('category-list');
 const channelListEl   = document.getElementById('channel-list');
 const categoryHeader  = document.getElementById('category-header');
+const channelHeaderTitle = document.getElementById('channel-header-title');
 const searchInput     = document.getElementById('search-bar');
+const catFilterInput  = document.getElementById('cat-filter-input');
 const nowPlayingContainer = document.getElementById('now-playing-container');
 const npTitle         = document.getElementById('np-title');
 const navHome         = document.getElementById('nav-home');
@@ -1237,7 +976,13 @@ let globalChannelsData = [];
 let categories = {};
 let activeCategoryBtn  = null;
 let activeChannelBtn   = null;
-// FIX: cap channel node cache to avoid unbounded DOM node accumulation
+
+let searchScope = 'all';
+let currentFilteredChannels = [];
+let renderedCount = 0;
+const PAGE_SIZE = 80;
+let searchDebounceTimeout = null;
+
 const CHANNEL_CACHE_MAX = 500;
 const channelNodeCache  = {};
 let channelCacheOrder   = [];
@@ -1252,9 +997,7 @@ function addToCache(id, node) {
     channelCacheOrder.push(id);
 }
 
-if (localStorage.getItem('iptv_sidebar_collapsed') === 'true') {
-    sidebar.classList.add('collapsed');
-}
+if (localStorage.getItem('iptv_sidebar_collapsed') === 'true') sidebar.classList.add('collapsed');
 
 collapseBtn.addEventListener('click', () => {
     sidebar.classList.toggle('collapsed');
@@ -1273,7 +1016,6 @@ function loadChannels() {
         .then(r => r.json())
         .then(channels => {
             globalChannelsData = channels;
-            // FIX: clear stale cache entries when channels reload
             Object.keys(channelNodeCache).forEach(k => delete channelNodeCache[k]);
             channelCacheOrder.length = 0;
             processData();
@@ -1287,33 +1029,68 @@ function processData() {
         if (!categories[g]) categories[g] = [];
         categories[g].push(ch);
     });
-    document.getElementById('total-channels-count').innerText = \`\${globalChannelsData.length} Channels\`;
+    const catCount = Object.keys(categories).length;
+    const catBadge = document.getElementById('cat-total-badge');
+    if (catBadge) catBadge.innerText = catCount + ' groups';
+
     renderCategories();
     if (typeof renderMobileCategories === 'function') renderMobileCategories();
-    const firstBtn = categoryListEl.querySelector('button');
-    if (firstBtn) firstBtn.click();
+    
+    const allBtn = categoryListEl.querySelector('button');
+    if (allBtn) allBtn.click();
 }
 
 const COLORS = ['bg-blue-500','bg-red-500','bg-green-500','bg-yellow-500','bg-purple-500','bg-pink-500','bg-indigo-500'];
 
 function renderCategories() {
     categoryListEl.innerHTML = '';
+    const filterQuery = catFilterInput ? catFilterInput.value.toLowerCase().trim() : '';
+
+    if (!filterQuery || "all channels".includes(filterQuery)) {
+        const allBtn = document.createElement('button');
+        allBtn.className = "category-row w-full text-left p-2.5 flex items-center gap-3.5 focus:outline-none cursor-pointer rounded-xl transition-all";
+        allBtn.dataset.group = '__ALL__';
+        allBtn.innerHTML = `
+        <div class="cat-avatar w-8 h-8 rounded-full bg-gradient-to-tr from-blue-600 to-indigo-500 flex items-center justify-center text-white text-xs font-bold shrink-0 shadow-sm">
+            <span class="material-icons" style="font-size: 16px;">public</span>
+        </div>
+        <div class="cat-text-container flex flex-col overflow-hidden">
+            <span class="text-xs font-semibold text-white truncate">All Channels</span>
+            <span class="text-[10px] text-gray-400 mt-0.5">${globalChannelsData.length} Channels</span>
+        </div>
+        `;
+        allBtn.onclick = () => {
+            if (activeCategoryBtn) activeCategoryBtn.classList.remove('is-active');
+            allBtn.classList.add('is-active');
+            activeCategoryBtn = allBtn;
+            document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('is-active'));
+            navHome.classList.add('is-active');
+            channelHeaderTitle.innerText = "All Channels";
+            if (searchInput) searchInput.value = '';
+            renderChannels(globalChannelsData);
+        };
+        categoryListEl.appendChild(allBtn);
+    }
+
     Object.keys(categories).forEach(groupName => {
         const groupChannels = categories[groupName];
         if (!groupChannels.length) return;
+        if (filterQuery && !groupName.toLowerCase().includes(filterQuery)) return;
+
         const colorClass = COLORS[groupName.length % COLORS.length];
         const initial = groupName.charAt(0).toUpperCase();
-        const displayGroupName = groupName.replace(' > ', '<span class="material-icons align-middle text-gray-400" style="font-size: 16px; margin: -2px 2px 0 2px;">chevron_right</span>');
+        const displayGroupName = groupName.replace(' > ', '<span class="material-icons align-middle text-gray-400" style="font-size: 14px; margin: -2px 2px 0 2px;">chevron_right</span>');
 
         const btn = document.createElement('button');
-        btn.className = "category-row w-full text-left p-3 flex items-center gap-4 focus:outline-none cursor-pointer";
-        btn.innerHTML = \`
-        <div class="cat-avatar w-8 h-8 rounded-full \${colorClass} flex items-center justify-center text-white text-xs font-bold shrink-0 shadow-inner">\${initial}</div>
+        btn.className = "category-row w-full text-left p-2.5 flex items-center gap-3.5 focus:outline-none cursor-pointer rounded-xl transition-all";
+        btn.dataset.group = groupName;
+        btn.innerHTML = `
+        <div class="cat-avatar w-8 h-8 rounded-full ${colorClass} flex items-center justify-center text-white text-xs font-bold shrink-0 shadow-inner">${initial}</div>
         <div class="cat-text-container flex flex-col overflow-hidden">
-            <span class="text-sm font-medium text-white truncate">\${displayGroupName}</span>
-            <span class="text-[11px] text-gray-500 mt-0.5">\${groupChannels.length} Channels</span>
+            <span class="text-xs font-medium text-white truncate">${displayGroupName}</span>
+            <span class="text-[10px] text-gray-400 mt-0.5">${groupChannels.length} Channels</span>
         </div>
-        \`;
+        `;
 
         btn.onclick = () => {
             if (activeCategoryBtn) activeCategoryBtn.classList.remove('is-active');
@@ -1321,9 +1098,8 @@ function renderCategories() {
             activeCategoryBtn = btn;
             document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('is-active'));
             navHome.classList.add('is-active');
-            categoryHeader.innerText = "Live TV's";
-            document.getElementById('total-channels-count').innerText = \`\${globalChannelsData.length} Channels\`;
-            searchInput.value = '';
+            channelHeaderTitle.innerText = groupName.replace(/^.*?>\s*/, '');
+            if (searchInput) searchInput.value = '';
             renderChannels(groupChannels);
             if (window.innerWidth >= 768 && window.innerWidth <= 1023) {
                 sidebar.classList.add('collapsed');
@@ -1334,15 +1110,33 @@ function renderCategories() {
     });
 }
 
+if (catFilterInput) {
+    catFilterInput.addEventListener('input', () => renderCategories());
+}
+
+function setSearchScope(scope) {
+    searchScope = scope;
+    const allBtn = document.getElementById('scope-all-btn');
+    const catBtn = document.getElementById('scope-cat-btn');
+
+    if (scope === 'all') {
+        allBtn.className = "flex-1 py-1 px-2.5 rounded-md text-[11px] font-semibold transition-all flex items-center justify-center gap-1 bg-[#2D5BE3] text-white shadow-sm";
+        catBtn.className = "flex-1 py-1 px-2.5 rounded-md text-[11px] font-semibold transition-all flex items-center justify-center gap-1 bg-transparent text-gray-400 hover:text-white";
+    } else {
+        catBtn.className = "flex-1 py-1 px-2.5 rounded-md text-[11px] font-semibold transition-all flex items-center justify-center gap-1 bg-[#2D5BE3] text-white shadow-sm";
+        allBtn.className = "flex-1 py-1 px-2.5 rounded-md text-[11px] font-semibold transition-all flex items-center justify-center gap-1 bg-transparent text-gray-400 hover:text-white";
+    }
+    applySearch();
+}
+
 function renderFavorites() {
     if (activeCategoryBtn) activeCategoryBtn.classList.remove('is-active');
     activeCategoryBtn = null;
     document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('is-active'));
     navFav.classList.add('is-active');
-    categoryHeader.innerText = "Favorites";
-    searchInput.value = '';
+    channelHeaderTitle.innerText = "Favorites";
+    if (searchInput) searchInput.value = '';
     const favChannels = globalChannelsData.filter(ch => getFavorites().includes(ch.id));
-    document.getElementById('total-channels-count').innerText = \`\${favChannels.length} Channels\`;
     renderChannels(favChannels);
     if (window.innerWidth >= 768 && window.innerWidth <= 1023) {
         sidebar.classList.add('collapsed');
@@ -1350,14 +1144,24 @@ function renderFavorites() {
     }
 }
 
-function renderChannels(channelsArray) {
-    channelListEl.innerHTML = '';
-    if (!channelsArray.length) {
-        channelListEl.innerHTML = '<div class="text-sm text-gray-500 p-4 text-center">No channels found.</div>';
+function renderChannels(channelsArray, append = false) {
+    if (!append) {
+        currentFilteredChannels = channelsArray;
+        renderedCount = 0;
+        channelListEl.innerHTML = '';
+        document.getElementById('total-channels-count').innerText = `${currentFilteredChannels.length} Channels`;
+    }
+
+    if (!currentFilteredChannels.length) {
+        channelListEl.innerHTML = '<div class="text-sm text-gray-500 p-6 text-center">No channels found.</div>';
         return;
     }
+
+    const slice = currentFilteredChannels.slice(renderedCount, renderedCount + PAGE_SIZE);
+    if (!slice.length) return;
+
     const fragment = document.createDocumentFragment();
-    channelsArray.forEach(ch => {
+    slice.forEach(ch => {
         let btn;
         if (channelNodeCache[ch.id]) {
             btn = channelNodeCache[ch.id];
@@ -1367,20 +1171,29 @@ function renderChannels(channelsArray) {
             const isFav = getFavorites().includes(ch.id);
             starEl.classList.toggle('text-[#E87A31]', isFav);
             starEl.classList.toggle('text-gray-600', !isFav);
-            starEl.innerHTML = \`<span class="material-icons" style="font-size:18px;">\${isFav ? 'star' : 'star_border'}</span>\`;
+            starEl.innerHTML = `<span class="material-icons" style="font-size:18px;">${isFav ? 'star' : 'star_border'}</span>`;
         } else {
             btn = buildDesktopCard(ch);
             addToCache(ch.id, btn);
         }
         fragment.appendChild(btn);
     });
+
     channelListEl.appendChild(fragment);
+    renderedCount += slice.length;
 }
 
-// FIX: use escHtml for logo onerror to handle channel names with quotes/special chars
+channelListEl.addEventListener('scroll', () => {
+    if (channelListEl.scrollTop + channelListEl.clientHeight >= channelListEl.scrollHeight - 200) {
+        if (renderedCount < currentFilteredChannels.length) {
+            renderChannels(currentFilteredChannels, true);
+        }
+    }
+});
+
 function buildDesktopCard(ch) {
     const btn = document.createElement('button');
-    btn.className = "channel-card w-full text-left bg-tv-card hover:bg-tv-cardhover rounded-xl p-3 flex items-center gap-4 focus:outline-none cursor-pointer shadow-sm";
+    btn.className = "channel-card w-full text-left bg-tv-card hover:bg-tv-cardhover rounded-xl p-3 flex items-center gap-3.5 focus:outline-none cursor-pointer shadow-sm border border-[#2A2B36]/30";
     if (activeChannelBtn && activeChannelBtn.dataset.id === ch.id) { btn.classList.add('is-active'); }
     btn.dataset.id = ch.id;
 
@@ -1388,31 +1201,33 @@ function buildDesktopCard(ch) {
     const safeName    = escHtml(ch.name);
     const initial     = escHtml(ch.name.charAt(0));
     const logoHtml = ch.logo
-        ? \`<img src="\${safeLogoUrl}" loading="lazy" class="w-full h-full object-contain" alt="\${safeName}" onerror="this.outerHTML='<span class=&quot;text-xs font-bold&quot;>\${initial}</span>'">\`
-        : \`<span class="text-xs font-bold text-gray-400">\${initial}</span>\`;
+        ? `<img src="${safeLogoUrl}" loading="lazy" class="w-full h-full object-contain" alt="${safeName}" onerror="this.outerHTML='<span class=&quot;text-xs font-bold text-gray-400&quot;>${initial}</span>'">`
+        : `<span class="text-xs font-bold text-gray-400">${initial}</span>`;
 
     const isFav = getFavorites().includes(ch.id);
     const starColor = isFav ? "text-[#E87A31]" : "text-gray-600 hover:text-[#E87A31]";
     const starIcon  = isFav ? "star" : "star_border";
 
     let badgesHtml = '';
-    if (ch.is_hd) badgesHtml += '<span class="text-[8px] flex items-center font-bold bg-white text-black px-1 rounded-sm shadow-sm">HD</span>';
-    if (ch.has_epg) badgesHtml += '<span class="text-[8px] flex items-center font-bold bg-gray-600 text-white px-1 rounded-sm shadow-sm">EPG</span>';
-    const sourceBadge = ch.source
-        ? \`<span class="text-[8px] flex items-center font-bold bg-blue-900/60 text-blue-300 px-1 rounded-sm truncate max-w-[80px] shadow-sm">\${escHtml(ch.source)}</span>\`
-        : '';
+    if (ch.is_hd) badgesHtml += '<span class="text-[8px] font-bold bg-white text-black px-1 rounded-sm shadow-sm">HD</span>';
+    if (ch.has_epg) badgesHtml += '<span class="text-[8px] font-bold bg-gray-600 text-white px-1 rounded-sm shadow-sm">EPG</span>';
+    
+    let catTag = '';
+    if (ch.group) {
+        const cleanGroup = ch.group.replace(/^.*?>\s*/, '');
+        catTag = `<span class="text-[8px] font-medium bg-[#1C1D26] text-gray-400 border border-[#2A2B38] px-1.5 py-0.5 rounded truncate max-w-[110px]" title="${escHtml(ch.group)}">${escHtml(cleanGroup)}</span>`;
+    }
 
-    btn.innerHTML = \`
-    <div class="w-14 h-14 bg-[#1C1D26] border border-[#2D2E3D] rounded flex items-center justify-center shrink-0 overflow-hidden shadow-inner">\${logoHtml}</div>
-    <div class="flex-1 flex flex-col overflow-hidden py-1">
-        <span class="text-sm font-semibold text-white truncate">\${safeName}</span>
-        <span class="text-[10px] text-tv-muted mt-1 truncate">Live Stream</span>
-        <div class="flex gap-1 mt-2 min-h-[16px] flex-wrap">\${badgesHtml}\${sourceBadge}</div>
+    btn.innerHTML = `
+    <div class="w-12 h-12 bg-[#1C1D26] border border-[#2D2E3D] rounded-lg flex items-center justify-center shrink-0 overflow-hidden shadow-inner">${logoHtml}</div>
+    <div class="flex-1 flex flex-col overflow-hidden py-0.5">
+        <span class="text-xs font-semibold text-white truncate">${safeName}</span>
+        <div class="flex items-center gap-1 mt-1.5 flex-wrap">${badgesHtml}${catTag}</div>
     </div>
-    <div class="star-btn p-2 shrink-0 \${starColor} transition-colors" data-id="\${ch.id}">
-        <span class="material-icons" style="font-size: 18px;">\${starIcon}</span>
+    <div class="star-btn p-1.5 shrink-0 ${starColor} transition-colors" data-id="${ch.id}">
+        <span class="material-icons" style="font-size: 18px;">${starIcon}</span>
     </div>
-    \`;
+    `;
 
     let hideBannerTimeout;
     btn.onclick = (e) => {
@@ -1423,7 +1238,7 @@ function buildDesktopCard(ch) {
         nowPlayingContainer.classList.remove('opacity-0');
         clearTimeout(hideBannerTimeout);
         hideBannerTimeout = setTimeout(() => nowPlayingContainer.classList.add('opacity-0'), 4000);
-        playStream(\`?action=proxy&url=\${encodeURIComponent(ch.url)}\`);
+        playStream(`?action=proxy&url=${encodeURIComponent(ch.url)}`);
     };
 
     const starEl = btn.querySelector('.star-btn');
@@ -1432,7 +1247,7 @@ function buildDesktopCard(ch) {
         toggleFavorite(ch.id, starEl, () => {
             if (navFav.classList.contains('is-active')) {
                 btn.remove();
-                document.getElementById('total-channels-count').innerText = \`\${getFavorites().length} Channels\`;
+                document.getElementById('total-channels-count').innerText = `${getFavorites().length} Channels`;
             }
         });
     };
